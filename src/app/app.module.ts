@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { TimeRegistrationPage } from '../pages/time-registration/time-registration';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,7 +15,8 @@ import { MockProvider } from '../providers/mock/mock';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    TimeRegistrationPage
   ],
   imports: [
     BrowserModule,
@@ -24,13 +26,14 @@ import { MockProvider } from '../providers/mock/mock';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    TimeRegistrationPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     MockProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
