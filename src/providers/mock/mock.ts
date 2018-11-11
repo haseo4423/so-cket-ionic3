@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Injectable } from '@angular/core';
 
 /*
   Generated class for the MockProvider provider.
@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
-@Injectable()
+// @Injectable()
 export class MockProvider {
 
   constructor() {
