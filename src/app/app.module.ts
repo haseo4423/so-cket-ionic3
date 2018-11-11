@@ -6,6 +6,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TimeRegistrationPage } from '../pages/time-registration/time-registration';
+import { DailyReportPage } from '../pages/daily-report/daily-report';
+import { DreamSourcePage } from '../pages/dream-source/dream-source';
+import { ConfigurationPage } from '../pages/configuration/configuration';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +19,10 @@ import { MockProvider } from '../providers/mock/mock';
     MyApp,
     HomePage,
     ListPage,
-    TimeRegistrationPage
+    TimeRegistrationPage,
+    DailyReportPage,
+    DreamSourcePage,
+    ConfigurationPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,10 @@ import { MockProvider } from '../providers/mock/mock';
     MyApp,
     HomePage,
     ListPage,
-    TimeRegistrationPage
+    TimeRegistrationPage,
+    DailyReportPage,
+    DreamSourcePage,
+    ConfigurationPage
   ],
   providers: [
     StatusBar,

@@ -6,6 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TimeRegistrationPage } from '../pages/time-registration/time-registration';
+import { DailyReportPage } from '../pages/daily-report/daily-report';
+import { DreamSourcePage } from '../pages/dream-source/dream-source';
+import { ConfigurationPage } from '../pages/configuration/configuration';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +27,10 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'TimeRegistration', component: TimeRegistrationPage }
+      { title: '勤怠登録', component: TimeRegistrationPage },
+      { title: '日報作成', component: DailyReportPage },
+      { title: 'DS', component: DreamSourcePage },
+      { title: '設定', component: ConfigurationPage }
     ];
 
   }
