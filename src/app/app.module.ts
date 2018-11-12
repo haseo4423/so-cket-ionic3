@@ -13,6 +13,7 @@ import { ConfigurationPage } from '../pages/configuration/configuration';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MockProvider } from '../providers/mock/mock';
+import { DreamSourceProvider } from '../providers/dream-source/dream-source';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MockProvider } from '../providers/mock/mock';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    MockProvider
+    MockProvider,
+    DreamSourceProvider
   ]
 })
 export class AppModule { }
