@@ -24,12 +24,14 @@ page-dream-source {
   ion-slide{
     padding-top:55px;
   }
-
   .slide-zoom {
     height: 100%;
     overflow-y: auto;
   }
   .tabmenu::-webkit-scrollbar {
     display: none;
+  }
+  .white-space-prewrap {
+    white-space: pre-wrap;
   }
 }

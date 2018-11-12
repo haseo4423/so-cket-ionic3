@@ -25716,3 +25716,7 @@ page-dream-source .slide-zoom {
 page-dream-source .tabmenu::-webkit-scrollbar {
   display: none;
 }
+
+page-dream-source .white-space-prewrap {
+  white-space: pre-wrap;
+}

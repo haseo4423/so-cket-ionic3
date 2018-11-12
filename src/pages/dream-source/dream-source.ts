@@ -1,6 +1,6 @@
 import { ViewChild, Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
-import { MockProvider } from '../../providers/mock/mock';
+import { DreamSourceProvider } from '../../providers/dream-source/dream-source';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval';
 
@@ -18,7 +18,7 @@ import 'rxjs/add/observable/interval';
 @Component({
   selector: 'page-dream-source',
   templateUrl: 'dream-source.html',
-  providers: [MockProvider],
+  providers: [DreamSourceProvider],
 })
 export class DreamSourcePage {
 
@@ -27,12 +27,12 @@ export class DreamSourcePage {
   segments: any = [];
   activeIndex: number = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public mock: MockProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dreamSource: DreamSourceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DreamSourcePage');
-    this.segments = this.mock.getSegmentItems();
+    this.segments = this.dreamSource.getSegmentItems();
   }
 
   change(idx) {

@@ -30,7 +30,7 @@
   <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>
     <ion-slide *ngFor="let segment of segments">
       <ion-list>
-        <button *ngFor="let item of segment.items" ion-item>{{item}}</button>
+        <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>
       </ion-list>
     </ion-slide>
   </ion-slides>
