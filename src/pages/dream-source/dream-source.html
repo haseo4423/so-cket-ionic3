@@ -17,6 +17,10 @@
 
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">
+    </ion-refresher-content>
+  </ion-refresher>
   <!-- START:タブメニュー-->
   <div class="tabmenu" #tabmenu ion-fixed>
     <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">
