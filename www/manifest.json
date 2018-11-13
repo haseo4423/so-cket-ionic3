@@ -1,11 +1,11 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "so-cket",
+  "short_name": "so-cket",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [
     {
-      "src": "assets/imgs/sankurrilogo_small_big.png",
+      "src": "assets/imgs/sankuri_logo_white.png",
       "sizes": "512x512",
       "type": "image/png"
     }
