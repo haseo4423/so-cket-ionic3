@@ -53,8 +53,8 @@ export class DreamSourceProvider {
       },
       {
         "name": "基本原則１",
-        "heading": [],
-        "items": [`１．Dream Sourceは会社の心である\nDream Sourceは三恵クリエスの心であり魂であり、大切にしている価値観です。全員がこれを自分のものとして受け入れ理解し、主体的に実践します。全てのメンバーはDream Sourceを常に身につけ、迷いが生じた時には振り返ります。`]
+        "heading": ["１．Dream Sourceは会社の心である"],
+        "items": [`\nDream Sourceは三恵クリエスの心であり魂であり、大切にしている価値観です。全員がこれを自分のものとして受け入れ理解し、主体的に実践します。全てのメンバーはDream Sourceを常に身につけ、迷いが生じた時には振り返ります。`]
       },
       {
         "name": "基本原則２",
