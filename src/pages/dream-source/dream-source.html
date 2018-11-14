@@ -10,7 +10,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      DS
+      D2S
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -19,11 +19,6 @@
 <ion-content padding>
   <!-- START:タブメニュー-->
   <div class="tabmenu" #tabmenu ion-fixed>
-    <div class="tabmenu-items">
-      <div class="tabmenu-bt">
-        <button [ngClass]="{'active':0==activeIndex}" ion-button (click)="change(0)" clear>目次</button>
-      </div>
-    </div>
     <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">
       <div class="tabmenu-bt">
         <button [ngClass]="{'active':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>
@@ -33,12 +28,15 @@
   <!-- END:タブメニュー-->
   <!-- START:リスト-->
   <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>
-    <ion-list>
-      <div class="white-space-prewrap">aaa</div>
-    </ion-list>
-    <ion-slide *ngFor="let segment of segments">
-      <ion-list>
+    <ion-slide *ngFor="let segment of segments;let idx = index;">
+      <ion-list *ngIf="idx==0">
+        <div *ngFor="let inner_segment of segments;let inner_index = index;">
+          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}</button>
+        </div>
+      </ion-list>
+      <ion-list *ngIf="idx!=0">
         <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>
+        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>
       </ion-list>
     </ion-slide>
   </ion-slides>
