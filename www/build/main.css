@@ -25720,3 +25720,7 @@ page-dream-source .tabmenu::-webkit-scrollbar {
 page-dream-source .white-space-prewrap {
   white-space: pre-wrap;
 }
+
+page-dream-source .font-weight-bold {
+  font-weight: bold;
+}
