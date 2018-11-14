@@ -17,12 +17,13 @@
 
 
 <ion-content padding>
-  <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">
-    </ion-refresher-content>
-  </ion-refresher>
   <!-- START:タブメニュー-->
   <div class="tabmenu" #tabmenu ion-fixed>
+    <div class="tabmenu-items">
+      <div class="tabmenu-bt">
+        <button [ngClass]="{'active':0==activeIndex}" ion-button (click)="change(0)" clear>目次</button>
+      </div>
+    </div>
     <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">
       <div class="tabmenu-bt">
         <button [ngClass]="{'active':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>
@@ -32,6 +33,9 @@
   <!-- END:タブメニュー-->
   <!-- START:リスト-->
   <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>
+    <ion-list>
+      <div class="white-space-prewrap">aaa</div>
+    </ion-list>
     <ion-slide *ngFor="let segment of segments">
       <ion-list>
         <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>
