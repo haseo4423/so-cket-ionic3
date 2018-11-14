@@ -11,4 +11,19 @@ export class HomePage {
 
   }
 
+  doRefresh(refresher) {
+    // this.currentPage = 1;
+    setTimeout(() => {
+      // this.qiitaServiceProvider.getQiitaItems(this.currentPage, this.queryOption)
+      //   .subscribe(items => {
+      //     this.qiitaItems = items;
+      //     console.log(items);
+      //   },
+      //     err => console.log(err),
+      //     () => { });
+
+      refresher.complete();
+    }, 500);
+  }
+
 }

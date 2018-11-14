@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">
+    </ion-refresher-content>
+  </ion-refresher>
   <h3>Ionic Menu Starter</h3>
 
   <p>
