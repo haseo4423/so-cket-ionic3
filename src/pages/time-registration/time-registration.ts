@@ -15,14 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'time-registration.html',
 })
 export class TimeRegistrationPage {
-  posts: {
-    ID: number,
-    Title: string,
-    content: string,
-    date: string,
-  }[] = [];
   url: string;
-  result: string;
 
   constructor(
     public navCtrl: NavController,
@@ -33,12 +26,7 @@ export class TimeRegistrationPage {
   ionViewDidLoad() { }
 
   apiExecute() {
-    this.http
-      .post(this.url, "")
-      .subscribe(data => {
-        console.log(data);
-        this.result = data["resultcode"];
-      });
+    window.open(this.url, "_system");
   }
 
 }
