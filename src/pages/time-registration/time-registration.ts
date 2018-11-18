@@ -22,6 +22,7 @@ export class TimeRegistrationPage {
     date: string,
   }[] = [];
   url: string;
+  result: string;
 
   constructor(
     public navCtrl: NavController,
@@ -33,11 +34,11 @@ export class TimeRegistrationPage {
 
   apiExecute() {
     this.http
-      .get(this.url)
+      .post(this.url, "")
       .subscribe(data => {
-        this.posts = data['posts'];
+        console.log(data);
+        this.result = data["resultcode"];
       });
-    console.log(this.posts);
   }
 
 }

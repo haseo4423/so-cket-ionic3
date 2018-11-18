@@ -25,12 +25,11 @@
         <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button (click)="apiExecute()" block>API実行</button>
+    <button ion-button block>API実行</button>
   </form>
   <ion-list>
-    <ion-item *ngFor="let p of posts">
-      <h2>{{p.title}}</h2>
-      <p>{{p.date}}</p>
+    <ion-item>
+      <p>{{result}}</p>
     </ion-item>
   </ion-list>
 </ion-content>
