@@ -25,7 +25,14 @@ export class TimeRegistrationPage {
 
   ionViewDidLoad() { }
 
+  ionViewWillEnter() {
+    if (localStorage.getItem('registeredUrl')) {
+      this.url = JSON.parse(localStorage.getItem('registeredUrl'));
+    }
+  }
+
   apiExecute() {
+    localStorage.setItem('registeredUrl', JSON.stringify(this.url));
     window.open(this.url, "_system");
   }
 
