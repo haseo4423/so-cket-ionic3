@@ -18,6 +18,15 @@
 
 
 <ion-content padding>
+  <form padding (submit)="apiExecute()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>URL</ion-label>
+        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button (click)="apiExecute()" block>API実行</button>
+  </form>
   <ion-list>
     <ion-item *ngFor="let p of posts">
       <h2>{{p.title}}</h2>

@@ -21,6 +21,7 @@ export class TimeRegistrationPage {
     content: string,
     date: string,
   }[] = [];
+  url: string;
 
   constructor(
     public navCtrl: NavController,
@@ -28,12 +29,15 @@ export class TimeRegistrationPage {
     public http: HttpClient
   ) { }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() { }
+
+  apiExecute() {
     this.http
-      .get('https://public-api.wordpress.com/rest/v1.1/sites/ionicjp.wordpress.com/posts')
+      .get(this.url)
       .subscribe(data => {
         this.posts = data['posts'];
       });
+    console.log(this.posts);
   }
 
 }
