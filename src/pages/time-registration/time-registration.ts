@@ -16,6 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TimeRegistrationPage {
   url: string;
+  weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
+  registeredLogArray: Array<any>;
 
   constructor(
     public navCtrl: NavController,
@@ -29,10 +31,16 @@ export class TimeRegistrationPage {
     if (localStorage.getItem('registeredUrl')) {
       this.url = JSON.parse(localStorage.getItem('registeredUrl'));
     }
+    if (localStorage.getItem('registeredLog')) {
+      this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
+    }
   }
 
   apiExecute() {
     localStorage.setItem('registeredUrl', JSON.stringify(this.url));
+    const now = new Date().toLocaleString;
+    this.registeredLogArray.push(now);
+    localStorage.setItem('registeredLog', JSON.stringify(this.registeredLogArray));
     window.open(this.url, "_system");
   }
 
