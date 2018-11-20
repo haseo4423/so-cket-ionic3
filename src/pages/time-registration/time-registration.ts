@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import * as moment from 'moment';
 
 /**
  * Generated class for the TimeRegistrationPage page.
@@ -17,7 +18,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class TimeRegistrationPage {
   url: string;
   weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
-  registeredLogArray: Array<any>;
+  registeredLogArray: Array<any> = [];
 
   constructor(
     public navCtrl: NavController,
@@ -38,8 +39,14 @@ export class TimeRegistrationPage {
 
   apiExecute() {
     localStorage.setItem('registeredUrl', JSON.stringify(this.url));
-    const now = new Date().toLocaleString;
+    const nowMoment = moment();
+    const weekNumber = nowMoment.format("d");
+    const now = nowMoment.format("Y年M月D日(" + this.weekString[weekNumber] + ")H時m分");
     this.registeredLogArray.push(now);
+    if (this.registeredLogArray.length > 6) {
+      const deleteItemCount = this.registeredLogArray.length - 6;
+      this.registeredLogArray.splice(0, deleteItemCount);
+    }
     localStorage.setItem('registeredLog', JSON.stringify(this.registeredLogArray));
     window.open(this.url, "_system");
   }
