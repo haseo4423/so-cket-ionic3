@@ -10,7 +10,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      勤怠登録
+      勤怠
     </ion-title>
   </ion-navbar>
 
@@ -25,9 +25,12 @@
         <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block>API実行</button>
+    <button ion-button block>勤怠登録</button>
   </form>
-  <ion-list *ngFor="let log of registeredLogArray">
-    <ion-item>{{log}}</ion-item>
+  <ion-list>
+    <p>勤怠登録履歴</p>
+    <ion-item *ngFor="let log of registeredLogArray">
+      <p>{{log}}</p>
+    </ion-item>
   </ion-list>
 </ion-content>
