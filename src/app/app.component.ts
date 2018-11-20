@@ -27,7 +27,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: '勤怠登録', component: TimeRegistrationPage },
+      { title: '勤怠', component: TimeRegistrationPage },
       { title: '日報作成', component: DailyReportPage },
       { title: 'D2S', component: DreamSourcePage },
       { title: '設定', component: ConfigurationPage }
