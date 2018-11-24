@@ -28,7 +28,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: '勤怠', component: TimeRegistrationPage },
-      { title: '日報作成', component: DailyReportPage },
+      { title: '日報', component: DailyReportPage },
       { title: 'D2S', component: DreamSourcePage },
       { title: '設定', component: ConfigurationPage }
     ];
