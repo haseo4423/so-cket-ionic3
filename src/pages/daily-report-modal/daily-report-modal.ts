@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the DailyReportModalPage page.
@@ -14,12 +14,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'daily-report-modal.html',
 })
 export class DailyReportModalPage {
+  character;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public viewCtrl: ViewController) {
+    var characters = [
+      {
+        name: 'Gollum',
+        quote: 'Sneaky little hobbitses!',
+        image: 'assets/img/avatar-gollum.jpg',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'River Folk' },
+          { title: 'Alter Ego', note: 'Smeagol' }
+        ]
+      },
+      {
+        name: 'Frodo',
+        quote: 'Go back, Sam! I\'m going to Mordor alone!',
+        image: 'assets/img/avatar-frodo.jpg',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Weapon', note: 'Sting' }
+        ]
+      },
+      {
+        name: 'Samwise Gamgee',
+        quote: 'What we need is a few good taters.',
+        image: 'assets/img/avatar-samwise.jpg',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      }
+    ];
+    let rand = Math.floor(Math.random() * 3);
+    this.character = characters[rand];
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DailyReportModalPage');
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }
