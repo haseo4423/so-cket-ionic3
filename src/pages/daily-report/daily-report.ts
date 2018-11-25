@@ -25,8 +25,8 @@ export class DailyReportPage {
     console.log('ionViewDidLoad DailyReportPage');
   }
 
-  openModal() {
-    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage);
+  openModal(Num) {
+    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, Num);
     dailyReportModal.present();
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the DailyReportModalPage page.
@@ -16,7 +16,10 @@ import { IonicPage, ViewController } from 'ionic-angular';
 export class DailyReportModalPage {
   character;
 
-  constructor(public viewCtrl: ViewController) {
+  constructor(
+    public params: NavParams,
+    public viewCtrl: ViewController
+  ) {
     var characters = [
       {
         name: 'Gollum',
@@ -49,8 +52,8 @@ export class DailyReportModalPage {
         ]
       }
     ];
-    let rand = Math.floor(Math.random() * 3);
-    this.character = characters[rand];
+    // let rand = Math.floor(Math.random() * 3);
+    this.character = characters[this.params.get('Num')];
   }
 
   dismiss() {
