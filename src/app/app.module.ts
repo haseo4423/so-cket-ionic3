@@ -10,6 +10,7 @@ import { TimeRegistrationPage } from '../pages/time-registration/time-registrati
 import { DailyReportPage } from '../pages/daily-report/daily-report';
 import { DreamSourcePage } from '../pages/dream-source/dream-source';
 import { ConfigurationPage } from '../pages/configuration/configuration';
+import { DailyReportModalPage } from '../pages/daily-report-modal/daily-report-modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
     TimeRegistrationPage,
     DailyReportPage,
     DreamSourcePage,
-    ConfigurationPage
+    ConfigurationPage,
+    DailyReportModalPage,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
     TimeRegistrationPage,
     DailyReportPage,
     DreamSourcePage,
-    ConfigurationPage
+    ConfigurationPage,
+    DailyReportModalPage,
   ],
   providers: [
     StatusBar,
