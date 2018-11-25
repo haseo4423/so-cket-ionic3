@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { DailyReportModalPage } from '../daily-report-modal/daily-report-modal';
 
 /**
  * Generated class for the DailyReportPage page.
@@ -15,11 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DailyReportPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public modalCtrl: ModalController
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DailyReportPage');
+  }
+
+  openModal() {
+    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage);
+    dailyReportModal.present();
   }
 
 }
