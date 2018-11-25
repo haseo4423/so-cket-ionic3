@@ -18,6 +18,7 @@
 
 
 <ion-content padding>
+  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して勤怠登録されます。</p>
   <form padding (submit)="apiExecute()">
     <ion-list>
       <ion-item>
@@ -25,10 +26,10 @@
         <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block>勤怠登録</button>
+    <button ion-button block>登録</button>
   </form>
-  <ion-list>
-    <p>勤怠登録履歴</p>
+  <ion-list padding>
+    <p>履歴</p>
     <ion-item *ngFor="let log of registeredLogArray">
       <p>{{log}}</p>
     </ion-item>
