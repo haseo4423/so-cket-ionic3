@@ -21,17 +21,12 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    TimeRegistrationPage,
-    DailyReportPage,
-    DreamSourcePage,
-    ConfigurationPage,
-    DailyReportModalPage,
+    ListPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +37,7 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
     DailyReportPage,
     DreamSourcePage,
     ConfigurationPage,
-    DailyReportModalPage,
+    DailyReportModalPage
   ],
   providers: [
     StatusBar,
