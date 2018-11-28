@@ -21,7 +21,12 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    TimeRegistrationPage,
+    DailyReportPage,
+    DreamSourcePage,
+    ConfigurationPage,
+    DailyReportModalPage,
   ],
   imports: [
     BrowserModule,
