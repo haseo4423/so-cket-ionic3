@@ -17,6 +17,10 @@
 
 
 <ion-content padding>
+  <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"
+    [showMaxAndMin]="true" [disabledDates]="disabledDates" clear class="ScheduleDate">
+    <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
+  </span>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
   <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>
   <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>

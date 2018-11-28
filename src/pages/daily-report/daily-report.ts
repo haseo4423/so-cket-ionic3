@@ -15,6 +15,13 @@ import { DailyReportModalPage } from '../daily-report-modal/daily-report-modal';
   templateUrl: 'daily-report.html',
 })
 export class DailyReportPage {
+  public localDate: Date = new Date();
+  public initDate: Date = new Date();
+  public initDate2: Date = new Date(2015, 1, 1);
+  public disabledDates: Date[] = [new Date(2017, 7, 14)];
+
+  public maxDate: Date = new Date(new Date().setDate(new Date().getDate() + 30));
+  public min: Date = new Date()
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -28,6 +35,17 @@ export class DailyReportPage {
   openModal(Num) {
     let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, Num);
     dailyReportModal.present();
+  }
+  public Log(stuff): void {
+    console.log(stuff);
+  }
+
+  public event(data: Date): void {
+    this.localDate = data;
+  }
+  public setDate(date: Date) {
+    console.log(date);
+    this.initDate = date;
   }
 
 }
