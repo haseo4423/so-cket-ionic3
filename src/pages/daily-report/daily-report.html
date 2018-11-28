@@ -18,7 +18,7 @@
 
 <ion-content padding>
   <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"
-    [showMaxAndMin]="true" [disabledDates]="disabledDates" clear class="ScheduleDate">
+    [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
     <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
   </span>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
