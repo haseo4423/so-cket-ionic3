@@ -16,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MockProvider } from '../providers/mock/mock';
 import { DreamSourceProvider } from '../providers/dream-source/dream-source';
+import { DatePickerModule } from 'ionic3-datepicker';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DreamSourceProvider } from '../providers/dream-source/dream-source';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    DatePickerModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
