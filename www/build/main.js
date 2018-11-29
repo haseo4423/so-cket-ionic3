@@ -1,1 +1,1232 @@
-webpackJsonp([5],{151:function(l,n){function u(l){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+l+"'.")})}u.keys=function(){return[]},u.resolve=u,l.exports=u,u.id=151},181:function(l,n,u){function a(l){var n=e[l];return n?u.e(n[1]).then(function(){return u(n[0])}):Promise.reject(new Error("Cannot find module '"+l+"'."))}var e={"../pages/configuration/configuration.module.ngfactory":[397,4],"../pages/daily-report-modal/daily-report-modal.module.ngfactory":[398,3],"../pages/daily-report/daily-report.module.ngfactory":[399,2],"../pages/dream-source/dream-source.module.ngfactory":[400,1],"../pages/time-registration/time-registration.module.ngfactory":[401,0]};a.keys=function(){return Object.keys(e)},a.id=181,l.exports=a},338:function(l,n,u){"use strict";function a(l){return e._23(0,[(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(1,0,null,null,20,"ion-header",[],null,null,null,null,null)),e.Y(2,16384,null,0,t.a,[i.a,e.j,e.z,[2,o.a]],null,null),(l()(),e._21(-1,null,["\n  "])),(l()(),e.Z(4,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,r.b,r.a)),e.Y(5,49152,null,0,s.a,[c.a,[2,o.a],[2,_.a],i.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n    "])),(l()(),e.Z(7,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==e._11(l,9).toggle()&&a}return a},d.b,d.a)),e.Y(8,1097728,[[1,4]],0,m.a,[[8,""],i.a,e.j,e.z],null,null),e.Y(9,1064960,null,0,g.a,[f.a,[2,o.a],[2,m.a],[2,s.a]],{menuToggle:[0,"menuToggle"]},null),e.Y(10,16384,null,1,h.a,[i.a,e.j,e.z,[2,p.a],[2,s.a]],null,null),e._19(603979776,1,{_buttons:1}),(l()(),e._21(-1,0,["\n      "])),(l()(),e.Z(13,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(14,147456,null,0,b.a,[i.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n    "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e.Z(17,0,null,3,2,"ion-title",[],null,null,null,j.b,j.a)),e.Y(18,49152,null,0,v.a,[i.a,e.j,e.z,[2,p.a],[2,s.a]],null,null),(l()(),e._21(-1,0,["\n      configuration\n    "])),(l()(),e._21(-1,3,["\n  "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n\n\n"])),(l()(),e.Z(23,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Y.b,Y.a)),e.Y(24,4374528,null,0,y.a,[i.a,Z.a,k.a,e.j,e.z,c.a,z.a,e.u,[2,o.a],[2,_.a]],null,null),(l()(),e._21(-1,1,["\n\n"]))],function(l,n){l(n,9,0,"");l(n,14,0,"menu")},function(l,n){l(n,4,0,e._11(n,5)._hidden,e._11(n,5)._sbPadding);l(n,7,0,e._11(n,9).isHidden);l(n,13,0,e._11(n,14)._hidden);l(n,23,0,e._11(n,24).statusbarPadding,e._11(n,24)._hasRefresher)})}u.d(n,"a",function(){return x});var e=u(0),t=u(32),i=u(2),o=u(6),r=u(56),s=u(24),c=u(7),_=u(15),d=u(27),m=u(13),g=u(44),f=u(20),h=u(36),p=u(28),b=u(26),j=u(45),v=u(30),Y=u(46),y=u(17),Z=u(4),k=u(9),z=u(22),w=u(93),C=u(12),S=e.X({encapsulation:2,styles:[],data:{}}),x=e.V("page-configuration",w.a,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"page-configuration",[],null,null,null,a,S)),e.Y(1,49152,null,0,w.a,[_.a,C.a],null,null)],null,null)},{},{},[])},339:function(l,n,u){"use strict";function a(l){return t._23(0,[(l()(),t.Z(0,0,null,null,10,"ion-item",[["class","item item-block"]],null,null,null,i.b,i.a)),t.Y(1,1097728,null,3,o.a,[r.a,s.a,t.j,t.z,[2,c.a]],null,null),t._19(335544320,5,{contentLabel:0}),t._19(603979776,6,{_buttons:1}),t._19(603979776,7,{_icons:1}),t.Y(5,16384,null,0,_.a,[],null,null),(l()(),t._21(6,2,["\n      ","\n      "])),(l()(),t.Z(7,0,null,4,2,"ion-note",[["item-end",""]],null,null,null,null,null)),t.Y(8,16384,null,0,d.a,[s.a,t.j,t.z],null,null),(l()(),t._21(9,null,["\n        ","\n      "])),(l()(),t._21(-1,2,["\n    "]))],null,function(l,n){l(n,6,0,n.context.$implicit.title);l(n,9,0,n.context.$implicit.note)})}function e(l){return t._23(0,[(l()(),t._21(-1,null,["\n"])),(l()(),t.Z(1,0,null,null,28,"ion-header",[],null,null,null,null,null)),t.Y(2,16384,null,0,m.a,[s.a,t.j,t.z,[2,g.a]],null,null),(l()(),t._21(-1,null,["\n  "])),(l()(),t.Z(4,0,null,null,24,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,f.b,f.a)),t.Y(5,49152,null,0,h.a,[s.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n    "])),(l()(),t.Z(7,0,null,3,2,"ion-title",[],null,null,null,p.b,p.a)),t.Y(8,49152,null,0,b.a,[s.a,t.j,t.z,[2,h.a],[2,j.a]],null,null),(l()(),t._21(-1,0,["\n      Description\n    "])),(l()(),t._21(-1,3,["\n    "])),(l()(),t.Z(11,0,null,1,16,"ion-buttons",[["start",""]],null,null,null,null,null)),t.Y(12,16384,null,1,v.a,[s.a,t.j,t.z,[2,h.a],[2,j.a]],null,null),t._19(603979776,1,{_buttons:1}),(l()(),t._21(-1,null,["\n      "])),(l()(),t.Z(15,0,null,null,11,"button",[["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.dismiss()&&a}return a},Y.b,Y.a)),t.Y(16,1097728,[[1,4]],0,y.a,[[8,""],s.a,t.j,t.z],null,null),(l()(),t._21(-1,0,["\n        "])),(l()(),t.Z(18,0,null,0,3,"span",[["color","primary"],["ion-text",""],["showWhen","ios"]],[[2,"hidden-show-when",null]],null,null,null,null)),t.Y(19,147456,null,0,Z.a,[[8,"ios"],k.a,t.u],null,null),t.Y(20,16384,null,0,z.a,[s.a,t.j,t.z],{color:[0,"color"]},null),(l()(),t._21(-1,null,["Cancel"])),(l()(),t._21(-1,0,["\n        "])),(l()(),t.Z(23,0,null,0,2,"ion-icon",[["name","md-close"],["role","img"],["showWhen","android, windows"]],[[2,"hide",null],[2,"hidden-show-when",null]],null,null,null,null)),t.Y(24,147456,null,0,w.a,[s.a,t.j,t.z],{name:[0,"name"]},null),t.Y(25,147456,null,0,Z.a,[[8,"android, windows"],k.a,t.u],null,null),(l()(),t._21(-1,0,["\n      "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,3,["\n  "])),(l()(),t._21(-1,null,["\n"])),(l()(),t._21(-1,null,["\n\n"])),(l()(),t.Z(31,0,null,null,29,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,C.b,C.a)),t.Y(32,4374528,null,0,S.a,[s.a,k.a,x.a,t.j,t.z,D.a,I.a,t.u,[2,g.a],[2,P.a]],null,null),(l()(),t._21(-1,1,["\n  "])),(l()(),t.Z(34,0,null,1,25,"ion-list",[],null,null,null,null,null)),t.Y(35,16384,null,0,T.a,[s.a,t.j,t.z,k.a,F.l,x.a],null,null),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(37,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,i.b,i.a)),t.Y(38,1097728,null,3,o.a,[r.a,s.a,t.j,t.z,[2,c.a]],null,null),t._19(335544320,2,{contentLabel:0}),t._19(603979776,3,{_buttons:1}),t._19(603979776,4,{_icons:1}),t.Y(42,16384,null,0,_.a,[],null,null),(l()(),t._21(-1,2,["\n      "])),(l()(),t.Z(44,0,null,0,4,"ion-avatar",[["item-start",""]],null,null,null,null,null)),t.Y(45,16384,null,0,M.a,[],null,null),(l()(),t._21(-1,null,["\n        "])),(l()(),t.Z(47,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),t._21(-1,null,["\n      "])),(l()(),t._21(-1,2,["\n      "])),(l()(),t.Z(50,0,null,2,1,"h2",[],null,null,null,null,null)),(l()(),t._21(51,null,["",""])),(l()(),t._21(-1,2,["\n      "])),(l()(),t.Z(53,0,null,2,1,"p",[],null,null,null,null,null)),(l()(),t._21(54,null,["",""])),(l()(),t._21(-1,2,["\n    "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t.U(16777216,null,null,1,null,a)),t.Y(58,802816,null,0,L.i,[t.I,t.F,t.p],{ngForOf:[0,"ngForOf"]},null),(l()(),t._21(-1,null,["\n  "])),(l()(),t._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,20,0,"primary");l(n,24,0,"md-close");l(n,58,0,u.character.items)},function(l,n){var u=n.component;l(n,4,0,t._11(n,5)._sbPadding);l(n,18,0,!t._11(n,19).isMatch);l(n,23,0,t._11(n,24)._hidden,!t._11(n,25).isMatch);l(n,31,0,t._11(n,32).statusbarPadding,t._11(n,32)._hasRefresher);l(n,47,0,t._2(1,"",u.character.image,""));l(n,51,0,u.character.name);l(n,54,0,u.character.quote)})}u.d(n,"a",function(){return V});var t=u(0),i=u(65),o=u(19),r=u(16),s=u(2),c=u(34),_=u(51),d=u(125),m=u(32),g=u(6),f=u(201),h=u(28),p=u(45),b=u(30),j=u(24),v=u(36),Y=u(27),y=u(13),Z=u(130),k=u(4),z=u(135),w=u(26),C=u(46),S=u(17),x=u(9),D=u(7),I=u(22),P=u(15),T=u(35),F=u(8),M=u(110),L=u(11),R=u(94),O=u(12),U=t.X({encapsulation:2,styles:[],data:{}}),V=t.V("page-daily-report-modal",R.a,function(l){return t._23(0,[(l()(),t.Z(0,0,null,null,1,"page-daily-report-modal",[],null,null,null,e,U)),t.Y(1,49152,null,0,R.a,[O.a,g.a],null,null)],null,null)},{},{},[])},340:function(l,n,u){"use strict";function a(l){return e._23(0,[e._14(0,t.d,[e.r]),(l()(),e._21(-1,null,["\n"])),(l()(),e.Z(2,0,null,null,20,"ion-header",[],null,null,null,null,null)),e.Y(3,16384,null,0,i.a,[o.a,e.j,e.z,[2,r.a]],null,null),(l()(),e._21(-1,null,["\n  "])),(l()(),e.Z(5,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,s.b,s.a)),e.Y(6,49152,null,0,c.a,[_.a,[2,r.a],[2,d.a],o.a,e.j,e.z],null,null),(l()(),e._21(-1,3,["\n    "])),(l()(),e.Z(8,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==e._11(l,10).toggle()&&a}return a},m.b,m.a)),e.Y(9,1097728,[[1,4]],0,g.a,[[8,""],o.a,e.j,e.z],null,null),e.Y(10,1064960,null,0,f.a,[h.a,[2,r.a],[2,g.a],[2,c.a]],{menuToggle:[0,"menuToggle"]},null),e.Y(11,16384,null,1,p.a,[o.a,e.j,e.z,[2,b.a],[2,c.a]],null,null),e._19(603979776,1,{_buttons:1}),(l()(),e._21(-1,0,["\n      "])),(l()(),e.Z(14,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(15,147456,null,0,j.a,[o.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,0,["\n    "])),(l()(),e._21(-1,3,["\n    "])),(l()(),e.Z(18,0,null,3,2,"ion-title",[],null,null,null,v.b,v.a)),e.Y(19,49152,null,0,Y.a,[o.a,e.j,e.z,[2,b.a],[2,c.a]],null,null),(l()(),e._21(-1,0,["\n      日報\n    "])),(l()(),e._21(-1,3,["\n  "])),(l()(),e._21(-1,null,["\n"])),(l()(),e._21(-1,null,["\n\n\n"])),(l()(),e.Z(24,0,null,null,28,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,y.b,y.a)),e.Y(25,4374528,null,0,Z.a,[o.a,k.a,z.a,e.j,e.z,_.a,w.a,e.u,[2,r.a],[2,d.a]],null,null),(l()(),e._21(-1,1,["\n  "])),(l()(),e.Z(27,0,null,1,12,"span",[["class","ScheduleDate"],["clear",""],["ion-datepicker",""]],null,[[null,"ionChanged"],[null,"tap"]],function(l,n,u){var a=!0,t=l.component;if("tap"===n){a=!1!==e._11(l,28)._click(u)&&a}if("ionChanged"===n){a=!1!==t.setDate(u)&&a}return a},null,null)),e.Y(28,16384,null,0,C.a,[S.a,x.a],{max:[0,"max"],min:[1,"min"],localeStrings:[2,"localeStrings"],value:[3,"value"],markDates:[4,"markDates"],showMaxAndMin:[5,"showMaxAndMin"]},{changed:"ionChanged"}),e._13(29,7),e._13(30,12),e._15(31,{weekdays:0,months:1}),(l()(),e._21(-1,null,["\n    "])),(l()(),e.Z(33,0,null,null,5,"span",[],null,null,null,null,null)),(l()(),e._21(34,null,[""," "])),e._16(35,1),(l()(),e.Z(36,0,null,null,1,"ion-icon",[["item-left",""],["name","clipboard"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(37,147456,null,0,j.a,[o.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e._21(-1,null,[" "])),(l()(),e._21(-1,null,["\n  "])),(l()(),e._21(-1,1,["\n  "])),(l()(),e.Z(41,0,null,1,2,"button",[["block",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.openModal({Num:0})&&a}return a},m.b,m.a)),e.Y(42,1097728,null,0,g.a,[[8,""],o.a,e.j,e.z],{block:[0,"block"]},null),(l()(),e._21(-1,0,["OpenModal1"])),(l()(),e._21(-1,1,["\n  "])),(l()(),e.Z(45,0,null,1,2,"button",[["block",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.openModal({Num:1})&&a}return a},m.b,m.a)),e.Y(46,1097728,null,0,g.a,[[8,""],o.a,e.j,e.z],{block:[0,"block"]},null),(l()(),e._21(-1,0,["OpenModal2"])),(l()(),e._21(-1,1,["\n  "])),(l()(),e.Z(49,0,null,1,2,"button",[["block",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.openModal({Num:2})&&a}return a},m.b,m.a)),e.Y(50,1097728,null,0,g.a,[[8,""],o.a,e.j,e.z],{block:[0,"block"]},null),(l()(),e._21(-1,0,["OpenModal3"])),(l()(),e._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,10,0,"");l(n,15,0,"menu");l(n,28,0,u.maxDate,u.initDate2,l(n,31,0,l(n,29,0,"日","月","火","水","木","金","土"),l(n,30,1,["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"])),u.initDate,u.disabledDates,!0);l(n,37,0,"clipboard");l(n,42,0,"");l(n,46,0,"");l(n,50,0,"")},function(l,n){var u=n.component;l(n,5,0,e._11(n,6)._hidden,e._11(n,6)._sbPadding);l(n,8,0,e._11(n,10).isHidden);l(n,14,0,e._11(n,15)._hidden);l(n,24,0,e._11(n,25).statusbarPadding,e._11(n,25)._hasRefresher);l(n,34,0,e._22(n,34,0,l(n,35,0,e._11(n,0),u.initDate)));l(n,36,0,e._11(n,37)._hidden)})}u.d(n,"a",function(){return F});var e=u(0),t=u(11),i=u(32),o=u(2),r=u(6),s=u(56),c=u(24),_=u(7),d=u(15),m=u(27),g=u(13),f=u(44),h=u(20),p=u(36),b=u(28),j=u(26),v=u(45),Y=u(30),y=u(46),Z=u(17),k=u(4),z=u(9),w=u(22),C=u(139),S=u(88),x=u(58),D=u(95),I=u(12),P=u(85),T=e.X({encapsulation:2,styles:[],data:{}}),F=e.V("page-daily-report",D.a,function(l){return e._23(0,[(l()(),e.Z(0,0,null,null,1,"page-daily-report",[],null,null,null,a,T)),e.Y(1,49152,null,0,D.a,[d.a,I.a,P.a],null,null)],null,null)},{},{},[])},341:function(l,n,u){"use strict";function a(l){return _._23(0,[(l()(),_.Z(0,0,null,null,10,"div",[["class","tabmenu-items"]],null,null,null,null,null)),(l()(),_._21(-1,null,["\n      "])),(l()(),_.Z(2,0,null,null,7,"div",[["class","tabmenu-bt"]],null,null,null,null,null)),(l()(),_._21(-1,null,["\n        "])),(l()(),_.Z(4,0,null,null,4,"button",[["clear",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.change(l.context.index)&&a}return a},d.b,d.a)),_.Y(5,278528,null,0,m.h,[_.p,_.q,_.j,_.A],{ngClass:[0,"ngClass"]},null),_._15(6,{active:0}),_.Y(7,1097728,null,0,g.a,[[8,""],f.a,_.j,_.z],{clear:[0,"clear"]},null),(l()(),_._21(8,0,["",""])),(l()(),_._21(-1,null,["\n      "])),(l()(),_._21(-1,null,["\n    "]))],function(l,n){l(n,5,0,l(n,6,0,n.context.index==n.component.activeIndex));l(n,7,0,"")},function(l,n){l(n,8,0,n.context.$implicit.name)})}function e(l){return _._23(0,[(l()(),_.Z(0,0,null,null,4,"button",[["class","active"],["clear",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.change(l.parent.context.index)&&a}return a},d.b,d.a)),_.Y(1,1097728,null,0,g.a,[[8,""],f.a,_.j,_.z],{clear:[0,"clear"]},null),(l()(),_._21(2,0,["",""])),(l()(),_.Z(3,0,null,0,0,"br",[],null,null,null,null,null)),(l()(),_._21(4,0,["",""]))],function(l,n){l(n,1,0,"")},function(l,n){l(n,2,0,n.parent.context.$implicit.name);l(n,4,0,n.parent.context.$implicit.heading)})}function t(l){return _._23(0,[(l()(),_.Z(0,0,null,null,4,"div",[],null,null,null,null,null)),(l()(),_._21(-1,null,["\n          "])),(l()(),_.U(16777216,null,null,1,null,e)),_.Y(3,16384,null,0,m.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._21(-1,null,["\n        "]))],function(l,n){l(n,3,0,0!=n.context.index)},null)}function i(l){return _._23(0,[(l()(),_.Z(0,0,null,null,5,"ion-list",[],null,null,null,null,null)),_.Y(1,16384,null,0,h.a,[f.a,_.j,_.z,p.a,b.l,j.a],null,null),(l()(),_._21(-1,null,["\n        "])),(l()(),_.U(16777216,null,null,1,null,t)),_.Y(4,802816,null,0,m.i,[_.I,_.F,_.p],{ngForOf:[0,"ngForOf"]},null),(l()(),_._21(-1,null,["\n      "]))],function(l,n){l(n,4,0,n.component.segments)},null)}function o(l){return _._23(0,[(l()(),_.Z(0,0,null,null,1,"div",[["class","white-space-prewrap"]],null,null,null,null,null)),(l()(),_._21(1,null,["",""]))],null,function(l,n){l(n,1,0,n.context.$implicit)})}function r(l){return _._23(0,[(l()(),_.Z(0,0,null,null,12,"ion-list",[],null,null,null,null,null)),_.Y(1,16384,null,0,h.a,[f.a,_.j,_.z,p.a,b.l,j.a],null,null),(l()(),_._21(-1,null,["\n        "])),(l()(),_.Z(3,0,null,null,1,"div",[["class","font-weight-bold"]],null,null,null,null,null)),(l()(),_._21(4,null,["",""])),(l()(),_._21(-1,null,["\n        "])),(l()(),_.U(16777216,null,null,1,null,o)),_.Y(7,802816,null,0,m.i,[_.I,_.F,_.p],{ngForOf:[0,"ngForOf"]},null),(l()(),_._21(-1,null,["\n        "])),(l()(),_.Z(9,0,null,null,2,"button",[["class","active"],["clear",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.change(0)&&a}return a},d.b,d.a)),_.Y(10,1097728,null,0,g.a,[[8,""],f.a,_.j,_.z],{clear:[0,"clear"]},null),(l()(),_._21(-1,0,["目次に戻る"])),(l()(),_._21(-1,null,["\n      "]))],function(l,n){l(n,7,0,n.parent.context.$implicit.items);l(n,10,0,"")},function(l,n){l(n,4,0,n.parent.context.$implicit.heading)})}function s(l){return _._23(0,[(l()(),_.Z(0,0,null,null,8,"ion-slide",[],null,null,null,v.b,v.a)),_.Y(1,180224,null,0,Y.a,[_.j,_.z,y.a],null,null),(l()(),_._21(-1,0,["\n      "])),(l()(),_.U(16777216,null,0,1,null,i)),_.Y(4,16384,null,0,m.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._21(-1,0,["\n      "])),(l()(),_.U(16777216,null,0,1,null,r)),_.Y(7,16384,null,0,m.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._21(-1,0,["\n    "]))],function(l,n){l(n,4,0,0==n.context.index);l(n,7,0,0!=n.context.index)},null)}function c(l){return _._23(0,[_._19(402653184,1,{slides:0}),_._19(402653184,2,{tabmenu:0}),(l()(),_._21(-1,null,["\n"])),(l()(),_.Z(3,0,null,null,20,"ion-header",[],null,null,null,null,null)),_.Y(4,16384,null,0,Z.a,[f.a,_.j,_.z,[2,k.a]],null,null),(l()(),_._21(-1,null,["\n  "])),(l()(),_.Z(6,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,z.b,z.a)),_.Y(7,49152,null,0,w.a,[C.a,[2,k.a],[2,S.a],f.a,_.j,_.z],null,null),(l()(),_._21(-1,3,["\n    "])),(l()(),_.Z(9,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==_._11(l,11).toggle()&&a}return a},d.b,d.a)),_.Y(10,1097728,[[3,4]],0,g.a,[[8,""],f.a,_.j,_.z],null,null),_.Y(11,1064960,null,0,x.a,[D.a,[2,k.a],[2,g.a],[2,w.a]],{menuToggle:[0,"menuToggle"]},null),_.Y(12,16384,null,1,I.a,[f.a,_.j,_.z,[2,P.a],[2,w.a]],null,null),_._19(603979776,3,{_buttons:1}),(l()(),_._21(-1,0,["\n      "])),(l()(),_.Z(15,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),_.Y(16,147456,null,0,T.a,[f.a,_.j,_.z],{name:[0,"name"]},null),(l()(),_._21(-1,0,["\n    "])),(l()(),_._21(-1,3,["\n    "])),(l()(),_.Z(19,0,null,3,2,"ion-title",[],null,null,null,F.b,F.a)),_.Y(20,49152,null,0,M.a,[f.a,_.j,_.z,[2,P.a],[2,w.a]],null,null),(l()(),_._21(-1,0,["\n      D2S\n    "])),(l()(),_._21(-1,3,["\n  "])),(l()(),_._21(-1,null,["\n"])),(l()(),_._21(-1,null,["\n\n\n"])),(l()(),_.Z(25,0,null,null,19,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),_.Y(26,4374528,null,0,R.a,[f.a,p.a,j.a,_.j,_.z,C.a,O.a,_.u,[2,k.a],[2,S.a]],null,null),(l()(),_._21(-1,1,["\n  "])),(l()(),_._21(-1,1,["\n  "])),(l()(),_.Z(29,0,[[2,0],["tabmenu",1]],0,4,"div",[["class","tabmenu"],["ion-fixed",""]],null,null,null,null,null)),(l()(),_._21(-1,null,["\n    "])),(l()(),_.U(16777216,null,null,1,null,a)),_.Y(32,802816,null,0,m.i,[_.I,_.F,_.p],{ngForOf:[0,"ngForOf"]},null),(l()(),_._21(-1,null,["\n  "])),(l()(),_._21(-1,1,["\n  "])),(l()(),_._21(-1,1,["\n  "])),(l()(),_._21(-1,1,["\n  "])),(l()(),_.Z(37,0,null,1,5,"ion-slides",[["class","tabmenu-slides"]],null,[[null,"ionSlideWillChange"]],function(l,n,u){var a=!0;if("ionSlideWillChange"===n){a=!1!==l.component.onSlideChangeStart()&&a}return a},U.b,U.a)),_.Y(38,1228800,[[1,4],["Slides",4]],0,y.a,[f.a,p.a,_.u,[2,k.a],_.j,_.z],null,{ionSlideWillChange:"ionSlideWillChange"}),(l()(),_._21(-1,0,["\n    "])),(l()(),_.U(16777216,null,0,1,null,s)),_.Y(41,802816,null,0,m.i,[_.I,_.F,_.p],{ngForOf:[0,"ngForOf"]},null),(l()(),_._21(-1,0,["\n  "])),(l()(),_._21(-1,1,["\n  "])),(l()(),_._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,11,0,"");l(n,16,0,"menu");l(n,32,0,u.segments);l(n,41,0,u.segments)},function(l,n){l(n,6,0,_._11(n,7)._hidden,_._11(n,7)._sbPadding);l(n,9,0,_._11(n,11).isHidden);l(n,15,0,_._11(n,16)._hidden);l(n,25,0,_._11(n,26).statusbarPadding,_._11(n,26)._hasRefresher)})}u.d(n,"a",function(){return A});var _=u(0),d=u(27),m=u(11),g=u(13),f=u(2),h=u(35),p=u(4),b=u(8),j=u(9),v=u(383),Y=u(87),y=u(57),Z=u(32),k=u(6),z=u(56),w=u(24),C=u(7),S=u(15),x=u(44),D=u(20),I=u(36),P=u(28),T=u(26),F=u(45),M=u(30),L=u(46),R=u(17),O=u(22),U=u(384),V=u(90),H=u(96),N=u(12),E=_.X({encapsulation:2,styles:[],data:{}}),A=_.V("page-dream-source",H.a,function(l){return _._23(0,[(l()(),_.Z(0,0,null,null,2,"page-dream-source",[],null,null,null,c,E)),_._17(512,null,V.a,V.a,[]),_.Y(2,49152,null,0,H.a,[S.a,N.a,V.a],null,null)],null,null)},{},{},[])},342:function(l,n,u){"use strict";function a(l){return t._23(0,[(l()(),t.Z(0,0,null,null,9,"ion-item",[["class","item item-block"]],null,null,null,i.b,i.a)),t.Y(1,1097728,null,3,o.a,[r.a,s.a,t.j,t.z,[2,c.a]],null,null),t._19(335544320,5,{contentLabel:0}),t._19(603979776,6,{_buttons:1}),t._19(603979776,7,{_icons:1}),t.Y(5,16384,null,0,_.a,[],null,null),(l()(),t._21(-1,2,["\n      "])),(l()(),t.Z(7,0,null,2,1,"p",[],null,null,null,null,null)),(l()(),t._21(8,null,["",""])),(l()(),t._21(-1,2,["\n    "]))],null,function(l,n){l(n,8,0,n.context.$implicit)})}function e(l){return t._23(0,[(l()(),t._21(-1,null,["\n"])),(l()(),t.Z(1,0,null,null,20,"ion-header",[],null,null,null,null,null)),t.Y(2,16384,null,0,d.a,[s.a,t.j,t.z,[2,m.a]],null,null),(l()(),t._21(-1,null,["\n  "])),(l()(),t.Z(4,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,g.b,g.a)),t.Y(5,49152,null,0,f.a,[h.a,[2,m.a],[2,p.a],s.a,t.j,t.z],null,null),(l()(),t._21(-1,3,["\n    "])),(l()(),t.Z(7,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==t._11(l,9).toggle()&&a}return a},b.b,b.a)),t.Y(8,1097728,[[1,4]],0,j.a,[[8,""],s.a,t.j,t.z],null,null),t.Y(9,1064960,null,0,v.a,[Y.a,[2,m.a],[2,j.a],[2,f.a]],{menuToggle:[0,"menuToggle"]},null),t.Y(10,16384,null,1,y.a,[s.a,t.j,t.z,[2,Z.a],[2,f.a]],null,null),t._19(603979776,1,{_buttons:1}),(l()(),t._21(-1,0,["\n      "])),(l()(),t.Z(13,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(14,147456,null,0,k.a,[s.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._21(-1,0,["\n    "])),(l()(),t._21(-1,3,["\n    "])),(l()(),t.Z(17,0,null,3,2,"ion-title",[],null,null,null,z.b,z.a)),t.Y(18,49152,null,0,w.a,[s.a,t.j,t.z,[2,Z.a],[2,f.a]],null,null),(l()(),t._21(-1,0,["\n      勤怠\n    "])),(l()(),t._21(-1,3,["\n  "])),(l()(),t._21(-1,null,["\n\n"])),(l()(),t._21(-1,null,["\n\n\n"])),(l()(),t.Z(23,0,null,null,48,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,C.b,C.a)),t.Y(24,4374528,null,0,S.a,[s.a,x.a,D.a,t.j,t.z,h.a,I.a,t.u,[2,m.a],[2,p.a]],null,null),(l()(),t._21(-1,1,["\n  "])),(l()(),t.Z(26,0,null,1,1,"p",[["padding",""]],null,null,null,null,null)),(l()(),t._21(-1,null,["※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して勤怠登録されます。"])),(l()(),t._21(-1,1,["\n  "])),(l()(),t.Z(29,0,null,1,31,"form",[["novalidate",""],["padding",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"submit"],[null,"reset"]],function(l,n,u){var a=!0,e=l.component;if("submit"===n){a=!1!==t._11(l,31).onSubmit(u)&&a}if("reset"===n){a=!1!==t._11(l,31).onReset()&&a}if("submit"===n){a=!1!==e.apiExecute()&&a}return a},null,null)),t.Y(30,16384,null,0,P.t,[],null,null),t.Y(31,4210688,null,0,P.m,[[8,null],[8,null]],null,null),t._17(2048,null,P.b,null,[P.m]),t.Y(33,16384,null,0,P.l,[P.b],null,null),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(35,0,null,null,20,"ion-list",[],null,null,null,null,null)),t.Y(36,16384,null,0,T.a,[s.a,t.j,t.z,x.a,F.l,D.a],null,null),(l()(),t._21(-1,null,["\n      "])),(l()(),t.Z(38,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,i.b,i.a)),t.Y(39,1097728,null,3,o.a,[r.a,s.a,t.j,t.z,[2,c.a]],null,null),t._19(335544320,2,{contentLabel:0}),t._19(603979776,3,{_buttons:1}),t._19(603979776,4,{_icons:1}),t.Y(43,16384,null,0,_.a,[],null,null),(l()(),t._21(-1,2,["\n        "])),(l()(),t.Z(45,0,null,1,2,"ion-label",[["floating",""]],null,null,null,null,null)),t.Y(46,16384,[[2,4]],0,M.a,[s.a,t.j,t.z,[8,""],[8,null],[8,null],[8,null]],null,null),(l()(),t._21(-1,null,["URL"])),(l()(),t._21(-1,2,["\n        "])),(l()(),t.Z(49,0,null,3,4,"ion-input",[["name","url"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var a=!0;if("ngModelChange"===n){a=!1!==(l.component.url=u)&&a}return a},L.b,L.a)),t.Y(50,671744,null,0,P.n,[[2,P.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),t._17(2048,null,P.j,null,[P.n]),t.Y(52,16384,null,0,P.k,[P.j],null,null),t.Y(53,5423104,null,0,R.a,[s.a,x.a,r.a,h.a,t.j,t.z,[2,S.a],[2,o.a],[2,P.j],D.a],{type:[0,"type"]},null),(l()(),t._21(-1,2,["\n      "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(57,0,null,null,2,"button",[["block",""],["ion-button",""]],null,null,null,b.b,b.a)),t.Y(58,1097728,null,0,j.a,[[8,""],s.a,t.j,t.z],{block:[0,"block"]},null),(l()(),t._21(-1,0,["登録"])),(l()(),t._21(-1,null,["\n  "])),(l()(),t._21(-1,1,["\n  "])),(l()(),t.Z(62,0,null,1,8,"ion-list",[["padding",""]],null,null,null,null,null)),t.Y(63,16384,null,0,T.a,[s.a,t.j,t.z,x.a,F.l,D.a],null,null),(l()(),t._21(-1,null,["\n    "])),(l()(),t.Z(65,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),t._21(-1,null,["履歴"])),(l()(),t._21(-1,null,["\n    "])),(l()(),t.U(16777216,null,null,1,null,a)),t.Y(69,802816,null,0,O.i,[t.I,t.F,t.p],{ngForOf:[0,"ngForOf"]},null),(l()(),t._21(-1,null,["\n  "])),(l()(),t._21(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,9,0,"");l(n,14,0,"menu");l(n,50,0,"url",u.url);l(n,53,0,"text");l(n,58,0,"");l(n,69,0,u.registeredLogArray)},function(l,n){l(n,4,0,t._11(n,5)._hidden,t._11(n,5)._sbPadding);l(n,7,0,t._11(n,9).isHidden);l(n,13,0,t._11(n,14)._hidden);l(n,23,0,t._11(n,24).statusbarPadding,t._11(n,24)._hasRefresher);l(n,29,0,t._11(n,33).ngClassUntouched,t._11(n,33).ngClassTouched,t._11(n,33).ngClassPristine,t._11(n,33).ngClassDirty,t._11(n,33).ngClassValid,t._11(n,33).ngClassInvalid,t._11(n,33).ngClassPending);l(n,49,0,t._11(n,52).ngClassUntouched,t._11(n,52).ngClassTouched,t._11(n,52).ngClassPristine,t._11(n,52).ngClassDirty,t._11(n,52).ngClassValid,t._11(n,52).ngClassInvalid,t._11(n,52).ngClassPending)})}u.d(n,"a",function(){return E});var t=u(0),i=u(65),o=u(19),r=u(16),s=u(2),c=u(34),_=u(51),d=u(32),m=u(6),g=u(56),f=u(24),h=u(7),p=u(15),b=u(27),j=u(13),v=u(44),Y=u(20),y=u(36),Z=u(28),k=u(26),z=u(45),w=u(30),C=u(46),S=u(17),x=u(4),D=u(9),I=u(22),P=u(18),T=u(35),F=u(8),M=u(55),L=u(387),R=u(76),O=u(11),U=u(97),V=u(12),H=u(68),N=t.X({encapsulation:2,styles:[],data:{}}),E=t.V("page-time-registration",U.a,function(l){return t._23(0,[(l()(),t.Z(0,0,null,null,1,"page-time-registration",[],null,null,null,e,N)),t.Y(1,49152,null,0,U.a,[p.a,V.a,H.c],null,null)],null,null)},{},{},[])},343:function(l,n,u){"use strict";function a(l){return c._23(0,[(l()(),c.Z(0,0,null,null,7,"button",[["class","item item-block"],["ion-item",""],["menuClose",""]],null,[[null,"click"]],function(l,n,u){var a=!0,e=l.component;if("click"===n){a=!1!==c._11(l,6).close()&&a}if("click"===n){a=!1!==e.openPage(l.context.$implicit)&&a}return a},M.b,M.a)),c.Y(1,1097728,null,3,L.a,[R.a,O.a,c.j,c.z,[2,U.a]],null,null),c._19(335544320,4,{contentLabel:0}),c._19(603979776,5,{_buttons:1}),c._19(603979776,6,{_icons:1}),c.Y(5,16384,null,0,V.a,[],null,null),c.Y(6,16384,null,0,H.a,[N.a],{menuClose:[0,"menuClose"]},null),(l()(),c._21(7,2,["\n        ","\n      "]))],function(l,n){l(n,6,0,"")},function(l,n){l(n,7,0,n.context.$implicit.title)})}function e(l){return c._23(0,[c._19(402653184,1,{nav:0}),(l()(),c.Z(1,0,null,null,28,"ion-menu",[["role","navigation"]],null,null,null,E.b,E.a)),c._17(6144,null,A.a,null,[$.a]),c.Y(3,245760,null,2,$.a,[N.a,c.j,O.a,W.a,c.z,X.a,q.l,B.a,G.a],{content:[0,"content"]},null),c._19(335544320,2,{menuContent:0}),c._19(335544320,3,{menuNav:0}),(l()(),c._21(-1,0,["\n  "])),(l()(),c.Z(7,0,null,0,10,"ion-header",[],null,null,null,null,null)),c.Y(8,16384,null,0,J.a,[O.a,c.j,c.z,[2,K.a]],null,null),(l()(),c._21(-1,null,["\n    "])),(l()(),c.Z(10,0,null,null,6,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,Q.b,Q.a)),c.Y(11,49152,null,0,ll.a,[O.a,c.j,c.z],null,null),(l()(),c._21(-1,3,["\n      "])),(l()(),c.Z(13,0,null,3,2,"ion-title",[],null,null,null,nl.b,nl.a)),c.Y(14,49152,null,0,ul.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),(l()(),c._21(-1,0,["Menu"])),(l()(),c._21(-1,3,["\n    "])),(l()(),c._21(-1,null,["\n  "])),(l()(),c._21(-1,0,["\n\n  "])),(l()(),c.Z(19,0,null,0,9,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,el.b,el.a)),c.Y(20,4374528,[[2,4]],0,tl.a,[O.a,W.a,B.a,c.j,c.z,G.a,X.a,c.u,[2,K.a],[2,il.a]],null,null),(l()(),c._21(-1,1,["\n    "])),(l()(),c.Z(22,0,null,1,5,"ion-list",[],null,null,null,null,null)),c.Y(23,16384,null,0,ol.a,[O.a,c.j,c.z,W.a,q.l,B.a],null,null),(l()(),c._21(-1,null,["\n      "])),(l()(),c.U(16777216,null,null,1,null,a)),c.Y(26,802816,null,0,rl.i,[c.I,c.F,c.p],{ngForOf:[0,"ngForOf"]},null),(l()(),c._21(-1,null,["\n    "])),(l()(),c._21(-1,1,["\n  "])),(l()(),c._21(-1,0,["\n\n"])),(l()(),c._21(-1,null,["\n\n"])),(l()(),c._21(-1,null,["\n"])),(l()(),c.Z(32,0,null,null,2,"ion-nav",[["swipeBackEnabled","false"]],null,null,null,sl.b,sl.a)),c._17(6144,null,A.a,null,[cl.a]),c.Y(34,4374528,[[1,4],["content",4]],0,cl.a,[[2,K.a],[2,il.a],G.a,O.a,W.a,c.j,c.u,c.z,c.i,q.l,_l.a,[2,dl.a],B.a,c.k],{swipeBackEnabled:[0,"swipeBackEnabled"],root:[1,"root"]},null)],function(l,n){var u=n.component;l(n,3,0,c._11(n,34));l(n,26,0,u.pages);l(n,34,0,"false",u.rootPage)},function(l,n){l(n,10,0,c._11(n,11)._sbPadding);l(n,19,0,c._11(n,20).statusbarPadding,c._11(n,20)._hasRefresher)})}function t(l){return c._23(0,[(l()(),c.Z(0,0,null,null,20,"ion-header",[],null,null,null,null,null)),c.Y(1,16384,null,0,J.a,[O.a,c.j,c.z,[2,K.a]],null,null),(l()(),c._21(-1,null,["\n  "])),(l()(),c.Z(3,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,fl.b,fl.a)),c.Y(4,49152,null,0,al.a,[G.a,[2,K.a],[2,il.a],O.a,c.j,c.z],null,null),(l()(),c._21(-1,3,["\n    "])),(l()(),c.Z(6,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==c._11(l,8).toggle()&&a}return a},hl.b,hl.a)),c.Y(7,1097728,[[1,4]],0,pl.a,[[8,""],O.a,c.j,c.z],null,null),c.Y(8,1064960,null,0,bl.a,[N.a,[2,K.a],[2,pl.a],[2,al.a]],{menuToggle:[0,"menuToggle"]},null),c.Y(9,16384,null,1,jl.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),c._19(603979776,1,{_buttons:1}),(l()(),c._21(-1,0,["\n      "])),(l()(),c.Z(12,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c.Y(13,147456,null,0,vl.a,[O.a,c.j,c.z],{name:[0,"name"]},null),(l()(),c._21(-1,0,["\n    "])),(l()(),c._21(-1,3,["\n    "])),(l()(),c.Z(16,0,null,3,2,"ion-title",[],null,null,null,nl.b,nl.a)),c.Y(17,49152,null,0,ul.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),(l()(),c._21(-1,0,["Home"])),(l()(),c._21(-1,3,["\n  "])),(l()(),c._21(-1,null,["\n"])),(l()(),c._21(-1,null,["\n\n"])),(l()(),c.Z(22,0,null,null,26,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,el.b,el.a)),c.Y(23,4374528,null,0,tl.a,[O.a,W.a,B.a,c.j,c.z,G.a,X.a,c.u,[2,K.a],[2,il.a]],null,null),(l()(),c._21(-1,1,["\n  "])),(l()(),c.Z(25,0,null,2,6,"ion-refresher",[],[[2,"refresher-active",null],[4,"top",null]],[[null,"ionRefresh"]],function(l,n,u){var a=!0;if("ionRefresh"===n){a=!1!==l.component.doRefresh(u)&&a}return a},null,null)),c.Y(26,212992,null,0,Yl.a,[W.a,tl.a,c.u,q.l],null,{ionRefresh:"ionRefresh"}),(l()(),c._21(-1,null,["\n    "])),(l()(),c.Z(28,0,null,null,2,"ion-refresher-content",[["pullingText","ひっぱって更新"],["refreshingText","更新中..."]],[[1,"state",0]],null,null,yl.b,yl.a)),c.Y(29,114688,null,0,Zl.a,[Yl.a,O.a],{pullingText:[0,"pullingText"],refreshingText:[1,"refreshingText"]},null),(l()(),c._21(-1,null,["\n    "])),(l()(),c._21(-1,null,["\n  "])),(l()(),c._21(-1,1,["\n  "])),(l()(),c.Z(33,0,null,1,1,"h3",[],null,null,null,null,null)),(l()(),c._21(-1,null,["Ionic Menu Starter"])),(l()(),c._21(-1,1,["\n\n  "])),(l()(),c.Z(36,0,null,1,4,"p",[],null,null,null,null,null)),(l()(),c._21(-1,null,["\n    If you get lost, the "])),(l()(),c.Z(38,0,null,null,1,"a",[["href","http://ionicframework.com/docs/v2"]],null,null,null,null,null)),(l()(),c._21(-1,null,["docs"])),(l()(),c._21(-1,null,[" will show you the way.\n  "])),(l()(),c._21(-1,1,["\n\n  "])),(l()(),c.Z(42,0,null,1,5,"button",[["ion-button",""],["menuToggle",""],["secondary",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==c._11(l,44).toggle()&&a}return a},hl.b,hl.a)),c.Y(43,1097728,[[2,4]],0,pl.a,[[8,""],O.a,c.j,c.z],null,null),c.Y(44,1064960,null,0,bl.a,[N.a,[2,K.a],[2,pl.a],[2,al.a]],{menuToggle:[0,"menuToggle"]},null),c.Y(45,16384,null,1,jl.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),c._19(603979776,2,{_buttons:1}),(l()(),c._21(-1,0,["Toggle Menu"])),(l()(),c._21(-1,1,["\n"]))],function(l,n){l(n,8,0,"");l(n,13,0,"menu"),l(n,26,0);l(n,29,0,"ひっぱって更新","更新中...");l(n,44,0,"")},function(l,n){l(n,3,0,c._11(n,4)._hidden,c._11(n,4)._sbPadding);l(n,6,0,c._11(n,8).isHidden);l(n,12,0,c._11(n,13)._hidden);l(n,22,0,c._11(n,23).statusbarPadding,c._11(n,23)._hasRefresher);l(n,25,0,"inactive"!==c._11(n,26).state,c._11(n,26)._top);l(n,28,0,c._11(n,29).r.state);l(n,42,0,c._11(n,44).isHidden)})}function i(l){return c._23(0,[(l()(),c.Z(0,0,null,null,12,"button",[["class","item item-block"],["ion-item",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.itemTapped(u,l.context.$implicit)&&a}return a},M.b,M.a)),c.Y(1,1097728,null,3,L.a,[R.a,O.a,c.j,c.z,[2,U.a]],null,null),c._19(335544320,2,{contentLabel:0}),c._19(603979776,3,{_buttons:1}),c._19(603979776,4,{_icons:1}),c.Y(5,16384,null,0,V.a,[],null,null),(l()(),c._21(-1,2,["\n      "])),(l()(),c.Z(7,0,null,0,1,"ion-icon",[["item-start",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),c.Y(8,147456,[[4,4]],0,vl.a,[O.a,c.j,c.z],{name:[0,"name"]},null),(l()(),c._21(9,2,["\n      ","\n      "])),(l()(),c.Z(10,0,null,4,1,"div",[["class","item-note"],["item-end",""]],null,null,null,null,null)),(l()(),c._21(11,null,["\n        ","\n      "])),(l()(),c._21(-1,2,["\n    "]))],function(l,n){l(n,8,0,n.context.$implicit.icon)},function(l,n){l(n,7,0,c._11(n,8)._hidden);l(n,9,0,n.context.$implicit.title);l(n,11,0,n.context.$implicit.note)})}function o(l){return c._23(0,[(l()(),c.Z(0,0,null,null,4,"div",[["padding",""]],null,null,null,null,null)),(l()(),c._21(-1,null,["\n    You navigated here from "])),(l()(),c.Z(2,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),c._21(3,null,["",""])),(l()(),c._21(-1,null,["\n  "]))],null,function(l,n){l(n,3,0,n.component.selectedItem.title)})}function r(l){return c._23(0,[(l()(),c.Z(0,0,null,null,20,"ion-header",[],null,null,null,null,null)),c.Y(1,16384,null,0,J.a,[O.a,c.j,c.z,[2,K.a]],null,null),(l()(),c._21(-1,null,["\n  "])),(l()(),c.Z(3,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,fl.b,fl.a)),c.Y(4,49152,null,0,al.a,[G.a,[2,K.a],[2,il.a],O.a,c.j,c.z],null,null),(l()(),c._21(-1,3,["\n    "])),(l()(),c.Z(6,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==c._11(l,8).toggle()&&a}return a},hl.b,hl.a)),c.Y(7,1097728,[[1,4]],0,pl.a,[[8,""],O.a,c.j,c.z],null,null),c.Y(8,1064960,null,0,bl.a,[N.a,[2,K.a],[2,pl.a],[2,al.a]],{menuToggle:[0,"menuToggle"]},null),c.Y(9,16384,null,1,jl.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),c._19(603979776,1,{_buttons:1}),(l()(),c._21(-1,0,["\n      "])),(l()(),c.Z(12,0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c.Y(13,147456,null,0,vl.a,[O.a,c.j,c.z],{name:[0,"name"]},null),(l()(),c._21(-1,0,["\n    "])),(l()(),c._21(-1,3,["\n    "])),(l()(),c.Z(16,0,null,3,2,"ion-title",[],null,null,null,nl.b,nl.a)),c.Y(17,49152,null,0,ul.a,[O.a,c.j,c.z,[2,ll.a],[2,al.a]],null,null),(l()(),c._21(-1,0,["List"])),(l()(),c._21(-1,3,["\n  "])),(l()(),c._21(-1,null,["\n"])),(l()(),c._21(-1,null,["\n\n"])),(l()(),c.Z(22,0,null,null,12,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,el.b,el.a)),c.Y(23,4374528,null,0,tl.a,[O.a,W.a,B.a,c.j,c.z,G.a,X.a,c.u,[2,K.a],[2,il.a]],null,null),(l()(),c._21(-1,1,["\n  "])),(l()(),c.Z(25,0,null,1,5,"ion-list",[],null,null,null,null,null)),c.Y(26,16384,null,0,ol.a,[O.a,c.j,c.z,W.a,q.l,B.a],null,null),(l()(),c._21(-1,null,["\n    "])),(l()(),c.U(16777216,null,null,1,null,i)),c.Y(29,802816,null,0,rl.i,[c.I,c.F,c.p],{ngForOf:[0,"ngForOf"]},null),(l()(),c._21(-1,null,["\n  "])),(l()(),c._21(-1,1,["\n  "])),(l()(),c.U(16777216,null,1,1,null,o)),c.Y(33,16384,null,0,rl.j,[c.I,c.F],{ngIf:[0,"ngIf"]},null),(l()(),c._21(-1,1,["\n"])),(l()(),c._21(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,8,0,"");l(n,13,0,"menu");l(n,29,0,u.items);l(n,33,0,u.selectedItem)},function(l,n){l(n,3,0,c._11(n,4)._hidden,c._11(n,4)._sbPadding);l(n,6,0,c._11(n,8).isHidden);l(n,12,0,c._11(n,13)._hidden);l(n,22,0,c._11(n,23).statusbarPadding,c._11(n,23)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var s=u(47),c=u(0),_=(u(5),u(68)),d=(u(29),u(91)),m=u(92),g=function(){function l(l){this.navCtrl=l}return l.prototype.doRefresh=function(l){setTimeout(function(){l.complete()},500)},l}(),f=function(){function l(l,n){this.navCtrl=l,this.navParams=n,this.selectedItem=n.get("item"),this.icons=["flask","wifi","beer","football","basketball","paper-plane","american-football","boat","bluetooth","build"],this.items=[];for(var u=1;u<11;u++)this.items.push({title:"Item "+u,note:"This is item #"+u,icon:this.icons[Math.floor(Math.random()*this.icons.length)]})}return n=l,l.prototype.itemTapped=function(l,u){this.navCtrl.push(n,{item:u})},l;var n}(),h=u(97),p=u(95),b=u(96),j=u(93),v=function(){function l(l,n,u){this.platform=l,this.statusBar=n,this.splashScreen=u,this.rootPage=g,this.initializeApp(),this.pages=[{title:"Home",component:g},{title:"List",component:f},{title:"勤怠",component:h.a},{title:"日報",component:p.a},{title:"D2S",component:b.a},{title:"設定",component:j.a}]}return l.prototype.initializeApp=function(){var l=this;this.platform.ready().then(function(){l.statusBar.styleDefault(),l.splashScreen.hide()})},l.prototype.openPage=function(l){this.nav.setRoot(l.component)},l}(),Y=(u(94),function(){function l(){}return l.prototype.getSegmentItems=function(){for(var l=[],n=0;n<10;n++){var u=this.getItem("menu"+n,15);l.push(u)}return l},l.prototype.getItem=function(l,n){for(var u={name:l,items:[]},a=0;a<n;a++)u.items.push("item"+a);return u},l}()),y=u(90),Z=(u(392),function(){return function(){}}()),k=u(60),z=u(329),w=u(330),C=u(331),S=u(332),x=u(333),D=u(334),I=u(335),P=u(336),T=u(337),F=u(393),M=u(65),L=u(19),R=u(16),O=u(2),U=u(34),V=u(51),H=u(116),N=u(20),E=u(394),A=u(43),$=u(79),W=u(4),X=u(22),q=u(8),B=u(9),G=u(7),J=u(32),K=u(6),Q=u(201),ll=u(28),nl=u(45),ul=u(30),al=u(24),el=u(46),tl=u(17),il=u(15),ol=u(35),rl=u(11),sl=u(395),cl=u(63),_l=u(40),dl=u(23),ml=c.X({encapsulation:2,styles:[],data:{}}),gl=c.V("ng-component",v,function(l){return c._23(0,[(l()(),c.Z(0,0,null,null,1,"ng-component",[],null,null,null,e,ml)),c.Y(1,49152,null,0,v,[W.a,d.a,m.a],null,null)],null,null)},{},{},[]),fl=u(56),hl=u(27),pl=u(13),bl=u(44),jl=u(36),vl=u(26),Yl=u(67),yl=u(396),Zl=u(86),kl=c.X({encapsulation:2,styles:[],data:{}}),zl=c.V("page-home",g,function(l){return c._23(0,[(l()(),c.Z(0,0,null,null,1,"page-home",[],null,null,null,t,kl)),c.Y(1,49152,null,0,g,[il.a],null,null)],null,null)},{},{},[]),wl=u(12),Cl=c.X({encapsulation:2,styles:[],data:{}}),Sl=c.V("page-list",f,function(l){return c._23(0,[(l()(),c.Z(0,0,null,null,1,"page-list",[],null,null,null,r,Cl)),c.Y(1,49152,null,0,f,[il.a,wl.a],null,null)],null,null)},{},{},[]),xl=u(342),Dl=u(340),Il=u(341),Pl=u(338),Tl=u(339),Fl=u(119),Ml=u(18),Ll=u(88),Rl=u(58),Ol=u(107),Ul=u(109),Vl=u(118),Hl=u(42),Nl=u(115),El=u(140),Al=u(61),$l=u(52),Wl=u(85),Xl=u(73),ql=u(127),Bl=u(121),Gl=u(134),Jl=u(326),Kl=u(120),Ql=u(117),ln=u(122),nn=u(328),un=c.W(Z,[k.b],function(l){return c._7([c._8(512,c.i,c.S,[[8,[z.a,w.a,C.a,S.a,x.a,D.a,I.a,P.a,T.a,F.a,gl,zl,Sl,xl.a,Dl.a,Il.a,Pl.a,Tl.a]],[3,c.i],c.s]),c._8(5120,c.r,c._18,[[3,c.r]]),c._8(4608,rl.l,rl.k,[c.r,[2,rl.t]]),c._8(5120,c.b,c._1,[]),c._8(5120,c.p,c._9,[]),c._8(5120,c.q,c._12,[]),c._8(4608,s.c,s.q,[rl.c]),c._8(6144,c.D,null,[s.c]),c._8(4608,s.f,Fl.a,[]),c._8(5120,s.d,function(l,n,u,a,e){return[new s.k(l,n),new s.o(u),new s.n(a,e)]},[rl.c,c.u,rl.c,rl.c,s.f]),c._8(4608,s.e,s.e,[s.d,c.u]),c._8(135680,s.m,s.m,[rl.c]),c._8(4608,s.l,s.l,[s.e,s.m]),c._8(6144,c.B,null,[s.l]),c._8(6144,s.p,null,[s.m]),c._8(4608,c.G,c.G,[c.u]),c._8(4608,s.h,s.h,[rl.c]),c._8(4608,s.i,s.i,[rl.c]),c._8(4608,_.h,_.n,[rl.c,c.w,_.l]),c._8(4608,_.o,_.o,[_.h,_.m]),c._8(5120,_.a,function(l){return[l]},[_.o]),c._8(4608,_.k,_.k,[]),c._8(6144,_.i,null,[_.k]),c._8(4608,_.g,_.g,[_.i]),c._8(6144,_.b,null,[_.g]),c._8(4608,_.f,_.j,[_.b,c.o]),c._8(4608,_.c,_.c,[_.f]),c._8(4608,Ml.u,Ml.u,[]),c._8(4608,Ml.d,Ml.d,[]),c._8(4608,Ll.a,Ll.a,[G.a,O.a]),c._8(4608,Rl.a,Rl.a,[]),c._8(4608,Ol.a,Ol.a,[G.a,O.a]),c._8(4608,Ul.a,Ul.a,[G.a,O.a]),c._8(4608,Vl.a,Vl.a,[]),c._8(4608,R.a,R.a,[]),c._8(4608,Hl.a,Hl.a,[W.a]),c._8(4608,X.a,X.a,[O.a,W.a,c.u,B.a]),c._8(4608,Nl.a,Nl.a,[G.a,O.a]),c._8(5120,rl.g,El.c,[rl.r,[2,rl.a],O.a]),c._8(4608,rl.f,rl.f,[rl.g]),c._8(5120,Al.b,Al.d,[G.a,Al.a]),c._8(5120,dl.a,dl.b,[G.a,Al.b,rl.f,$l.b,c.i]),c._8(4608,Wl.a,Wl.a,[G.a,O.a,dl.a]),c._8(4608,Xl.a,Xl.a,[G.a,O.a]),c._8(4608,ql.a,ql.a,[G.a,O.a,dl.a]),c._8(4608,Bl.a,Bl.a,[O.a,W.a,B.a,G.a,q.l]),c._8(4608,Gl.a,Gl.a,[G.a,O.a]),c._8(4608,_l.a,_l.a,[W.a,O.a]),c._8(4608,d.a,d.a,[]),c._8(4608,m.a,m.a,[]),c._8(4608,Y,Y,[]),c._8(4608,y.a,y.a,[]),c._8(512,rl.b,rl.b,[]),c._8(512,c.k,Jl.a,[]),c._8(256,O.b,{},[]),c._8(1024,Kl.a,Kl.b,[]),c._8(1024,W.a,W.b,[s.b,Kl.a,c.u]),c._8(1024,O.a,O.c,[O.b,W.a]),c._8(512,B.a,B.a,[W.a]),c._8(512,N.a,N.a,[]),c._8(512,G.a,G.a,[O.a,W.a,[2,N.a]]),c._8(512,q.l,q.l,[G.a]),c._8(256,Al.a,{links:[{loadChildren:"../pages/configuration/configuration.module.ngfactory#ConfigurationPageModuleNgFactory",name:"ConfigurationPage",segment:"configuration",priority:"low",defaultHistory:[]},{loadChildren:"../pages/daily-report-modal/daily-report-modal.module.ngfactory#DailyReportModalPageModuleNgFactory",name:"DailyReportModalPage",segment:"daily-report-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/daily-report/daily-report.module.ngfactory#DailyReportPageModuleNgFactory",name:"DailyReportPage",segment:"daily-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/dream-source/dream-source.module.ngfactory#DreamSourcePageModuleNgFactory",name:"dream-source",segment:"dream-source",priority:"low",defaultHistory:[]},{loadChildren:"../pages/time-registration/time-registration.module.ngfactory#TimeRegistrationPageModuleNgFactory",name:"TimeRegistrationPage",segment:"time-registration",priority:"low",defaultHistory:[]}]},[]),c._8(512,c.h,c.h,[]),c._8(512,Ql.a,Ql.a,[c.h]),c._8(1024,$l.b,$l.c,[Ql.a,c.o]),c._8(1024,c.c,function(l,n,u,a,e,t,i,o,r,c,_,d,m){return[s.s(l),ln.a(n),Vl.b(u,a),Bl.b(e,t,i,o,r),$l.d(c,_,d,m)]},[[2,c.t],O.a,W.a,B.a,O.a,W.a,B.a,G.a,q.l,O.a,Al.a,$l.b,c.u]),c._8(512,c.d,c.d,[[2,c.c]]),c._8(131584,c.f,c.f,[c.u,c.T,c.o,c.k,c.i,c.d]),c._8(512,c.e,c.e,[c.f]),c._8(512,s.a,s.a,[[3,s.a]]),c._8(512,_.e,_.e,[]),c._8(512,_.d,_.d,[]),c._8(512,Ml.s,Ml.s,[]),c._8(512,Ml.g,Ml.g,[]),c._8(512,Ml.p,Ml.p,[]),c._8(512,El.a,El.a,[]),c._8(512,nn.a,nn.a,[]),c._8(512,Z,Z,[]),c._8(256,_.l,"XSRF-TOKEN",[]),c._8(256,_.m,"X-XSRF-TOKEN",[]),c._8(256,k.a,v,[]),c._8(256,rl.a,"/",[])])});Object(c.M)(),Object(s.j)().bootstrapModuleFactory(un)},386:function(l,n,u){function a(l){return u(e(l))}function e(l){var n=t[l];if(!(n+1))throw new Error("Cannot find module '"+l+"'.");return n}var t={"./af":203,"./af.js":203,"./ar":204,"./ar-dz":205,"./ar-dz.js":205,"./ar-kw":206,"./ar-kw.js":206,"./ar-ly":207,"./ar-ly.js":207,"./ar-ma":208,"./ar-ma.js":208,"./ar-sa":209,"./ar-sa.js":209,"./ar-tn":210,"./ar-tn.js":210,"./ar.js":204,"./az":211,"./az.js":211,"./be":212,"./be.js":212,"./bg":213,"./bg.js":213,"./bm":214,"./bm.js":214,"./bn":215,"./bn.js":215,"./bo":216,"./bo.js":216,"./br":217,"./br.js":217,"./bs":218,"./bs.js":218,"./ca":219,"./ca.js":219,"./cs":220,"./cs.js":220,"./cv":221,"./cv.js":221,"./cy":222,"./cy.js":222,"./da":223,"./da.js":223,"./de":224,"./de-at":225,"./de-at.js":225,"./de-ch":226,"./de-ch.js":226,"./de.js":224,"./dv":227,"./dv.js":227,"./el":228,"./el.js":228,"./en-au":229,"./en-au.js":229,"./en-ca":230,"./en-ca.js":230,"./en-gb":231,"./en-gb.js":231,"./en-ie":232,"./en-ie.js":232,"./en-il":233,"./en-il.js":233,"./en-nz":234,"./en-nz.js":234,"./eo":235,"./eo.js":235,"./es":236,"./es-do":237,"./es-do.js":237,"./es-us":238,"./es-us.js":238,"./es.js":236,"./et":239,"./et.js":239,"./eu":240,"./eu.js":240,"./fa":241,"./fa.js":241,"./fi":242,"./fi.js":242,"./fo":243,"./fo.js":243,"./fr":244,"./fr-ca":245,"./fr-ca.js":245,"./fr-ch":246,"./fr-ch.js":246,"./fr.js":244,"./fy":247,"./fy.js":247,"./gd":248,"./gd.js":248,"./gl":249,"./gl.js":249,"./gom-latn":250,"./gom-latn.js":250,"./gu":251,"./gu.js":251,"./he":252,"./he.js":252,"./hi":253,"./hi.js":253,"./hr":254,"./hr.js":254,"./hu":255,"./hu.js":255,"./hy-am":256,"./hy-am.js":256,"./id":257,"./id.js":257,"./is":258,"./is.js":258,"./it":259,"./it.js":259,"./ja":260,"./ja.js":260,"./jv":261,"./jv.js":261,"./ka":262,"./ka.js":262,"./kk":263,"./kk.js":263,"./km":264,"./km.js":264,"./kn":265,"./kn.js":265,"./ko":266,"./ko.js":266,"./ky":267,"./ky.js":267,"./lb":268,"./lb.js":268,"./lo":269,"./lo.js":269,"./lt":270,"./lt.js":270,"./lv":271,"./lv.js":271,"./me":272,"./me.js":272,"./mi":273,"./mi.js":273,"./mk":274,"./mk.js":274,"./ml":275,"./ml.js":275,"./mn":276,"./mn.js":276,"./mr":277,"./mr.js":277,"./ms":278,"./ms-my":279,"./ms-my.js":279,"./ms.js":278,"./mt":280,"./mt.js":280,"./my":281,"./my.js":281,"./nb":282,"./nb.js":282,"./ne":283,"./ne.js":283,"./nl":284,"./nl-be":285,"./nl-be.js":285,"./nl.js":284,"./nn":286,"./nn.js":286,"./pa-in":287,"./pa-in.js":287,"./pl":288,"./pl.js":288,"./pt":289,"./pt-br":290,"./pt-br.js":290,"./pt.js":289,"./ro":291,"./ro.js":291,"./ru":292,"./ru.js":292,"./sd":293,"./sd.js":293,"./se":294,"./se.js":294,"./si":295,"./si.js":295,"./sk":296,"./sk.js":296,"./sl":297,"./sl.js":297,"./sq":298,"./sq.js":298,"./sr":299,"./sr-cyrl":300,"./sr-cyrl.js":300,"./sr.js":299,"./ss":301,"./ss.js":301,"./sv":302,"./sv.js":302,"./sw":303,"./sw.js":303,"./ta":304,"./ta.js":304,"./te":305,"./te.js":305,"./tet":306,"./tet.js":306,"./tg":307,"./tg.js":307,"./th":308,"./th.js":308,"./tl-ph":309,"./tl-ph.js":309,"./tlh":310,"./tlh.js":310,"./tr":311,"./tr.js":311,"./tzl":312,"./tzl.js":312,"./tzm":313,"./tzm-latn":314,"./tzm-latn.js":314,"./tzm.js":313,"./ug-cn":315,"./ug-cn.js":315,"./uk":316,"./uk.js":316,"./ur":317,"./ur.js":317,"./uz":318,"./uz-latn":319,"./uz-latn.js":319,"./uz.js":318,"./vi":320,"./vi.js":320,"./x-pseudo":321,"./x-pseudo.js":321,"./yo":322,"./yo.js":322,"./zh-cn":323,"./zh-cn.js":323,"./zh-hk":324,"./zh-hk.js":324,"./zh-tw":325,"./zh-tw.js":325};a.keys=function(){return Object.keys(t)},a.resolve=e,l.exports=a,a.id=386},90:function(l,n,u){"use strict";u.d(n,"a",function(){return a});var a=function(){function l(){}return l.prototype.getSegmentItems=function(){return[{name:"目次",heading:[],items:[]},{name:"序文",heading:[],items:["「ありがとう」という言葉は比較的耳にするとしても、「出逢えて良かった」という言葉は相手の人生に対して相当な感動やインパクトを与えないと出てこない言葉です。\n          \n社員同士はお互いを自分の家族のように感じ、個性や役割を尊重し合い、苦楽を共にする関係を築いて、「三恵クリエスのメンバーで良かった」と言える関係を創りたい。\n          \n私たちは神業の技術と、とびっきりの真心を込めたサービスを提供することで、お客様の本質的な課題を解決し、発展に大きく寄与して、「三恵クリエスさんに出逢えて良かった」と言われる会社になりたい。\n          \n私たちが関わる全ての人と「出逢えて良かった」と言いあえるような関係を築いていくことが、私たちの夢であり、目指す理想のモデル企業です。"]},{name:"Life Winner",heading:[],items:["大志を抱き人生をかけて　継続的に努力し、決断した道を前進する人である。\n          \n常に学び常に直面する障害を乗り越える方法を考え、実践する人である。\n          \nまず自立し失敗しても他人のせいにせず、最後まで責任を取る人である。\n          \n決断した道を進む過程を通じて、自分そして周囲の人に対しても感動と幸福を与える人である。"]},{name:"Vision",heading:[],items:["「あなたに出逢えて良かった」と言われるNo.1の企業グループになります。"]},{name:"Mission",heading:[],items:["First Step\n          \n三恵クリエスは、社員の人格成長と専門スキル向上のために、必要な教育やチャンスを提供します。\n          \nSecond Step\n          \n三恵クリエスは、お客様の発展と幸福のために、ハートフルなITサービスを提供します。\n          \nThird Step\n          \n三恵クリエスは、「ありがとう」があふれる未来のために、「家族文化*」を発信し続けます。\n          \n*お互いを自分の家族のように感じ、個性や役割を尊重し合い、苦楽を共にする関係"]},{name:"基本原則１",heading:["Dream Sourceは会社の心である"],items:["\nDream Sourceは三恵クリエスの心であり魂であり、大切にしている価値観です。全員がこれを自分のものとして受け入れ理解し、主体的に実践します。全てのメンバーはDream Sourceを常に身につけ、迷いが生じた時には振り返ります。"]},{name:"基本原則２",heading:["動機を大切にする"],items:["\n担当するプロジェクトや仕事の目的と意義を動機として、自らのエンジンを加速させ、期待される以上の成果を生み出していきます。"]},{name:"基本原則３",heading:["代表者意識"],items:["\n全てのメンバーは会社の代表です。私達一人一人の言動によって、周囲の人はどのような会社か判断します。私達は本社勤務あるいは客先常駐であったとしても、プライベートの時間であったとしても、常に代表者意識を持ってDream Sourceに恥じない言動に努めます。"]},{name:"基本原則４",heading:["率先して責任を持つ"],items:["\n私達は業務の目的を達成するために、率先して責任を持ち、主体的に提案・実行できる内容がないかを考え取り組みます。"]},{name:"基本原則５",heading:["目標を明確にする"],items:["\n私達はチームの目標を共有し、お客様と目指す方向性や期待値の認識合わせをした上で、今やるべき事を明確にし、ゴールに向け前進していきます。"]},{name:"基本原則６",heading:["情熱と真剣さを持って最後までやり抜く"],items:["\n私達は仕事に情熱と真剣さをもって取り組み、徹底して努力し続けます。どんな困難にぶつかっても例外を作らず、「私は必ず達成できる！」という確信と誇りを持って、最後までやり抜きます。"]},{name:"基本原則７",heading:["可能性を信じ、自己の限界に挑戦する"],items:["\n挑戦することは時に勇気が必要ですが、困難を乗り越え達成した時こそ、人間として最高の喜びに出会うことができます。私達は、自らそして会社の可能性を信じて、日々自己の限界に挑戦します。"]},{name:"基本原則８",heading:["常に自らのスキルを磨く"],items:["\n私達は社員同士、出逢ったお客様に対し、常に最高のサービスを提供し続けていくために、自分の生涯をかけてスキルを磨いていきます。"]},{name:"基本原則９",heading:["心を開く"],items:["\n私達は社員同士、お客様に対して、心を開いて接し、素直に相手の考えや気持ちを理解することを大切にします。そうすることで、私達自身も相手に理解してもらうことができます。"]},{name:"基本原則１０",heading:["メンバーを尊重しお互いの強みを共有する"],items:["\n私達はチームメンバーを信じ、尊重し、協調性を持って仕事に取り組みます。そして一人一人がプロとして持っている「強み」「ノウハウ」「技術」「情熱」等を共有し、チーム全体の成果向上に取り組みます。"]},{name:"基本原則１１",heading:["周囲に活力を与える"],items:["\n私達は日々一緒に仕事をする仲間にストローク(*)を与えて、周囲を活性化していきます。私達は惜しみなくお客様の発展と幸福、そして一緒に仕事をするメンバーの喜びと成長のために全力を尽くします。\n*ストローク：心理学用語。相手の存在を認める全ての動作や働きかけ。具体的には人との「関わり」「フィードバック（行動に対する評価）」「刺激」のことを言います。挨拶、握手、視線を合わせるなどもその一種です。"]},{name:"基本原則１２",heading:["良き助言を与えあう"],items:["\n相手の成長と会社全体のために率直に意見を言い合います。言いにくいことでも、チームが、そして会社全体が最高の力を発揮するにはどうするべきかと考えて意見します。ただし、陰で批判したり、改善案の伴わない批判等々は絶対に認めません。"]},{name:"基本原則１３",heading:["クレームに対し誠心誠意取り組む"],items:["\nクレームは更にサービスを提供できるチャンスと捉え、積極的に対応します。対応する社員は会社の代表として、目の前のクレームに誠心誠意取り組みます。"]},{name:"基本原則１４",heading:["凡事を徹底する"],items:["\n信頼を勝ち取るためには、当たり前の事を当たり前にやるという凡事徹底が大切です。たとえば、「約束を守る」「時間を守る」「報連相」など、知っているだけではなく、やれている状態にする事が大切です。"]},{name:"基本原則１５",heading:["身の回りの整理整頓を心がける"],items:["\nオフィス環境の汚れや乱雑さは心の反映です。環境を整理し清潔にした分、心の荒みもなくなりきれいになります。私達は自らの心を清め、周囲のメンバーが気持ちよく働いてもらうために、身の回りの整理整頓を心がけます。"]},{name:"基本原則１６",heading:["心と体の健康管理"],items:["\n私達はプロフェッショナルとして、心と体の健康に細心の注意を払います。心と体のバランスが取れて、初めて私達は持てる力を出し切ることができます。私の体は単に自分のものではなく、公のものとして日頃の体調管理に努めます。"]},{name:"基本原則１７",heading:["会社の資産を大切に使う"],items:["\n私達は自分が直接管理している机や備品はもちろんのこと、会社の資産を責任持って管理します。私達は資産の本来の価値を引き出せるように大切に使います。"]},{name:"基本原則１８",heading:["人生の成功者を目指す"],items:["\n私達は職業人としての成功者ではなく、人生の成功者を目指します。良い生活習慣は仕事に活かされ、仕事で得たことは生活に活かされます。私達は生活も仕事もどちらも等しく大切にし、人生の成功者を目指します。"]},{name:"基本原則１９",heading:["良心に従って行動する"],items:["\n私達はコンプライアンスを徹底します。そして、仮に法律や規則に明示されていなかったとしても、Dream Sourceを共有した家族として、自分の良心に従って行動します。"]}]},l.prototype.getItem=function(l,n){for(var u={name:l,items:[]},a=0;a<n;a++)u.items.push("item"+a);return u},l}()},93:function(l,n,u){"use strict";u.d(n,"a",function(){return a});u(5),u(29);var a=function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ConfigurationPage")},l}()},94:function(l,n,u){"use strict";u.d(n,"a",function(){return a});u(5),u(29);var a=function(){function l(l,n){this.params=l,this.viewCtrl=n;this.character=[{name:"Gollum",quote:"Sneaky little hobbitses!",image:"assets/img/avatar-gollum.jpg",items:[{title:"Race",note:"Hobbit"},{title:"Culture",note:"River Folk"},{title:"Alter Ego",note:"Smeagol"}]},{name:"Frodo",quote:"Go back, Sam! I'm going to Mordor alone!",image:"assets/img/avatar-frodo.jpg",items:[{title:"Race",note:"Hobbit"},{title:"Culture",note:"Shire Folk"},{title:"Weapon",note:"Sting"}]},{name:"Samwise Gamgee",quote:"What we need is a few good taters.",image:"assets/img/avatar-samwise.jpg",items:[{title:"Race",note:"Hobbit"},{title:"Culture",note:"Shire Folk"},{title:"Nickname",note:"Sam"}]}][this.params.get("Num")]}return l.prototype.dismiss=function(){this.viewCtrl.dismiss()},l}()},95:function(l,n,u){"use strict";u.d(n,"a",function(){return e});u(5),u(29);var a=u(94),e=function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this.modalCtrl=u,this.localDate=new Date,this.initDate=new Date,this.initDate2=new Date(2015,1,1),this.disabledDates=[new Date(2018,11,14)],this.maxDate=new Date((new Date).setDate((new Date).getDate()+30)),this.min=new Date}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad DailyReportPage")},l.prototype.openModal=function(l){this.modalCtrl.create(a.a,l).present()},l.prototype.Log=function(l){console.log(l)},l.prototype.event=function(l){this.localDate=l},l.prototype.setDate=function(l){console.log(l),this.initDate=l},l}()},96:function(l,n,u){"use strict";u.d(n,"a",function(){return t});u(5),u(29);var a=u(14),e=(u.n(a),u(374)),t=(u.n(e),function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this.dreamSource=u,this.segments=[],this.activeIndex=0}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad DreamSourcePage"),this.segments=this.dreamSource.getSegmentItems()},l.prototype.change=function(l){this.activeIndex=l,this.slides.slideTo(this.activeIndex,500)},l.prototype.onSlideChangeStart=function(){var l=this,n=this.slides.getActiveIndex();if(!(this.tabmenu.nativeElement.children.length<=n)){this.activeIndex=n;var u=this.tabmenu.nativeElement.scrollLeft,e=this.tabmenu.nativeElement.children[n].offsetLeft,t=1;u>e&&(t*=-1);var i=Math.abs(e-u)/20,o=0,r=a.Observable.interval(1).subscribe(function(n){l.tabmenu.nativeElement.scrollLeft=u+(o+=i*t),u+o>=e&&1==t&&r.unsubscribe(),u+o<=e&&-1==t&&r.unsubscribe()})}},l.prototype.doRefresh=function(l){setTimeout(function(){l.complete()},500)},l}())},97:function(l,n,u){"use strict";u.d(n,"a",function(){return e});u(5),u(29);var a=u(1),e=(u.n(a),function(){function l(l,n,u){this.navCtrl=l,this.navParams=n,this.http=u,this.weekString=["日","月","火","水","木","金","土"],this.registeredLogArray=[]}return l.prototype.ionViewDidLoad=function(){},l.prototype.ionViewWillEnter=function(){localStorage.getItem("registeredUrl")&&(this.url=JSON.parse(localStorage.getItem("registeredUrl"))),localStorage.getItem("registeredLog")&&(this.registeredLogArray=JSON.parse(localStorage.getItem("registeredLog")))},l.prototype.apiExecute=function(){localStorage.setItem("registeredUrl",JSON.stringify(this.url));var l=a(),n=l.format("d"),u=l.format("Y年M月D日("+this.weekString[n]+")H時m分");if(this.registeredLogArray.push(u),this.registeredLogArray.length>6){this.registeredLogArray.splice(0,this.registeredLogArray.length-6)}localStorage.setItem("registeredLog",JSON.stringify(this.registeredLogArray)),window.open(this.url,"_system")},l}())}},[343]);
+webpackJsonp([5],{
+
+/***/ 103:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigurationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ConfigurationPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ConfigurationPage = /** @class */ (function () {
+    function ConfigurationPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ConfigurationPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ConfigurationPage');
+    };
+    ConfigurationPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-configuration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/'<!--\n  Generated template for the ConfigurationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      configuration\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+    ], ConfigurationPage);
+    return ConfigurationPage;
+}());
+
+//# sourceMappingURL=configuration.js.map
+
+/***/ }),
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the DailyReportModalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DailyReportModalPage = /** @class */ (function () {
+    function DailyReportModalPage(params, viewCtrl) {
+        this.params = params;
+        this.viewCtrl = viewCtrl;
+        var characters = [
+            {
+                name: 'Gollum',
+                quote: 'Sneaky little hobbitses!',
+                image: 'assets/img/avatar-gollum.jpg',
+                items: [
+                    { title: 'Race', note: 'Hobbit' },
+                    { title: 'Culture', note: 'River Folk' },
+                    { title: 'Alter Ego', note: 'Smeagol' }
+                ]
+            },
+            {
+                name: 'Frodo',
+                quote: 'Go back, Sam! I\'m going to Mordor alone!',
+                image: 'assets/img/avatar-frodo.jpg',
+                items: [
+                    { title: 'Race', note: 'Hobbit' },
+                    { title: 'Culture', note: 'Shire Folk' },
+                    { title: 'Weapon', note: 'Sting' }
+                ]
+            },
+            {
+                name: 'Samwise Gamgee',
+                quote: 'What we need is a few good taters.',
+                image: 'assets/img/avatar-samwise.jpg',
+                items: [
+                    { title: 'Race', note: 'Hobbit' },
+                    { title: 'Culture', note: 'Shire Folk' },
+                    { title: 'Nickname', note: 'Sam' }
+                ]
+            }
+        ];
+        // let rand = Math.floor(Math.random() * 3);
+        console.log(this.params.get('value'));
+        this.character = characters[1];
+    }
+    DailyReportModalPage.prototype.dismiss = function () {
+        this.viewCtrl.dismiss();
+    };
+    DailyReportModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Description\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]) === "function" && _b || Object])
+    ], DailyReportModalPage);
+    return DailyReportModalPage;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=daily-report-modal.js.map
+
+/***/ }),
+
+/***/ 105:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DreamSourcePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the DreamSourcePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DreamSourcePage = /** @class */ (function () {
+    function DreamSourcePage(navCtrl, navParams, dreamSource) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.dreamSource = dreamSource;
+        this.segments = [];
+        this.activeIndex = 0;
+    }
+    DreamSourcePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DreamSourcePage');
+        this.segments = this.dreamSource.getSegmentItems();
+    };
+    DreamSourcePage.prototype.change = function (idx) {
+        this.activeIndex = idx;
+        this.slides.slideTo(this.activeIndex, 500);
+    };
+    DreamSourcePage.prototype.onSlideChangeStart = function () {
+        var _this = this;
+        var index = this.slides.getActiveIndex();
+        // しきい値チェック。タブメニューをはみ出してたらリターン
+        if (this.tabmenu.nativeElement.children.length <= index) {
+            return;
+        }
+        this.activeIndex = index;
+        // タブメニューの移動
+        var start = this.tabmenu.nativeElement.scrollLeft;
+        var end = this.tabmenu.nativeElement.children[index].offsetLeft;
+        var dir = 1;
+        // 進行方向を決定(1：進む、-1：戻る)
+        if (start > end) {
+            dir = dir * -1;
+        }
+        // 移動量を決める。
+        var speed = Math.abs(end - start) / 20;
+        var cnt = 0;
+        // endの位置に来るまでループ
+        var obs = __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].interval(1).subscribe(function (x) {
+            cnt = cnt + (speed * dir);
+            _this.tabmenu.nativeElement.scrollLeft = start + cnt;
+            // 進む場合
+            if ((start + cnt) >= end && dir == 1) {
+                obs.unsubscribe();
+            }
+            // 戻る場合
+            if ((start + cnt) <= end && dir == -1) {
+                obs.unsubscribe();
+            }
+        });
+    };
+    DreamSourcePage.prototype.doRefresh = function (refresher) {
+        // this.currentPage = 1;
+        setTimeout(function () {
+            // this.qiitaServiceProvider.getQiitaItems(this.currentPage, this.queryOption)
+            //   .subscribe(items => {
+            //     this.qiitaItems = items;
+            //     console.log(items);
+            //   },
+            //     err => console.log(err),
+            //     () => { });
+            refresher.complete();
+        }, 500);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */])
+    ], DreamSourcePage.prototype, "slides", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('tabmenu'),
+        __metadata("design:type", Object)
+    ], DreamSourcePage.prototype, "tabmenu", void 0);
+    DreamSourcePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-dream-source',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]])
+    ], DreamSourcePage);
+    return DreamSourcePage;
+}());
+
+//# sourceMappingURL=dream-source.js.map
+
+/***/ }),
+
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__ = __webpack_require__(104);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the DailyReportPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ *
+ * See https://github.com/pauloedsr/ionic3-datepicker.
+ */
+var DailyReportPage = /** @class */ (function () {
+    function DailyReportPage(navCtrl, navParams, modalCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.localDate = new Date();
+        this.initDate = new Date();
+        this.initDate2 = new Date(2015, 1, 1);
+        this.disabledDates = [new Date(2018, 11, 14)];
+        this.maxDate = new Date(new Date().setDate(new Date().getDate() + 30));
+        this.min = new Date();
+        this.name = "";
+    }
+    DailyReportPage.prototype.ionViewDidLoad = function () {
+        // console.log('ionViewDidLoad DailyReportPage');
+    };
+    DailyReportPage.prototype.openModal = function (Num) {
+        var modalObject = { title: '氏名', value: this.name };
+        console.log(modalObject);
+        var dailyReportModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */], modalObject);
+        dailyReportModal.present();
+    };
+    DailyReportPage.prototype.Log = function (stuff) {
+        console.log(stuff);
+    };
+    DailyReportPage.prototype.event = function (data) {
+        this.localDate = data;
+    };
+    DailyReportPage.prototype.setDate = function (date) {
+        console.log(date);
+        this.initDate = date;
+    };
+    DailyReportPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"\n      [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n      <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>\n    </span>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>\n  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>\n  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _c || Object])
+    ], DailyReportPage);
+    return DailyReportPage;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=daily-report.js.map
+
+/***/ }),
+
+/***/ 107:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimeRegistrationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the TimeRegistrationPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TimeRegistrationPage = /** @class */ (function () {
+    function TimeRegistrationPage(navCtrl, navParams, http) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.http = http;
+        this.weekString = ['日', '月', '火', '水', '木', '金', '土'];
+        this.registeredLogArray = [];
+    }
+    TimeRegistrationPage.prototype.ionViewDidLoad = function () { };
+    TimeRegistrationPage.prototype.ionViewWillEnter = function () {
+        if (localStorage.getItem('registeredUrl')) {
+            this.url = JSON.parse(localStorage.getItem('registeredUrl'));
+        }
+        if (localStorage.getItem('registeredLog')) {
+            this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
+        }
+    };
+    TimeRegistrationPage.prototype.apiExecute = function () {
+        localStorage.setItem('registeredUrl', JSON.stringify(this.url));
+        var nowMoment = __WEBPACK_IMPORTED_MODULE_3_moment__();
+        var weekNumber = nowMoment.format("d");
+        var now = nowMoment.format("Y年M月D日(" + this.weekString[weekNumber] + ")H時m分");
+        this.registeredLogArray.push(now);
+        if (this.registeredLogArray.length > 6) {
+            var deleteItemCount = this.registeredLogArray.length - 6;
+            this.registeredLogArray.splice(0, deleteItemCount);
+        }
+        localStorage.setItem('registeredLog', JSON.stringify(this.registeredLogArray));
+        window.open(this.url, "_system");
+    };
+    TimeRegistrationPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して勤怠登録されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], TimeRegistrationPage);
+    return TimeRegistrationPage;
+}());
+
+//# sourceMappingURL=time-registration.js.map
+
+/***/ }),
+
+/***/ 118:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 118;
+
+/***/ }),
+
+/***/ 161:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/configuration/configuration.module": [
+		424,
+		4
+	],
+	"../pages/daily-report-modal/daily-report-modal.module": [
+		425,
+		3
+	],
+	"../pages/daily-report/daily-report.module": [
+		427,
+		2
+	],
+	"../pages/dream-source/dream-source.module": [
+		426,
+		1
+	],
+	"../pages/time-registration/time-registration.module": [
+		428,
+		0
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 161;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 162:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DreamSourceProvider; });
+/*
+  Generated class for the DreamSourceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var DreamSourceProvider = /** @class */ (function () {
+    function DreamSourceProvider() {
+    }
+    /*
+      戻り値：[{"name":"string", "items":[string[]]}]
+    */
+    DreamSourceProvider.prototype.getSegmentItems = function () {
+        var segments = [
+            {
+                "name": "目次",
+                "heading": [],
+                "items": []
+            },
+            {
+                "name": "序文",
+                "heading": [],
+                "items": ["\u300C\u3042\u308A\u304C\u3068\u3046\u300D\u3068\u3044\u3046\u8A00\u8449\u306F\u6BD4\u8F03\u7684\u8033\u306B\u3059\u308B\u3068\u3057\u3066\u3082\u3001\u300C\u51FA\u9022\u3048\u3066\u826F\u304B\u3063\u305F\u300D\u3068\u3044\u3046\u8A00\u8449\u306F\u76F8\u624B\u306E\u4EBA\u751F\u306B\u5BFE\u3057\u3066\u76F8\u5F53\u306A\u611F\u52D5\u3084\u30A4\u30F3\u30D1\u30AF\u30C8\u3092\u4E0E\u3048\u306A\u3044\u3068\u51FA\u3066\u3053\u306A\u3044\u8A00\u8449\u3067\u3059\u3002\n          \n\u793E\u54E1\u540C\u58EB\u306F\u304A\u4E92\u3044\u3092\u81EA\u5206\u306E\u5BB6\u65CF\u306E\u3088\u3046\u306B\u611F\u3058\u3001\u500B\u6027\u3084\u5F79\u5272\u3092\u5C0A\u91CD\u3057\u5408\u3044\u3001\u82E6\u697D\u3092\u5171\u306B\u3059\u308B\u95A2\u4FC2\u3092\u7BC9\u3044\u3066\u3001\u300C\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u306E\u30E1\u30F3\u30D0\u30FC\u3067\u826F\u304B\u3063\u305F\u300D\u3068\u8A00\u3048\u308B\u95A2\u4FC2\u3092\u5275\u308A\u305F\u3044\u3002\n          \n\u79C1\u305F\u3061\u306F\u795E\u696D\u306E\u6280\u8853\u3068\u3001\u3068\u3073\u3063\u304D\u308A\u306E\u771F\u5FC3\u3092\u8FBC\u3081\u305F\u30B5\u30FC\u30D3\u30B9\u3092\u63D0\u4F9B\u3059\u308B\u3053\u3068\u3067\u3001\u304A\u5BA2\u69D8\u306E\u672C\u8CEA\u7684\u306A\u8AB2\u984C\u3092\u89E3\u6C7A\u3057\u3001\u767A\u5C55\u306B\u5927\u304D\u304F\u5BC4\u4E0E\u3057\u3066\u3001\u300C\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u3055\u3093\u306B\u51FA\u9022\u3048\u3066\u826F\u304B\u3063\u305F\u300D\u3068\u8A00\u308F\u308C\u308B\u4F1A\u793E\u306B\u306A\u308A\u305F\u3044\u3002\n          \n\u79C1\u305F\u3061\u304C\u95A2\u308F\u308B\u5168\u3066\u306E\u4EBA\u3068\u300C\u51FA\u9022\u3048\u3066\u826F\u304B\u3063\u305F\u300D\u3068\u8A00\u3044\u3042\u3048\u308B\u3088\u3046\u306A\u95A2\u4FC2\u3092\u7BC9\u3044\u3066\u3044\u304F\u3053\u3068\u304C\u3001\u79C1\u305F\u3061\u306E\u5922\u3067\u3042\u308A\u3001\u76EE\u6307\u3059\u7406\u60F3\u306E\u30E2\u30C7\u30EB\u4F01\u696D\u3067\u3059\u3002"]
+            },
+            {
+                "name": "Life Winner",
+                "heading": [],
+                "items": ["\u5927\u5FD7\u3092\u62B1\u304D\u4EBA\u751F\u3092\u304B\u3051\u3066\u3000\u7D99\u7D9A\u7684\u306B\u52AA\u529B\u3057\u3001\u6C7A\u65AD\u3057\u305F\u9053\u3092\u524D\u9032\u3059\u308B\u4EBA\u3067\u3042\u308B\u3002\n          \n\u5E38\u306B\u5B66\u3073\u5E38\u306B\u76F4\u9762\u3059\u308B\u969C\u5BB3\u3092\u4E57\u308A\u8D8A\u3048\u308B\u65B9\u6CD5\u3092\u8003\u3048\u3001\u5B9F\u8DF5\u3059\u308B\u4EBA\u3067\u3042\u308B\u3002\n          \n\u307E\u305A\u81EA\u7ACB\u3057\u5931\u6557\u3057\u3066\u3082\u4ED6\u4EBA\u306E\u305B\u3044\u306B\u305B\u305A\u3001\u6700\u5F8C\u307E\u3067\u8CAC\u4EFB\u3092\u53D6\u308B\u4EBA\u3067\u3042\u308B\u3002\n          \n\u6C7A\u65AD\u3057\u305F\u9053\u3092\u9032\u3080\u904E\u7A0B\u3092\u901A\u3058\u3066\u3001\u81EA\u5206\u305D\u3057\u3066\u5468\u56F2\u306E\u4EBA\u306B\u5BFE\u3057\u3066\u3082\u611F\u52D5\u3068\u5E78\u798F\u3092\u4E0E\u3048\u308B\u4EBA\u3067\u3042\u308B\u3002"]
+            },
+            {
+                "name": "Vision",
+                "heading": [],
+                "items": ["\u300C\u3042\u306A\u305F\u306B\u51FA\u9022\u3048\u3066\u826F\u304B\u3063\u305F\u300D\u3068\u8A00\u308F\u308C\u308BNo.1\u306E\u4F01\u696D\u30B0\u30EB\u30FC\u30D7\u306B\u306A\u308A\u307E\u3059\u3002"]
+            },
+            {
+                "name": "Mission",
+                "heading": [],
+                "items": ["First Step\n          \n\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u306F\u3001\u793E\u54E1\u306E\u4EBA\u683C\u6210\u9577\u3068\u5C02\u9580\u30B9\u30AD\u30EB\u5411\u4E0A\u306E\u305F\u3081\u306B\u3001\u5FC5\u8981\u306A\u6559\u80B2\u3084\u30C1\u30E3\u30F3\u30B9\u3092\u63D0\u4F9B\u3057\u307E\u3059\u3002\n          \nSecond Step\n          \n\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u306F\u3001\u304A\u5BA2\u69D8\u306E\u767A\u5C55\u3068\u5E78\u798F\u306E\u305F\u3081\u306B\u3001\u30CF\u30FC\u30C8\u30D5\u30EB\u306AIT\u30B5\u30FC\u30D3\u30B9\u3092\u63D0\u4F9B\u3057\u307E\u3059\u3002\n          \nThird Step\n          \n\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u306F\u3001\u300C\u3042\u308A\u304C\u3068\u3046\u300D\u304C\u3042\u3075\u308C\u308B\u672A\u6765\u306E\u305F\u3081\u306B\u3001\u300C\u5BB6\u65CF\u6587\u5316*\u300D\u3092\u767A\u4FE1\u3057\u7D9A\u3051\u307E\u3059\u3002\n          \n*\u304A\u4E92\u3044\u3092\u81EA\u5206\u306E\u5BB6\u65CF\u306E\u3088\u3046\u306B\u611F\u3058\u3001\u500B\u6027\u3084\u5F79\u5272\u3092\u5C0A\u91CD\u3057\u5408\u3044\u3001\u82E6\u697D\u3092\u5171\u306B\u3059\u308B\u95A2\u4FC2"]
+            },
+            {
+                "name": "基本原則１",
+                "heading": ["Dream Sourceは会社の心である"],
+                "items": ["\nDream Source\u306F\u4E09\u6075\u30AF\u30EA\u30A8\u30B9\u306E\u5FC3\u3067\u3042\u308A\u9B42\u3067\u3042\u308A\u3001\u5927\u5207\u306B\u3057\u3066\u3044\u308B\u4FA1\u5024\u89B3\u3067\u3059\u3002\u5168\u54E1\u304C\u3053\u308C\u3092\u81EA\u5206\u306E\u3082\u306E\u3068\u3057\u3066\u53D7\u3051\u5165\u308C\u7406\u89E3\u3057\u3001\u4E3B\u4F53\u7684\u306B\u5B9F\u8DF5\u3057\u307E\u3059\u3002\u5168\u3066\u306E\u30E1\u30F3\u30D0\u30FC\u306FDream Source\u3092\u5E38\u306B\u8EAB\u306B\u3064\u3051\u3001\u8FF7\u3044\u304C\u751F\u3058\u305F\u6642\u306B\u306F\u632F\u308A\u8FD4\u308A\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則２",
+                "heading": ["動機を大切にする"],
+                "items": ["\n\u62C5\u5F53\u3059\u308B\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u3084\u4ED5\u4E8B\u306E\u76EE\u7684\u3068\u610F\u7FA9\u3092\u52D5\u6A5F\u3068\u3057\u3066\u3001\u81EA\u3089\u306E\u30A8\u30F3\u30B8\u30F3\u3092\u52A0\u901F\u3055\u305B\u3001\u671F\u5F85\u3055\u308C\u308B\u4EE5\u4E0A\u306E\u6210\u679C\u3092\u751F\u307F\u51FA\u3057\u3066\u3044\u304D\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則３",
+                "heading": ["代表者意識"],
+                "items": ["\n\u5168\u3066\u306E\u30E1\u30F3\u30D0\u30FC\u306F\u4F1A\u793E\u306E\u4EE3\u8868\u3067\u3059\u3002\u79C1\u9054\u4E00\u4EBA\u4E00\u4EBA\u306E\u8A00\u52D5\u306B\u3088\u3063\u3066\u3001\u5468\u56F2\u306E\u4EBA\u306F\u3069\u306E\u3088\u3046\u306A\u4F1A\u793E\u304B\u5224\u65AD\u3057\u307E\u3059\u3002\u79C1\u9054\u306F\u672C\u793E\u52E4\u52D9\u3042\u308B\u3044\u306F\u5BA2\u5148\u5E38\u99D0\u3067\u3042\u3063\u305F\u3068\u3057\u3066\u3082\u3001\u30D7\u30E9\u30A4\u30D9\u30FC\u30C8\u306E\u6642\u9593\u3067\u3042\u3063\u305F\u3068\u3057\u3066\u3082\u3001\u5E38\u306B\u4EE3\u8868\u8005\u610F\u8B58\u3092\u6301\u3063\u3066Dream Source\u306B\u6065\u3058\u306A\u3044\u8A00\u52D5\u306B\u52AA\u3081\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則４",
+                "heading": ["率先して責任を持つ"],
+                "items": ["\n\u79C1\u9054\u306F\u696D\u52D9\u306E\u76EE\u7684\u3092\u9054\u6210\u3059\u308B\u305F\u3081\u306B\u3001\u7387\u5148\u3057\u3066\u8CAC\u4EFB\u3092\u6301\u3061\u3001\u4E3B\u4F53\u7684\u306B\u63D0\u6848\u30FB\u5B9F\u884C\u3067\u304D\u308B\u5185\u5BB9\u304C\u306A\u3044\u304B\u3092\u8003\u3048\u53D6\u308A\u7D44\u307F\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則５",
+                "heading": ["目標を明確にする"],
+                "items": ["\n\u79C1\u9054\u306F\u30C1\u30FC\u30E0\u306E\u76EE\u6A19\u3092\u5171\u6709\u3057\u3001\u304A\u5BA2\u69D8\u3068\u76EE\u6307\u3059\u65B9\u5411\u6027\u3084\u671F\u5F85\u5024\u306E\u8A8D\u8B58\u5408\u308F\u305B\u3092\u3057\u305F\u4E0A\u3067\u3001\u4ECA\u3084\u308B\u3079\u304D\u4E8B\u3092\u660E\u78BA\u306B\u3057\u3001\u30B4\u30FC\u30EB\u306B\u5411\u3051\u524D\u9032\u3057\u3066\u3044\u304D\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則６",
+                "heading": ["情熱と真剣さを持って最後までやり抜く"],
+                "items": ["\n\u79C1\u9054\u306F\u4ED5\u4E8B\u306B\u60C5\u71B1\u3068\u771F\u5263\u3055\u3092\u3082\u3063\u3066\u53D6\u308A\u7D44\u307F\u3001\u5FB9\u5E95\u3057\u3066\u52AA\u529B\u3057\u7D9A\u3051\u307E\u3059\u3002\u3069\u3093\u306A\u56F0\u96E3\u306B\u3076\u3064\u304B\u3063\u3066\u3082\u4F8B\u5916\u3092\u4F5C\u3089\u305A\u3001\u300C\u79C1\u306F\u5FC5\u305A\u9054\u6210\u3067\u304D\u308B\uFF01\u300D\u3068\u3044\u3046\u78BA\u4FE1\u3068\u8A87\u308A\u3092\u6301\u3063\u3066\u3001\u6700\u5F8C\u307E\u3067\u3084\u308A\u629C\u304D\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則７",
+                "heading": ["可能性を信じ、自己の限界に挑戦する"],
+                "items": ["\n\u6311\u6226\u3059\u308B\u3053\u3068\u306F\u6642\u306B\u52C7\u6C17\u304C\u5FC5\u8981\u3067\u3059\u304C\u3001\u56F0\u96E3\u3092\u4E57\u308A\u8D8A\u3048\u9054\u6210\u3057\u305F\u6642\u3053\u305D\u3001\u4EBA\u9593\u3068\u3057\u3066\u6700\u9AD8\u306E\u559C\u3073\u306B\u51FA\u4F1A\u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002\u79C1\u9054\u306F\u3001\u81EA\u3089\u305D\u3057\u3066\u4F1A\u793E\u306E\u53EF\u80FD\u6027\u3092\u4FE1\u3058\u3066\u3001\u65E5\u3005\u81EA\u5DF1\u306E\u9650\u754C\u306B\u6311\u6226\u3057\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則８",
+                "heading": ["常に自らのスキルを磨く"],
+                "items": ["\n\u79C1\u9054\u306F\u793E\u54E1\u540C\u58EB\u3001\u51FA\u9022\u3063\u305F\u304A\u5BA2\u69D8\u306B\u5BFE\u3057\u3001\u5E38\u306B\u6700\u9AD8\u306E\u30B5\u30FC\u30D3\u30B9\u3092\u63D0\u4F9B\u3057\u7D9A\u3051\u3066\u3044\u304F\u305F\u3081\u306B\u3001\u81EA\u5206\u306E\u751F\u6DAF\u3092\u304B\u3051\u3066\u30B9\u30AD\u30EB\u3092\u78E8\u3044\u3066\u3044\u304D\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則９",
+                "heading": ["心を開く"],
+                "items": ["\n\u79C1\u9054\u306F\u793E\u54E1\u540C\u58EB\u3001\u304A\u5BA2\u69D8\u306B\u5BFE\u3057\u3066\u3001\u5FC3\u3092\u958B\u3044\u3066\u63A5\u3057\u3001\u7D20\u76F4\u306B\u76F8\u624B\u306E\u8003\u3048\u3084\u6C17\u6301\u3061\u3092\u7406\u89E3\u3059\u308B\u3053\u3068\u3092\u5927\u5207\u306B\u3057\u307E\u3059\u3002\u305D\u3046\u3059\u308B\u3053\u3068\u3067\u3001\u79C1\u9054\u81EA\u8EAB\u3082\u76F8\u624B\u306B\u7406\u89E3\u3057\u3066\u3082\u3089\u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１０",
+                "heading": ["メンバーを尊重しお互いの強みを共有する"],
+                "items": ["\n\u79C1\u9054\u306F\u30C1\u30FC\u30E0\u30E1\u30F3\u30D0\u30FC\u3092\u4FE1\u3058\u3001\u5C0A\u91CD\u3057\u3001\u5354\u8ABF\u6027\u3092\u6301\u3063\u3066\u4ED5\u4E8B\u306B\u53D6\u308A\u7D44\u307F\u307E\u3059\u3002\u305D\u3057\u3066\u4E00\u4EBA\u4E00\u4EBA\u304C\u30D7\u30ED\u3068\u3057\u3066\u6301\u3063\u3066\u3044\u308B\u300C\u5F37\u307F\u300D\u300C\u30CE\u30A6\u30CF\u30A6\u300D\u300C\u6280\u8853\u300D\u300C\u60C5\u71B1\u300D\u7B49\u3092\u5171\u6709\u3057\u3001\u30C1\u30FC\u30E0\u5168\u4F53\u306E\u6210\u679C\u5411\u4E0A\u306B\u53D6\u308A\u7D44\u307F\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１１",
+                "heading": ["周囲に活力を与える"],
+                "items": ["\n\u79C1\u9054\u306F\u65E5\u3005\u4E00\u7DD2\u306B\u4ED5\u4E8B\u3092\u3059\u308B\u4EF2\u9593\u306B\u30B9\u30C8\u30ED\u30FC\u30AF(*)\u3092\u4E0E\u3048\u3066\u3001\u5468\u56F2\u3092\u6D3B\u6027\u5316\u3057\u3066\u3044\u304D\u307E\u3059\u3002\u79C1\u9054\u306F\u60DC\u3057\u307F\u306A\u304F\u304A\u5BA2\u69D8\u306E\u767A\u5C55\u3068\u5E78\u798F\u3001\u305D\u3057\u3066\u4E00\u7DD2\u306B\u4ED5\u4E8B\u3092\u3059\u308B\u30E1\u30F3\u30D0\u30FC\u306E\u559C\u3073\u3068\u6210\u9577\u306E\u305F\u3081\u306B\u5168\u529B\u3092\u5C3D\u304F\u3057\u307E\u3059\u3002\n*\u30B9\u30C8\u30ED\u30FC\u30AF\uFF1A\u5FC3\u7406\u5B66\u7528\u8A9E\u3002\u76F8\u624B\u306E\u5B58\u5728\u3092\u8A8D\u3081\u308B\u5168\u3066\u306E\u52D5\u4F5C\u3084\u50CD\u304D\u304B\u3051\u3002\u5177\u4F53\u7684\u306B\u306F\u4EBA\u3068\u306E\u300C\u95A2\u308F\u308A\u300D\u300C\u30D5\u30A3\u30FC\u30C9\u30D0\u30C3\u30AF\uFF08\u884C\u52D5\u306B\u5BFE\u3059\u308B\u8A55\u4FA1\uFF09\u300D\u300C\u523A\u6FC0\u300D\u306E\u3053\u3068\u3092\u8A00\u3044\u307E\u3059\u3002\u6328\u62F6\u3001\u63E1\u624B\u3001\u8996\u7DDA\u3092\u5408\u308F\u305B\u308B\u306A\u3069\u3082\u305D\u306E\u4E00\u7A2E\u3067\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１２",
+                "heading": ["良き助言を与えあう"],
+                "items": ["\n\u76F8\u624B\u306E\u6210\u9577\u3068\u4F1A\u793E\u5168\u4F53\u306E\u305F\u3081\u306B\u7387\u76F4\u306B\u610F\u898B\u3092\u8A00\u3044\u5408\u3044\u307E\u3059\u3002\u8A00\u3044\u306B\u304F\u3044\u3053\u3068\u3067\u3082\u3001\u30C1\u30FC\u30E0\u304C\u3001\u305D\u3057\u3066\u4F1A\u793E\u5168\u4F53\u304C\u6700\u9AD8\u306E\u529B\u3092\u767A\u63EE\u3059\u308B\u306B\u306F\u3069\u3046\u3059\u308B\u3079\u304D\u304B\u3068\u8003\u3048\u3066\u610F\u898B\u3057\u307E\u3059\u3002\u305F\u3060\u3057\u3001\u9670\u3067\u6279\u5224\u3057\u305F\u308A\u3001\u6539\u5584\u6848\u306E\u4F34\u308F\u306A\u3044\u6279\u5224\u7B49\u3005\u306F\u7D76\u5BFE\u306B\u8A8D\u3081\u307E\u305B\u3093\u3002"]
+            },
+            {
+                "name": "基本原則１３",
+                "heading": ["クレームに対し誠心誠意取り組む"],
+                "items": ["\n\u30AF\u30EC\u30FC\u30E0\u306F\u66F4\u306B\u30B5\u30FC\u30D3\u30B9\u3092\u63D0\u4F9B\u3067\u304D\u308B\u30C1\u30E3\u30F3\u30B9\u3068\u6349\u3048\u3001\u7A4D\u6975\u7684\u306B\u5BFE\u5FDC\u3057\u307E\u3059\u3002\u5BFE\u5FDC\u3059\u308B\u793E\u54E1\u306F\u4F1A\u793E\u306E\u4EE3\u8868\u3068\u3057\u3066\u3001\u76EE\u306E\u524D\u306E\u30AF\u30EC\u30FC\u30E0\u306B\u8AA0\u5FC3\u8AA0\u610F\u53D6\u308A\u7D44\u307F\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１４",
+                "heading": ["凡事を徹底する"],
+                "items": ["\n\u4FE1\u983C\u3092\u52DD\u3061\u53D6\u308B\u305F\u3081\u306B\u306F\u3001\u5F53\u305F\u308A\u524D\u306E\u4E8B\u3092\u5F53\u305F\u308A\u524D\u306B\u3084\u308B\u3068\u3044\u3046\u51E1\u4E8B\u5FB9\u5E95\u304C\u5927\u5207\u3067\u3059\u3002\u305F\u3068\u3048\u3070\u3001\u300C\u7D04\u675F\u3092\u5B88\u308B\u300D\u300C\u6642\u9593\u3092\u5B88\u308B\u300D\u300C\u5831\u9023\u76F8\u300D\u306A\u3069\u3001\u77E5\u3063\u3066\u3044\u308B\u3060\u3051\u3067\u306F\u306A\u304F\u3001\u3084\u308C\u3066\u3044\u308B\u72B6\u614B\u306B\u3059\u308B\u4E8B\u304C\u5927\u5207\u3067\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１５",
+                "heading": ["身の回りの整理整頓を心がける"],
+                "items": ["\n\u30AA\u30D5\u30A3\u30B9\u74B0\u5883\u306E\u6C5A\u308C\u3084\u4E71\u96D1\u3055\u306F\u5FC3\u306E\u53CD\u6620\u3067\u3059\u3002\u74B0\u5883\u3092\u6574\u7406\u3057\u6E05\u6F54\u306B\u3057\u305F\u5206\u3001\u5FC3\u306E\u8352\u307F\u3082\u306A\u304F\u306A\u308A\u304D\u308C\u3044\u306B\u306A\u308A\u307E\u3059\u3002\u79C1\u9054\u306F\u81EA\u3089\u306E\u5FC3\u3092\u6E05\u3081\u3001\u5468\u56F2\u306E\u30E1\u30F3\u30D0\u30FC\u304C\u6C17\u6301\u3061\u3088\u304F\u50CD\u3044\u3066\u3082\u3089\u3046\u305F\u3081\u306B\u3001\u8EAB\u306E\u56DE\u308A\u306E\u6574\u7406\u6574\u9813\u3092\u5FC3\u304C\u3051\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１６",
+                "heading": ["心と体の健康管理"],
+                "items": ["\n\u79C1\u9054\u306F\u30D7\u30ED\u30D5\u30A7\u30C3\u30B7\u30E7\u30CA\u30EB\u3068\u3057\u3066\u3001\u5FC3\u3068\u4F53\u306E\u5065\u5EB7\u306B\u7D30\u5FC3\u306E\u6CE8\u610F\u3092\u6255\u3044\u307E\u3059\u3002\u5FC3\u3068\u4F53\u306E\u30D0\u30E9\u30F3\u30B9\u304C\u53D6\u308C\u3066\u3001\u521D\u3081\u3066\u79C1\u9054\u306F\u6301\u3066\u308B\u529B\u3092\u51FA\u3057\u5207\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002\u79C1\u306E\u4F53\u306F\u5358\u306B\u81EA\u5206\u306E\u3082\u306E\u3067\u306F\u306A\u304F\u3001\u516C\u306E\u3082\u306E\u3068\u3057\u3066\u65E5\u9803\u306E\u4F53\u8ABF\u7BA1\u7406\u306B\u52AA\u3081\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１７",
+                "heading": ["会社の資産を大切に使う"],
+                "items": ["\n\u79C1\u9054\u306F\u81EA\u5206\u304C\u76F4\u63A5\u7BA1\u7406\u3057\u3066\u3044\u308B\u673A\u3084\u5099\u54C1\u306F\u3082\u3061\u308D\u3093\u306E\u3053\u3068\u3001\u4F1A\u793E\u306E\u8CC7\u7523\u3092\u8CAC\u4EFB\u6301\u3063\u3066\u7BA1\u7406\u3057\u307E\u3059\u3002\u79C1\u9054\u306F\u8CC7\u7523\u306E\u672C\u6765\u306E\u4FA1\u5024\u3092\u5F15\u304D\u51FA\u305B\u308B\u3088\u3046\u306B\u5927\u5207\u306B\u4F7F\u3044\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１８",
+                "heading": ["人生の成功者を目指す"],
+                "items": ["\n\u79C1\u9054\u306F\u8077\u696D\u4EBA\u3068\u3057\u3066\u306E\u6210\u529F\u8005\u3067\u306F\u306A\u304F\u3001\u4EBA\u751F\u306E\u6210\u529F\u8005\u3092\u76EE\u6307\u3057\u307E\u3059\u3002\u826F\u3044\u751F\u6D3B\u7FD2\u6163\u306F\u4ED5\u4E8B\u306B\u6D3B\u304B\u3055\u308C\u3001\u4ED5\u4E8B\u3067\u5F97\u305F\u3053\u3068\u306F\u751F\u6D3B\u306B\u6D3B\u304B\u3055\u308C\u307E\u3059\u3002\u79C1\u9054\u306F\u751F\u6D3B\u3082\u4ED5\u4E8B\u3082\u3069\u3061\u3089\u3082\u7B49\u3057\u304F\u5927\u5207\u306B\u3057\u3001\u4EBA\u751F\u306E\u6210\u529F\u8005\u3092\u76EE\u6307\u3057\u307E\u3059\u3002"]
+            },
+            {
+                "name": "基本原則１９",
+                "heading": ["良心に従って行動する"],
+                "items": ["\n\u79C1\u9054\u306F\u30B3\u30F3\u30D7\u30E9\u30A4\u30A2\u30F3\u30B9\u3092\u5FB9\u5E95\u3057\u307E\u3059\u3002\u305D\u3057\u3066\u3001\u4EEE\u306B\u6CD5\u5F8B\u3084\u898F\u5247\u306B\u660E\u793A\u3055\u308C\u3066\u3044\u306A\u304B\u3063\u305F\u3068\u3057\u3066\u3082\u3001Dream Source\u3092\u5171\u6709\u3057\u305F\u5BB6\u65CF\u3068\u3057\u3066\u3001\u81EA\u5206\u306E\u826F\u5FC3\u306B\u5F93\u3063\u3066\u884C\u52D5\u3057\u307E\u3059\u3002"]
+            },
+        ];
+        return segments;
+    };
+    /*
+      戻り値：{"name":"string", "items":[string[]]}
+    */
+    DreamSourceProvider.prototype.getItem = function (name, num) {
+        var item = {
+            "name": name,
+            "items": []
+        };
+        for (var i = 0; i < num; i++) {
+            item.items.push("item" + i);
+        }
+        return item;
+    };
+    return DreamSourceProvider;
+}());
+
+//# sourceMappingURL=dream-source.js.map
+
+/***/ }),
+
+/***/ 330:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage.prototype.doRefresh = function (refresher) {
+        // this.currentPage = 1;
+        setTimeout(function () {
+            // this.qiitaServiceProvider.getQiitaItems(this.currentPage, this.queryOption)
+            //   .subscribe(items => {
+            //     this.qiitaItems = items;
+            //     console.log(items);
+            //   },
+            //     err => console.log(err),
+            //     () => { });
+            refresher.complete();
+        }, 500);
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 331:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ListPage = /** @class */ (function () {
+    function ListPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        // If we navigated to this page, we will have an item available as a nav param
+        this.selectedItem = navParams.get('item');
+        // Let's populate this page with some filler content for funzies
+        this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
+            'american-football', 'boat', 'bluetooth', 'build'];
+        this.items = [];
+        for (var i = 1; i < 11; i++) {
+            this.items.push({
+                title: 'Item ' + i,
+                note: 'This is item #' + i,
+                icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+            });
+        }
+    }
+    ListPage_1 = ListPage;
+    ListPage.prototype.itemTapped = function (event, item) {
+        // That's right, we're pushing to ourselves!
+        this.navCtrl.push(ListPage_1, {
+            item: item
+        });
+    };
+    ListPage = ListPage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-list',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/list/list.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+    ], ListPage);
+    return ListPage;
+    var ListPage_1;
+}());
+
+//# sourceMappingURL=list.js.map
+
+/***/ }),
+
+/***/ 334:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(355);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 355:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_time_registration_time_registration__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_daily_report_daily_report__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dream_source_dream_source__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_daily_report_modal_daily_report_modal__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_mock_mock__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_dream_source_dream_source__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ionic3_datepicker__ = __webpack_require__(421);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_time_registration_time_registration__["a" /* TimeRegistrationPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_daily_report_daily_report__["a" /* DailyReportPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_dream_source_dream_source__["a" /* DreamSourcePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__["a" /* ConfigurationPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/configuration/configuration.module#ConfigurationPageModule', name: 'ConfigurationPage', segment: 'configuration', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/daily-report-modal/daily-report-modal.module#DailyReportModalPageModule', name: 'DailyReportModalPage', segment: 'daily-report-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dream-source/dream-source.module#DreamSourcePageModule', name: 'dream-source', segment: 'dream-source', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/daily-report/daily-report.module#DailyReportPageModule', name: 'DailyReportPage', segment: 'daily-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/time-registration/time-registration.module#TimeRegistrationPageModule', name: 'TimeRegistrationPage', segment: 'time-registration', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_16_ionic3_datepicker__["a" /* DatePickerModule */],
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_list_list__["a" /* ListPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_time_registration_time_registration__["a" /* TimeRegistrationPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_daily_report_daily_report__["a" /* DailyReportPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_dream_source_dream_source__["a" /* DreamSourcePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__["a" /* ConfigurationPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_14__providers_mock_mock__["a" /* MockProvider */],
+                __WEBPACK_IMPORTED_MODULE_15__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 395:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 163,
+	"./af.js": 163,
+	"./ar": 164,
+	"./ar-dz": 165,
+	"./ar-dz.js": 165,
+	"./ar-kw": 166,
+	"./ar-kw.js": 166,
+	"./ar-ly": 167,
+	"./ar-ly.js": 167,
+	"./ar-ma": 168,
+	"./ar-ma.js": 168,
+	"./ar-sa": 169,
+	"./ar-sa.js": 169,
+	"./ar-tn": 170,
+	"./ar-tn.js": 170,
+	"./ar.js": 164,
+	"./az": 171,
+	"./az.js": 171,
+	"./be": 172,
+	"./be.js": 172,
+	"./bg": 173,
+	"./bg.js": 173,
+	"./bm": 174,
+	"./bm.js": 174,
+	"./bn": 175,
+	"./bn.js": 175,
+	"./bo": 176,
+	"./bo.js": 176,
+	"./br": 177,
+	"./br.js": 177,
+	"./bs": 178,
+	"./bs.js": 178,
+	"./ca": 179,
+	"./ca.js": 179,
+	"./cs": 180,
+	"./cs.js": 180,
+	"./cv": 181,
+	"./cv.js": 181,
+	"./cy": 182,
+	"./cy.js": 182,
+	"./da": 183,
+	"./da.js": 183,
+	"./de": 184,
+	"./de-at": 185,
+	"./de-at.js": 185,
+	"./de-ch": 186,
+	"./de-ch.js": 186,
+	"./de.js": 184,
+	"./dv": 187,
+	"./dv.js": 187,
+	"./el": 188,
+	"./el.js": 188,
+	"./en-au": 189,
+	"./en-au.js": 189,
+	"./en-ca": 190,
+	"./en-ca.js": 190,
+	"./en-gb": 191,
+	"./en-gb.js": 191,
+	"./en-ie": 192,
+	"./en-ie.js": 192,
+	"./en-il": 193,
+	"./en-il.js": 193,
+	"./en-nz": 194,
+	"./en-nz.js": 194,
+	"./eo": 195,
+	"./eo.js": 195,
+	"./es": 196,
+	"./es-do": 197,
+	"./es-do.js": 197,
+	"./es-us": 198,
+	"./es-us.js": 198,
+	"./es.js": 196,
+	"./et": 199,
+	"./et.js": 199,
+	"./eu": 200,
+	"./eu.js": 200,
+	"./fa": 201,
+	"./fa.js": 201,
+	"./fi": 202,
+	"./fi.js": 202,
+	"./fo": 203,
+	"./fo.js": 203,
+	"./fr": 204,
+	"./fr-ca": 205,
+	"./fr-ca.js": 205,
+	"./fr-ch": 206,
+	"./fr-ch.js": 206,
+	"./fr.js": 204,
+	"./fy": 207,
+	"./fy.js": 207,
+	"./gd": 208,
+	"./gd.js": 208,
+	"./gl": 209,
+	"./gl.js": 209,
+	"./gom-latn": 210,
+	"./gom-latn.js": 210,
+	"./gu": 211,
+	"./gu.js": 211,
+	"./he": 212,
+	"./he.js": 212,
+	"./hi": 213,
+	"./hi.js": 213,
+	"./hr": 214,
+	"./hr.js": 214,
+	"./hu": 215,
+	"./hu.js": 215,
+	"./hy-am": 216,
+	"./hy-am.js": 216,
+	"./id": 217,
+	"./id.js": 217,
+	"./is": 218,
+	"./is.js": 218,
+	"./it": 219,
+	"./it.js": 219,
+	"./ja": 220,
+	"./ja.js": 220,
+	"./jv": 221,
+	"./jv.js": 221,
+	"./ka": 222,
+	"./ka.js": 222,
+	"./kk": 223,
+	"./kk.js": 223,
+	"./km": 224,
+	"./km.js": 224,
+	"./kn": 225,
+	"./kn.js": 225,
+	"./ko": 226,
+	"./ko.js": 226,
+	"./ky": 227,
+	"./ky.js": 227,
+	"./lb": 228,
+	"./lb.js": 228,
+	"./lo": 229,
+	"./lo.js": 229,
+	"./lt": 230,
+	"./lt.js": 230,
+	"./lv": 231,
+	"./lv.js": 231,
+	"./me": 232,
+	"./me.js": 232,
+	"./mi": 233,
+	"./mi.js": 233,
+	"./mk": 234,
+	"./mk.js": 234,
+	"./ml": 235,
+	"./ml.js": 235,
+	"./mn": 236,
+	"./mn.js": 236,
+	"./mr": 237,
+	"./mr.js": 237,
+	"./ms": 238,
+	"./ms-my": 239,
+	"./ms-my.js": 239,
+	"./ms.js": 238,
+	"./mt": 240,
+	"./mt.js": 240,
+	"./my": 241,
+	"./my.js": 241,
+	"./nb": 242,
+	"./nb.js": 242,
+	"./ne": 243,
+	"./ne.js": 243,
+	"./nl": 244,
+	"./nl-be": 245,
+	"./nl-be.js": 245,
+	"./nl.js": 244,
+	"./nn": 246,
+	"./nn.js": 246,
+	"./pa-in": 247,
+	"./pa-in.js": 247,
+	"./pl": 248,
+	"./pl.js": 248,
+	"./pt": 249,
+	"./pt-br": 250,
+	"./pt-br.js": 250,
+	"./pt.js": 249,
+	"./ro": 251,
+	"./ro.js": 251,
+	"./ru": 252,
+	"./ru.js": 252,
+	"./sd": 253,
+	"./sd.js": 253,
+	"./se": 254,
+	"./se.js": 254,
+	"./si": 255,
+	"./si.js": 255,
+	"./sk": 256,
+	"./sk.js": 256,
+	"./sl": 257,
+	"./sl.js": 257,
+	"./sq": 258,
+	"./sq.js": 258,
+	"./sr": 259,
+	"./sr-cyrl": 260,
+	"./sr-cyrl.js": 260,
+	"./sr.js": 259,
+	"./ss": 261,
+	"./ss.js": 261,
+	"./sv": 262,
+	"./sv.js": 262,
+	"./sw": 263,
+	"./sw.js": 263,
+	"./ta": 264,
+	"./ta.js": 264,
+	"./te": 265,
+	"./te.js": 265,
+	"./tet": 266,
+	"./tet.js": 266,
+	"./tg": 267,
+	"./tg.js": 267,
+	"./th": 268,
+	"./th.js": 268,
+	"./tl-ph": 269,
+	"./tl-ph.js": 269,
+	"./tlh": 270,
+	"./tlh.js": 270,
+	"./tr": 271,
+	"./tr.js": 271,
+	"./tzl": 272,
+	"./tzl.js": 272,
+	"./tzm": 273,
+	"./tzm-latn": 274,
+	"./tzm-latn.js": 274,
+	"./tzm.js": 273,
+	"./ug-cn": 275,
+	"./ug-cn.js": 275,
+	"./uk": 276,
+	"./uk.js": 276,
+	"./ur": 277,
+	"./ur.js": 277,
+	"./uz": 278,
+	"./uz-latn": 279,
+	"./uz-latn.js": 279,
+	"./uz.js": 278,
+	"./vi": 280,
+	"./vi.js": 280,
+	"./x-pseudo": 281,
+	"./x-pseudo.js": 281,
+	"./yo": 282,
+	"./yo.js": 282,
+	"./zh-cn": 283,
+	"./zh-cn.js": 283,
+	"./zh-hk": 284,
+	"./zh-hk.js": 284,
+	"./zh-tw": 285,
+	"./zh-tw.js": 285
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 395;
+
+/***/ }),
+
+/***/ 412:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_configuration_configuration__ = __webpack_require__(103);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.initializeApp();
+        // used for an example of ngFor and navigation
+        this.pages = [
+            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
+            { title: 'List', component: __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */] },
+            { title: '勤怠', component: __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__["a" /* TimeRegistrationPage */] },
+            { title: '日報', component: __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__["a" /* DailyReportPage */] },
+            { title: 'D2S', component: __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__["a" /* DreamSourcePage */] },
+            { title: '設定', component: __WEBPACK_IMPORTED_MODULE_9__pages_configuration_configuration__["a" /* ConfigurationPage */] }
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 420:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MockProvider; });
+// import { HttpClient } from '@angular/common/http';
+// import { Injectable } from '@angular/core';
+/*
+  Generated class for the MockProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+// @Injectable()
+var MockProvider = /** @class */ (function () {
+    function MockProvider() {
+    }
+    /*
+      戻り値：[{"name":"string", "items":[string[]]}]
+    */
+    MockProvider.prototype.getSegmentItems = function () {
+        var segments = [];
+        for (var i = 0; i < 10; i++) {
+            var item = this.getItem("menu" + i, 15);
+            segments.push(item);
+        }
+        return segments;
+    };
+    /*
+      戻り値：{"name":"string", "items":[string[]]}
+    */
+    MockProvider.prototype.getItem = function (name, num) {
+        var item = {
+            "name": name,
+            "items": []
+        };
+        for (var i = 0; i < num; i++) {
+            item.items.push("item" + i);
+        }
+        return item;
+    };
+    return MockProvider;
+}());
+
+//# sourceMappingURL=mock.js.map
+
+/***/ })
+
+},[334]);
+//# sourceMappingURL=main.js.map

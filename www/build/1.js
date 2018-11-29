@@ -1,1 +1,39 @@
-webpackJsonp([1],{400:function(a,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(0),u=(n(5),n(29),n(96)),_=function(){return function(){}}(),t=n(329),o=n(330),c=n(331),i=n(332),s=n(333),b=n(334),d=n(335),f=n(336),p=n(337),g=n(341),l=n(11),v=n(18),k=n(140),y=n(52);n.d(e,"DreamSourcePageModuleNgFactory",function(){return M});var M=r.W(_,[],function(a){return r._7([r._8(512,r.i,r.S,[[8,[t.a,o.a,c.a,i.a,s.a,b.a,d.a,f.a,p.a,g.a]],[3,r.i],r.s]),r._8(4608,l.l,l.k,[r.r,[2,l.t]]),r._8(4608,v.u,v.u,[]),r._8(4608,v.d,v.d,[]),r._8(512,l.b,l.b,[]),r._8(512,v.s,v.s,[]),r._8(512,v.g,v.g,[]),r._8(512,v.p,v.p,[]),r._8(512,k.a,k.a,[]),r._8(512,k.b,k.b,[]),r._8(512,_,_,[]),r._8(256,y.a,u.a,[])])})}});
+webpackJsonp([1],{
+
+/***/ 426:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DreamSourcePageModule", function() { return DreamSourcePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dream_source__ = __webpack_require__(105);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DreamSourcePageModule = /** @class */ (function () {
+    function DreamSourcePageModule() {
+    }
+    DreamSourcePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__dream_source__["a" /* DreamSourcePage */]),
+            ],
+        })
+    ], DreamSourcePageModule);
+    return DreamSourcePageModule;
+}());
+
+//# sourceMappingURL=dream-source.module.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=1.js.map

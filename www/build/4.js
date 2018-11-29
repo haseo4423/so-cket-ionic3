@@ -1,1 +1,39 @@
-webpackJsonp([4],{397:function(a,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var u=t(0),_=(t(5),t(29),t(93)),e=function(){return function(){}}(),r=t(329),o=t(330),i=t(331),c=t(332),f=t(333),s=t(334),b=t(335),d=t(336),g=t(337),p=t(338),l=t(11),v=t(18),k=t(140),y=t(52);t.d(n,"ConfigurationPageModuleNgFactory",function(){return M});var M=u.W(e,[],function(a){return u._7([u._8(512,u.i,u.S,[[8,[r.a,o.a,i.a,c.a,f.a,s.a,b.a,d.a,g.a,p.a]],[3,u.i],u.s]),u._8(4608,l.l,l.k,[u.r,[2,l.t]]),u._8(4608,v.u,v.u,[]),u._8(4608,v.d,v.d,[]),u._8(512,l.b,l.b,[]),u._8(512,v.s,v.s,[]),u._8(512,v.g,v.g,[]),u._8(512,v.p,v.p,[]),u._8(512,k.a,k.a,[]),u._8(512,k.b,k.b,[]),u._8(512,e,e,[]),u._8(256,y.a,_.a,[])])})}});
+webpackJsonp([4],{
+
+/***/ 424:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigurationPageModule", function() { return ConfigurationPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configuration__ = __webpack_require__(103);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ConfigurationPageModule = /** @class */ (function () {
+    function ConfigurationPageModule() {
+    }
+    ConfigurationPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__configuration__["a" /* ConfigurationPage */]),
+            ],
+        })
+    ], ConfigurationPageModule);
+    return ConfigurationPageModule;
+}());
+
+//# sourceMappingURL=configuration.module.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=4.js.map
