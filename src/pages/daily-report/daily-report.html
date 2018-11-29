@@ -17,10 +17,16 @@
 
 
 <ion-content padding>
-  <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"
-    [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
-    <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
-  </span>
+  <ion-list>
+    <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"
+      [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
+      <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
+    </span>
+    <ion-item>
+      <ion-label color="primary" stacked>氏名</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+    </ion-item>
+  </ion-list>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
   <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>
   <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>

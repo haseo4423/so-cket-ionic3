@@ -24,6 +24,7 @@ export class DailyReportPage {
 
   public maxDate: Date = new Date(new Date().setDate(new Date().getDate() + 30));
   public min: Date = new Date()
+  public name: string = "";
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -31,13 +32,16 @@ export class DailyReportPage {
   ) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DailyReportPage');
+    // console.log('ionViewDidLoad DailyReportPage');
   }
 
   openModal(Num) {
-    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, Num);
+    let modalObject = { title: '氏名', value: this.name };
+    console.log(modalObject);
+    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, modalObject);
     dailyReportModal.present();
   }
+
   public Log(stuff): void {
     console.log(stuff);
   }
@@ -45,6 +49,7 @@ export class DailyReportPage {
   public event(data: Date): void {
     this.localDate = data;
   }
+
   public setDate(date: Date) {
     console.log(date);
     this.initDate = date;
