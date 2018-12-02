@@ -26,6 +26,35 @@
       <ion-label color="primary" stacked>氏名</ion-label>
       <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>今日のDS</ion-label>
+      <ion-select [(ngModel)]="gaming" interface="alert">
+        <ion-option value="nes">NES<span>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></ion-option>
+        <ion-option value="n64">Nintendo64</ion-option>
+        <ion-option value="ps">PlayStation</ion-option>
+        <ion-option value="genesis">Sega Genesis</ion-option>
+        <ion-option value="saturn">Sega Saturn</ion-option>
+        <ion-option value="snes">SNES</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>
+      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue1" color="secondary" (ngModelChange)="rangeValue1=$event/10">
+        <ion-icon range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>今日の調子： {{rangeValue2}}</ion-label>
+      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue2" color="secondary" (ngModelChange)="rangeValue2=$event/10">
+        <ion-icon range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>自由記入欄</ion-label>
+      <ion-textarea [(ngModel)]="comment" name="comment"></ion-textarea>
+    </ion-item>
   </ion-list>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
   <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>

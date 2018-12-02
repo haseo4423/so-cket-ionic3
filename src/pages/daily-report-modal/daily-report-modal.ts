@@ -53,7 +53,7 @@ export class DailyReportModalPage {
       }
     ];
     // let rand = Math.floor(Math.random() * 3);
-    console.log(this.params.get('value'));
+    console.log(this.params.get("0"));
     this.character = characters[1];
   }
 

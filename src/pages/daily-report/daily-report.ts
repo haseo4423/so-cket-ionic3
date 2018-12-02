@@ -24,7 +24,11 @@ export class DailyReportPage {
 
   public maxDate: Date = new Date(new Date().setDate(new Date().getDate() + 30));
   public min: Date = new Date()
-  public name: string = "";
+
+  public name: string;
+  public comment: string;
+  public rangeValue1: number = 3;
+  public rangeValue2: number = 3;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -36,7 +40,7 @@ export class DailyReportPage {
   }
 
   openModal(Num) {
-    let modalObject = { title: '氏名', value: this.name };
+    let modalObject = [{ title: '氏名', value: this.name }];
     console.log(modalObject);
     let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, modalObject);
     dailyReportModal.present();
