@@ -34,7 +34,7 @@ var ConfigurationPage = /** @class */ (function () {
     };
     ConfigurationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-configuration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/'<!--\n  Generated template for the ConfigurationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      configuration\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/,
+            selector: 'page-configuration',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/'<!--\n  Generated template for the ConfigurationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      configuration\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ConfigurationPage);
@@ -106,7 +106,7 @@ var DailyReportModalPage = /** @class */ (function () {
             }
         ];
         // let rand = Math.floor(Math.random() * 3);
-        console.log(this.params.get('value'));
+        console.log(this.params.get("0"));
         this.character = characters[1];
     }
     DailyReportModalPage.prototype.dismiss = function () {
@@ -114,7 +114,7 @@ var DailyReportModalPage = /** @class */ (function () {
     };
     DailyReportModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Description\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
+            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Description\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]) === "function" && _b || Object])
     ], DailyReportModalPage);
@@ -127,6 +127,81 @@ var DailyReportModalPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 105:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__ = __webpack_require__(104);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the DailyReportPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ *
+ * See https://github.com/pauloedsr/ionic3-datepicker.
+ */
+var DailyReportPage = /** @class */ (function () {
+    function DailyReportPage(navCtrl, navParams, modalCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.localDate = new Date();
+        this.initDate = new Date();
+        this.initDate2 = new Date(2015, 1, 1);
+        this.disabledDates = [new Date(2018, 11, 14)];
+        this.maxDate = new Date(new Date().setDate(new Date().getDate() + 30));
+        this.min = new Date();
+        this.rangeValue1 = 3;
+        this.rangeValue2 = 3;
+    }
+    DailyReportPage.prototype.ionViewDidLoad = function () {
+        // console.log('ionViewDidLoad DailyReportPage');
+    };
+    DailyReportPage.prototype.openModal = function (Num) {
+        var modalObject = [{ title: '氏名', value: this.name }];
+        console.log(modalObject);
+        var dailyReportModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */], modalObject);
+        dailyReportModal.present();
+    };
+    DailyReportPage.prototype.Log = function (stuff) {
+        console.log(stuff);
+    };
+    DailyReportPage.prototype.event = function (data) {
+        this.localDate = data;
+    };
+    DailyReportPage.prototype.setDate = function (date) {
+        console.log(date);
+        this.initDate = date;
+    };
+    DailyReportPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"\n      [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n      <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>\n    </span>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select [(ngModel)]="gaming" interface="alert">\n        <ion-option value="nes">NES<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</ion-option>\n        <ion-option value="n64">Nintendo64</ion-option>\n        <ion-option value="ps">PlayStation</ion-option>\n        <ion-option value="genesis">Sega Genesis</ion-option>\n        <ion-option value="saturn">Sega Saturn</ion-option>\n        <ion-option value="snes">SNES</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue1" color="secondary" (ngModelChange)="rangeValue1=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日の調子： {{rangeValue2}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue2" color="secondary" (ngModelChange)="rangeValue2=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment"></ion-textarea>\n    </ion-item>\n  </ion-list>\n  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>\n  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>\n  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _c || Object])
+    ], DailyReportPage);
+    return DailyReportPage;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=daily-report.js.map
+
+/***/ }),
+
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -230,7 +305,7 @@ var DreamSourcePage = /** @class */ (function () {
     ], DreamSourcePage.prototype, "tabmenu", void 0);
     DreamSourcePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-dream-source',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
+            selector: 'page-dream-source',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap" *ngFor="let item of segment.items">{{item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]])
@@ -239,80 +314,6 @@ var DreamSourcePage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=dream-source.js.map
-
-/***/ }),
-
-/***/ 106:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__ = __webpack_require__(104);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the DailyReportPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- *
- * See https://github.com/pauloedsr/ionic3-datepicker.
- */
-var DailyReportPage = /** @class */ (function () {
-    function DailyReportPage(navCtrl, navParams, modalCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
-        this.localDate = new Date();
-        this.initDate = new Date();
-        this.initDate2 = new Date(2015, 1, 1);
-        this.disabledDates = [new Date(2018, 11, 14)];
-        this.maxDate = new Date(new Date().setDate(new Date().getDate() + 30));
-        this.min = new Date();
-        this.name = "";
-    }
-    DailyReportPage.prototype.ionViewDidLoad = function () {
-        // console.log('ionViewDidLoad DailyReportPage');
-    };
-    DailyReportPage.prototype.openModal = function (Num) {
-        var modalObject = { title: '氏名', value: this.name };
-        console.log(modalObject);
-        var dailyReportModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */], modalObject);
-        dailyReportModal.present();
-    };
-    DailyReportPage.prototype.Log = function (stuff) {
-        console.log(stuff);
-    };
-    DailyReportPage.prototype.event = function (data) {
-        this.localDate = data;
-    };
-    DailyReportPage.prototype.setDate = function (date) {
-        console.log(date);
-        this.initDate = date;
-    };
-    DailyReportPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"\n      [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n      <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>\n    </span>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n  </ion-list>\n  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>\n  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>\n  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _c || Object])
-    ], DailyReportPage);
-    return DailyReportPage;
-    var _a, _b, _c;
-}());
-
-//# sourceMappingURL=daily-report.js.map
 
 /***/ }),
 
@@ -377,7 +378,7 @@ var TimeRegistrationPage = /** @class */ (function () {
     };
     TimeRegistrationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して勤怠登録されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
+            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して勤怠登録されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
@@ -420,11 +421,11 @@ var map = {
 		3
 	],
 	"../pages/daily-report/daily-report.module": [
-		427,
+		426,
 		2
 	],
 	"../pages/dream-source/dream-source.module": [
-		426,
+		427,
 		1
 	],
 	"../pages/time-registration/time-registration.module": [
@@ -647,7 +648,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], HomePage);
@@ -703,7 +704,7 @@ var ListPage = /** @class */ (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/list/list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/list/list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ListPage);
@@ -742,8 +743,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(330);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_time_registration_time_registration__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_daily_report_daily_report__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dream_source_dream_source__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_daily_report_daily_report__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dream_source_dream_source__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_daily_report_modal_daily_report_modal__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(326);
@@ -796,8 +797,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/configuration/configuration.module#ConfigurationPageModule', name: 'ConfigurationPage', segment: 'configuration', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/daily-report-modal/daily-report-modal.module#DailyReportModalPageModule', name: 'DailyReportModalPage', segment: 'daily-report-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/dream-source/dream-source.module#DreamSourcePageModule', name: 'dream-source', segment: 'dream-source', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/daily-report/daily-report.module#DailyReportPageModule', name: 'DailyReportPage', segment: 'daily-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dream-source/dream-source.module#DreamSourcePageModule', name: 'dream-source', segment: 'dream-source', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/time-registration/time-registration.module#TimeRegistrationPageModule', name: 'TimeRegistrationPage', segment: 'time-registration', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1111,8 +1112,8 @@ webpackContext.id = 395;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(330);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_configuration_configuration__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1169,7 +1170,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
