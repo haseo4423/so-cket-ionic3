@@ -29,12 +29,7 @@
     <ion-item>
       <ion-label color="primary" stacked>今日のDS</ion-label>
       <ion-select [(ngModel)]="gaming" interface="alert">
-        <ion-option value="nes">NES<span>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{segment.name}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
@@ -53,7 +48,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>自由記入欄</ion-label>
-      <ion-textarea [(ngModel)]="comment" name="comment"></ion-textarea>
+      <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>
     </ion-item>
   </ion-list>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { DailyReportModalPage } from '../daily-report-modal/daily-report-modal';
+import { DreamSourceProvider } from '../../providers/dream-source/dream-source';
 
 /**
  * Generated class for the DailyReportPage page.
@@ -11,10 +12,14 @@ import { DailyReportModalPage } from '../daily-report-modal/daily-report-modal';
  * See https://github.com/pauloedsr/ionic3-datepicker.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'daily-report',
+  segment: 'daily-report'
+})
 @Component({
   selector: 'page-daily-report',
   templateUrl: 'daily-report.html',
+  providers: [DreamSourceProvider],
 })
 export class DailyReportPage {
   public localDate: Date = new Date();
@@ -29,14 +34,17 @@ export class DailyReportPage {
   public comment: string;
   public rangeValue1: number = 3;
   public rangeValue2: number = 3;
+  segments: any = [];
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public dreamSource: DreamSourceProvider
   ) { }
 
   ionViewDidLoad() {
     // console.log('ionViewDidLoad DailyReportPage');
+    this.segments = this.dreamSource.getMainSegmentItems();
   }
 
   openModal(Num) {
