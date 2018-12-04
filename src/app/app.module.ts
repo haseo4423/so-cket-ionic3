@@ -5,11 +5,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { TimeRegistrationPage } from '../pages/time-registration/time-registration';
 import { DailyReportPage } from '../pages/daily-report/daily-report';
 import { DreamSourcePage } from '../pages/dream-source/dream-source';
-import { ConfigurationPage } from '../pages/configuration/configuration';
 import { DailyReportModalPage } from '../pages/daily-report-modal/daily-report-modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,11 +20,9 @@ import { DatePickerModule } from 'ionic3-datepicker';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     TimeRegistrationPage,
     DailyReportPage,
     DreamSourcePage,
-    ConfigurationPage,
     DailyReportModalPage,
   ],
   imports: [
@@ -39,11 +35,9 @@ import { DatePickerModule } from 'ionic3-datepicker';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     TimeRegistrationPage,
     DailyReportPage,
     DreamSourcePage,
-    ConfigurationPage,
     DailyReportModalPage
   ],
   providers: [
