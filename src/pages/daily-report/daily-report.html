@@ -18,10 +18,13 @@
 
 <ion-content padding>
   <ion-list>
-    <span ion-datepicker (ionChanged)="setDate($event);" [max]="maxDate" [min]="initDate2" [value]="initDate"
-      [showMaxAndMin]="true" [markDates]="disabledDates" clear class="ScheduleDate" [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
-      <span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
-    </span>
+    <ion-item>
+      <p color="primary" class="likely-label" stacked>日付</p>
+      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"
+        [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
+        <span>{{displayDate}} <ion-icon name="clipboard" item-left></ion-icon></span>
+      </span>
+    </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>氏名</ion-label>
       <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
@@ -29,12 +32,7 @@
     <ion-item>
       <ion-label color="primary" stacked>今日のDS</ion-label>
       <ion-select [(ngModel)]="gaming" interface="alert">
-        <ion-option value="nes">NES<span>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
@@ -53,7 +51,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>自由記入欄</ion-label>
-      <ion-textarea [(ngModel)]="comment" name="comment"></ion-textarea>
+      <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>
     </ion-item>
   </ion-list>
   <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
