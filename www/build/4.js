@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 425:
+/***/ 423:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigurationPageModule", function() { return ConfigurationPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DailyReportModalPageModule", function() { return DailyReportModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__configuration__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,20 +18,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ConfigurationPageModule = /** @class */ (function () {
-    function ConfigurationPageModule() {
+var DailyReportModalPageModule = /** @class */ (function () {
+    function DailyReportModalPageModule() {
     }
-    ConfigurationPageModule = __decorate([
+    DailyReportModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__configuration__["a" /* ConfigurationPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal__["a" /* DailyReportModalPage */]),
             ],
         })
-    ], ConfigurationPageModule);
-    return ConfigurationPageModule;
+    ], DailyReportModalPageModule);
+    return DailyReportModalPageModule;
 }());
 
-//# sourceMappingURL=configuration.module.js.map
+//# sourceMappingURL=daily-report-modal.module.js.map
 
 /***/ })
 
