@@ -31,7 +31,7 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>今日のDS</ion-label>
-      <ion-select [(ngModel)]="gaming" interface="alert">
+      <ion-select [(ngModel)]="gaming" interface="alert" [(ngModel)]="dsToday" name="dsToday">
         <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>
       </ion-select>
     </ion-item>
@@ -54,7 +54,5 @@
       <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>
     </ion-item>
   </ion-list>
-  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
-  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>
-  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>
+  <button ion-button (click)="openModal()" block>OpenModal1</button>
 </ion-content>

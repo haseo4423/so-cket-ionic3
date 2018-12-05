@@ -29,9 +29,10 @@ export class DailyReportPage {
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
-  public comment: string;
+  public dsToday: number;
   public rangeValue1: number = 3;
   public rangeValue2: number = 3;
+  public comment: string;
   public segments: any = [];
 
   constructor(public navCtrl: NavController,
@@ -41,19 +42,22 @@ export class DailyReportPage {
   ) { }
 
   ionViewDidLoad() {
-    // console.log('ionViewDidLoad DailyReportPage');
     this.segments = this.dreamSource.getMainSegmentItems();
   }
 
-  openModal(Num) {
-    let modalObject = [{ title: '氏名', value: this.name }];
-    console.log(modalObject);
-    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, modalObject);
+  openModal() {
+    let modalObject = {
+      contents: [
+        { type: "date", value: this.displayDate },
+        { type: "name", value: this.name },
+        { type: "dsToday", value: this.dsToday },
+        { type: "dsAchievement", value: this.rangeValue1 },
+        { type: "condition", value: this.rangeValue2 },
+        { type: "comment", value: this.comment },
+      ]
+    };
+    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, { modalObject });
     dailyReportModal.present();
-  }
-
-  public Log(stuff): void {
-    console.log(stuff);
   }
 
   public event(data: Date): void {
