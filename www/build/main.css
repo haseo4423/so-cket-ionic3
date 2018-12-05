@@ -25693,6 +25693,11 @@ page-daily-report .likely-label {
   font-size: 1.2rem;
 }
 
+page-daily-report-modal .modalTextarea .text-input {
+  height: 30vh;
+  border: 1px solid black;
+}
+
 page-dream-source .scroll-content {
   overflow-y: hidden;
 }

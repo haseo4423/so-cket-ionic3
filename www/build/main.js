@@ -28,53 +28,26 @@ var DailyReportModalPage = /** @class */ (function () {
     function DailyReportModalPage(params, viewCtrl) {
         this.params = params;
         this.viewCtrl = viewCtrl;
-        var characters = [
-            {
-                name: 'Gollum',
-                quote: 'Sneaky little hobbitses!',
-                image: 'assets/img/avatar-gollum.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'River Folk' },
-                    { title: 'Alter Ego', note: 'Smeagol' }
-                ]
-            },
-            {
-                name: 'Frodo',
-                quote: 'Go back, Sam! I\'m going to Mordor alone!',
-                image: 'assets/img/avatar-frodo.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Weapon', note: 'Sting' }
-                ]
-            },
-            {
-                name: 'Samwise Gamgee',
-                quote: 'What we need is a few good taters.',
-                image: 'assets/img/avatar-samwise.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Nickname', note: 'Sam' }
-                ]
+        this.modalContents = "";
+        var getParams = this.params.get("modalObject");
+        for (var _i = 0, _a = getParams.contents; _i < _a.length; _i++) {
+            var param = _a[_i];
+            if (param.value != undefined) {
+                this.modalContents += param.value + "\n";
             }
-        ];
-        // let rand = Math.floor(Math.random() * 3);
-        console.log(this.params.get("0"));
-        this.character = characters[1];
+        }
     }
     DailyReportModalPage.prototype.dismiss = function () {
         this.viewCtrl.dismiss();
     };
     DailyReportModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Description\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
+            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      日報生成\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-label color="primary" stacked>本文</ion-label>\n  <ion-textarea [(ngModel)]="modalContents" name="modalContents" class="modalTextarea"></ion-textarea>\n  <!-- <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list> -->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]) === "function" && _b || Object])
     ], DailyReportModalPage);
     return DailyReportModalPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=daily-report-modal.js.map
@@ -127,17 +100,21 @@ var DailyReportPage = /** @class */ (function () {
         this.segments = [];
     }
     DailyReportPage.prototype.ionViewDidLoad = function () {
-        // console.log('ionViewDidLoad DailyReportPage');
         this.segments = this.dreamSource.getMainSegmentItems();
     };
-    DailyReportPage.prototype.openModal = function (Num) {
-        var modalObject = [{ title: '氏名', value: this.name }];
-        console.log(modalObject);
-        var dailyReportModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */], modalObject);
+    DailyReportPage.prototype.openModal = function () {
+        var modalObject = {
+            contents: [
+                { type: "date", value: this.displayDate },
+                { type: "name", value: this.name },
+                { type: "dsToday", value: this.dsToday },
+                { type: "dsAchievement", value: this.rangeValue1 },
+                { type: "condition", value: this.rangeValue2 },
+                { type: "comment", value: this.comment },
+            ]
+        };
+        var dailyReportModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */], { modalObject: modalObject });
         dailyReportModal.present();
-    };
-    DailyReportPage.prototype.Log = function (stuff) {
-        console.log(stuff);
     };
     DailyReportPage.prototype.event = function (data) {
         this.localDate = data;
@@ -166,7 +143,7 @@ var DailyReportPage = /** @class */ (function () {
     };
     DailyReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"\n        [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n        <span>{{displayDate}} <ion-icon name="clipboard" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select [(ngModel)]="gaming" interface="alert">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue1" color="secondary" (ngModelChange)="rangeValue1=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日の調子： {{rangeValue2}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue2" color="secondary" (ngModelChange)="rangeValue2=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>\n  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>\n  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
+            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"\n        [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select [(ngModel)]="gaming" interface="alert" [(ngModel)]="dsToday" name="dsToday">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue1" color="secondary" (ngModelChange)="rangeValue1=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日の調子： {{rangeValue2}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue2" color="secondary" (ngModelChange)="rangeValue2=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n  <button ion-button (click)="openModal()" block>OpenModal1</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]) === "function" && _d || Object])
@@ -564,14 +541,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__["a" /* TimeRegistrationPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__["a" /* DailyReportPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__["a" /* DreamSourcePage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */],
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_12__providers_mock_mock__["a" /* MockProvider */],
-                __WEBPACK_IMPORTED_MODULE_13__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]
+                __WEBPACK_IMPORTED_MODULE_13__providers_dream_source_dream_source__["a" /* DreamSourceProvider */],
             ]
         })
     ], AppModule);
