@@ -24,11 +24,12 @@ export class DailyReportModalPage {
     public toastCtrl: ToastController
   ) {
     let getParams = this.params.get("modalObject");
-    for (let param of getParams.contents) {
-      if (param.value != undefined) {
-        this.modalContents += param.value + "\n";
-      }
+    this.modalContents = `日報　` + getParams.displayDate + `　` + getParams.name + `\n`;
+    this.modalContents += `□本日のDS　` + getParams.dsToday + `：` + getParams.dsHeading + `\n`;
+    for (let content of getParams.contents) {
+      this.modalContents += `□` + content.type + `：` + content.value + "\n";
     }
+    this.modalContents += `□自由記入欄(DS体験/気づきなど、その他なんでも)\n` + getParams.comment;
     this.clipboard = new Clipboard('#cpyBtn');
     this.clipboard.on('success', () => this.showMsg(toastCtrl));
   }
