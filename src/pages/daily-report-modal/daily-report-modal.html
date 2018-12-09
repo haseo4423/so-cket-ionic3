@@ -20,7 +20,8 @@
 
 <ion-content padding>
   <ion-label color="primary" stacked>本文</ion-label>
-  <ion-textarea [(ngModel)]="modalContents" name="modalContents" class="modalTextarea"></ion-textarea>
+  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>
+  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>
   <!-- <ion-list>
     <ion-item>
       <ion-avatar item-start>

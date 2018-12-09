@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams, ToastController } from 'ionic-angular';
+import * as Clipboard from 'clipboard/dist/clipboard.min.js';
 
 /**
  * Generated class for the DailyReportModalPage page.
@@ -15,10 +16,12 @@ import { IonicPage, ViewController, NavParams } from 'ionic-angular';
 })
 export class DailyReportModalPage {
   public modalContents: string = "";
+  public clipboard: any;
 
   constructor(
     public params: NavParams,
-    public viewCtrl: ViewController
+    public viewCtrl: ViewController,
+    public toastCtrl: ToastController
   ) {
     let getParams = this.params.get("modalObject");
     for (let param of getParams.contents) {
@@ -26,10 +29,21 @@ export class DailyReportModalPage {
         this.modalContents += param.value + "\n";
       }
     }
+    this.clipboard = new Clipboard('#cpyBtn');
+    this.clipboard.on('success', () => this.showMsg(toastCtrl));
   }
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  showMsg(toastCtrl: ToastController) {
+    let toast = toastCtrl.create({
+      message: 'クリップボードにコピーしました',
+      duration: 3000,
+      position: 'bottom'
+    });
+    toast.present();
   }
 
 }
