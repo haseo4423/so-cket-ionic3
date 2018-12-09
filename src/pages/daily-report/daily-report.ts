@@ -23,38 +23,41 @@ import { DreamSourceProvider } from '../../providers/dream-source/dream-source';
 })
 export class DailyReportPage {
   weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
-  public localDate: Date = new Date();
   public initDate: Date = new Date();
   public disabledDates: Date[] = [new Date(2018, 11, 14)];
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
   public dsToday: number;
+  public dsItem: string;
   public rangeValue1: number = 3;
   public rangeValue2: number = 3;
   public comment: string;
   public segments: any = [];
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
     public dreamSource: DreamSourceProvider
-  ) { }
-
-  ionViewDidLoad() {
+  ) {
     this.segments = this.dreamSource.getMainSegmentItems();
+    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items[0];
   }
 
   openModal() {
+    let num = this.dsToday;
+    num++;
     let modalObject = {
+      displayDate: this.displayDate,
+      name: this.name,
+      dsToday: num,
+      dsHeading: this.segments[this.dsToday].heading[0],
       contents: [
-        { type: "date", value: this.displayDate },
-        { type: "name", value: this.name },
-        { type: "dsToday", value: this.dsToday },
-        { type: "dsAchievement", value: this.rangeValue1 },
-        { type: "condition", value: this.rangeValue2 },
-        { type: "comment", value: this.comment },
-      ]
+        { type: "今日のDS意識度", value: this.rangeValue1 },
+        { type: "今日の調子", value: this.rangeValue2 },
+      ],
+      comment: this.comment,
     };
     let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, { modalObject });
     dailyReportModal.present();
@@ -63,6 +66,10 @@ export class DailyReportPage {
   public setDate(date: Date) {
     this.initDate = date;
     this.displayDate = this.dateFormat(date);
+  }
+
+  public setDsItem() {
+    this.dsItem = this.segments[this.dsToday].items[0];
   }
 
   // dateFormat 関数の定義

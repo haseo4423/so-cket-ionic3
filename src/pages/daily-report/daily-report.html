@@ -31,9 +31,12 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>今日のDS</ion-label>
-      <ion-select [(ngModel)]="gaming" interface="alert" [(ngModel)]="dsToday" name="dsToday">
+      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">
         <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>
       </ion-select>
+    </ion-item>
+    <ion-item>
+      <p class="white-space-prewrap">{{dsItem}}</p>
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>
