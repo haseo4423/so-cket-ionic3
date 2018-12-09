@@ -42,6 +42,10 @@ export class DailyReportPage {
     public dreamSource: DreamSourceProvider
   ) {
     this.segments = this.dreamSource.getMainSegmentItems();
+  }
+
+  ionViewWillEnter() {
+    console.log(JSON.parse(localStorage.getItem('modalObject')));
     if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items[0];
   }
 
@@ -59,6 +63,7 @@ export class DailyReportPage {
       ],
       comment: this.comment,
     };
+    localStorage.setItem('modalObject', JSON.stringify(modalObject));
     let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, { modalObject });
     dailyReportModal.present();
   }
@@ -88,7 +93,7 @@ export class DailyReportPage {
     }
 
     // フォーマット整形済みの文字列を戻り値にする
-    return y + '年' + m + '月' + d + '日 (' + wNames[w] + ')';
+    return y + '年' + m + '月' + d + '日(' + wNames[w] + ')';
   }
 
 }
