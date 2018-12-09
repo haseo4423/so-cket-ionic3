@@ -25678,6 +25678,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.white-space-prewrap {
+  white-space: pre-wrap;
+}
+
 page-daily-report .height10vh {
   height: 10vh;
 }
@@ -25691,6 +25695,12 @@ page-daily-report .likely-label {
   margin-left: 0;
   margin-bottom: 0;
   font-size: 1.2rem;
+}
+
+page-daily-report-modal .modalTextarea {
+  height: 30vh;
+  width: 100%;
+  border: 1px solid black;
 }
 
 page-dream-source .scroll-content {
@@ -25734,10 +25744,6 @@ page-dream-source .slide-zoom {
 
 page-dream-source .tabmenu::-webkit-scrollbar {
   display: none;
-}
-
-page-dream-source .white-space-prewrap {
-  white-space: pre-wrap;
 }
 
 page-dream-source .font-weight-bold {

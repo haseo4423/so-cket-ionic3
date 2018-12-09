@@ -22,7 +22,7 @@
       <p color="primary" class="likely-label" stacked>日付</p>
       <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"
         [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
-        <span>{{displayDate}} <ion-icon name="clipboard" item-left></ion-icon></span>
+        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>
       </span>
     </ion-item>
     <ion-item>
@@ -31,9 +31,12 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>今日のDS</ion-label>
-      <ion-select [(ngModel)]="gaming" interface="alert">
+      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">
         <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>
       </ion-select>
+    </ion-item>
+    <ion-item>
+      <p class="white-space-prewrap">{{dsItem}}</p>
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>
@@ -53,8 +56,6 @@
       <ion-label color="primary" stacked>自由記入欄</ion-label>
       <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>
     </ion-item>
+    <ion-item><button ion-button (click)="openModal()" block>日報を作成する</button></ion-item>
   </ion-list>
-  <button ion-button (click)="openModal({Num:0})" block>OpenModal1</button>
-  <button ion-button (click)="openModal({Num:1})" block>OpenModal2</button>
-  <button ion-button (click)="openModal({Num:2})" block>OpenModal3</button>
 </ion-content>

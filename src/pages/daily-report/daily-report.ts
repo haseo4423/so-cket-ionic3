@@ -23,48 +23,67 @@ import { DreamSourceProvider } from '../../providers/dream-source/dream-source';
 })
 export class DailyReportPage {
   weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
-  public localDate: Date = new Date();
   public initDate: Date = new Date();
   public disabledDates: Date[] = [new Date(2018, 11, 14)];
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
-  public comment: string;
+  public dsToday: number;
+  public dsItem: string;
   public rangeValue1: number = 3;
   public rangeValue2: number = 3;
+  public comment: string;
   public segments: any = [];
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
     public dreamSource: DreamSourceProvider
-  ) { }
-
-  ionViewDidLoad() {
-    // console.log('ionViewDidLoad DailyReportPage');
+  ) {
     this.segments = this.dreamSource.getMainSegmentItems();
   }
 
-  openModal(Num) {
-    let modalObject = [{ title: '氏名', value: this.name }];
-    console.log(modalObject);
-    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, modalObject);
+  ionViewWillEnter() {
+    if (localStorage.getItem('modalObject')) {
+      let modalObject = JSON.parse(localStorage.getItem('modalObject'));
+      this.name = modalObject.name;
+      let num = modalObject.dsToday;
+      this.dsToday = num - 1;
+      for (let content of modalObject.contents) {
+        this.rangeValue1 = content.value;
+      }
+      this.comment = modalObject.comment;
+    }
+    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items[0];
+  }
+
+  openModal() {
+    let num = this.dsToday;
+    num++;
+    let modalObject = {
+      displayDate: this.displayDate,
+      name: this.name,
+      dsToday: num,
+      dsHeading: this.segments[this.dsToday].heading[0],
+      contents: [
+        { type: "今日のDS意識度", value: this.rangeValue1 },
+        { type: "今日の調子", value: this.rangeValue2 },
+      ],
+      comment: this.comment,
+    };
+    localStorage.setItem('modalObject', JSON.stringify(modalObject));
+    let dailyReportModal = this.modalCtrl.create(DailyReportModalPage, { modalObject });
     dailyReportModal.present();
   }
 
-  public Log(stuff): void {
-    console.log(stuff);
-  }
-
-  public event(data: Date): void {
-    this.localDate = data;
-    this.displayDate = this.dateFormat(data);
-  }
-
   public setDate(date: Date) {
-    console.log(date);
     this.initDate = date;
     this.displayDate = this.dateFormat(date);
+  }
+
+  public setDsItem() {
+    this.dsItem = this.segments[this.dsToday].items[0];
   }
 
   // dateFormat 関数の定義
@@ -83,7 +102,7 @@ export class DailyReportPage {
     }
 
     // フォーマット整形済みの文字列を戻り値にする
-    return y + '年' + m + '月' + d + '日 (' + wNames[w] + ')';
+    return y + '年' + m + '月' + d + '日(' + wNames[w] + ')';
   }
 
 }

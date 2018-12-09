@@ -38,14 +38,14 @@ import { DatePickerModule } from 'ionic3-datepicker';
     TimeRegistrationPage,
     DailyReportPage,
     DreamSourcePage,
-    DailyReportModalPage
+    DailyReportModalPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     MockProvider,
-    DreamSourceProvider
+    DreamSourceProvider,
   ]
 })
 export class AppModule { }

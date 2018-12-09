@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams, ToastController } from 'ionic-angular';
+import * as Clipboard from 'clipboard/dist/clipboard.min.js';
 
 /**
  * Generated class for the DailyReportModalPage page.
@@ -14,51 +15,36 @@ import { IonicPage, ViewController, NavParams } from 'ionic-angular';
   templateUrl: 'daily-report-modal.html',
 })
 export class DailyReportModalPage {
-  character;
+  public modalContents: string = "";
+  public clipboard: any;
 
   constructor(
     public params: NavParams,
-    public viewCtrl: ViewController
+    public viewCtrl: ViewController,
+    public toastCtrl: ToastController
   ) {
-    var characters = [
-      {
-        name: 'Gollum',
-        quote: 'Sneaky little hobbitses!',
-        image: 'assets/img/avatar-gollum.jpg',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'River Folk' },
-          { title: 'Alter Ego', note: 'Smeagol' }
-        ]
-      },
-      {
-        name: 'Frodo',
-        quote: 'Go back, Sam! I\'m going to Mordor alone!',
-        image: 'assets/img/avatar-frodo.jpg',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Weapon', note: 'Sting' }
-        ]
-      },
-      {
-        name: 'Samwise Gamgee',
-        quote: 'What we need is a few good taters.',
-        image: 'assets/img/avatar-samwise.jpg',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      }
-    ];
-    // let rand = Math.floor(Math.random() * 3);
-    console.log(this.params.get("0"));
-    this.character = characters[1];
+    let getParams = this.params.get("modalObject");
+    this.modalContents = `日報　` + getParams.displayDate + `　` + getParams.name + `\n`;
+    this.modalContents += `□本日のDS　` + getParams.dsToday + `：` + getParams.dsHeading + `\n`;
+    for (let content of getParams.contents) {
+      this.modalContents += `□` + content.type + `：` + content.value + "\n";
+    }
+    this.modalContents += `□自由記入欄(DS体験/気づきなど、その他なんでも)\n` + getParams.comment;
+    this.clipboard = new Clipboard('#cpyBtn');
+    this.clipboard.on('success', () => this.showMsg(toastCtrl));
   }
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  showMsg(toastCtrl: ToastController) {
+    let toast = toastCtrl.create({
+      message: 'クリップボードにコピーしました',
+      duration: 3000,
+      position: 'bottom'
+    });
+    toast.present();
   }
 
 }

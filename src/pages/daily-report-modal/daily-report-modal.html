@@ -7,7 +7,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      日報作成
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -18,8 +18,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+<ion-content padding>
+  <ion-label color="primary" stacked>本文</ion-label>
+  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>
+  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>
+  <!-- <ion-list>
     <ion-item>
       <ion-avatar item-start>
         <img src="{{character.image}}">
@@ -33,5 +36,5 @@
         {{item.note}}
       </ion-note>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
