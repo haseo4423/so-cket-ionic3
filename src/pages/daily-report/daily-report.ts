@@ -45,7 +45,16 @@ export class DailyReportPage {
   }
 
   ionViewWillEnter() {
-    console.log(JSON.parse(localStorage.getItem('modalObject')));
+    if (localStorage.getItem('modalObject')) {
+      let modalObject = JSON.parse(localStorage.getItem('modalObject'));
+      this.name = modalObject.name;
+      let num = modalObject.dsToday;
+      this.dsToday = num - 1;
+      for (let content of modalObject.contents) {
+        this.rangeValue1 = content.value;
+      }
+      this.comment = modalObject.comment;
+    }
     if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items[0];
   }
 
