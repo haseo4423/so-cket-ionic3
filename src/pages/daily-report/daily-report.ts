@@ -60,13 +60,7 @@ export class DailyReportPage {
     dailyReportModal.present();
   }
 
-  public event(data: Date): void {
-    this.localDate = data;
-    this.displayDate = this.dateFormat(data);
-  }
-
   public setDate(date: Date) {
-    console.log(date);
     this.initDate = date;
     this.displayDate = this.dateFormat(date);
   }
