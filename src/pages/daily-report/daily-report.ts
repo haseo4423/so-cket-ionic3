@@ -16,24 +16,25 @@ import { DreamSourceProvider } from '../../providers/dream-source/dream-source';
   name: 'daily-report',
   segment: 'daily-report'
 })
+
 @Component({
   selector: 'page-daily-report',
   templateUrl: 'daily-report.html',
   providers: [DreamSourceProvider],
 })
+
 export class DailyReportPage {
   weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
   public initDate: Date = new Date();
-  public disabledDates: Date[] = [new Date(2018, 11, 14)];
+  public disabledDates: Date[] = [new Date(2016, 11, 14)];
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
   public dsToday: number;
   public dsItem: string;
-  public rangeValue1: number = 3;
-  public rangeValue2: number = 3;
   public comment: string;
   public segments: any = [];
+  public testContents: { type: string, value: number }[] = [];
 
   constructor(
     public navCtrl: NavController,
@@ -51,9 +52,14 @@ export class DailyReportPage {
       let num = modalObject.dsToday;
       this.dsToday = num - 1;
       for (let content of modalObject.contents) {
-        this.rangeValue1 = content.value;
+        this.testContents.push({ type: content.type, value: content.value });
       }
       this.comment = modalObject.comment;
+    } else {
+      this.testContents = [
+        { type: "今日のDS意識度", value: 3 },
+        { type: "今日の調子", value: 3 }
+      ];
     }
     if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].item;
   }
@@ -61,15 +67,16 @@ export class DailyReportPage {
   openModal() {
     let num = this.dsToday;
     num++;
+    let objectArray = [];
+    for (let content of this.testContents) {
+      objectArray.push({ type: content.type, value: content.value });
+    }
     let modalObject = {
       displayDate: this.displayDate,
       name: this.name,
       dsToday: num,
       dsHeading: this.segments[this.dsToday].heading,
-      contents: [
-        { type: "今日のDS意識度", value: this.rangeValue1 },
-        { type: "今日の調子", value: this.rangeValue2 },
-      ],
+      contents: objectArray,
       comment: this.comment,
     };
     localStorage.setItem('modalObject', JSON.stringify(modalObject));
