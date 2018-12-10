@@ -55,7 +55,7 @@ export class DailyReportPage {
       }
       this.comment = modalObject.comment;
     }
-    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items[0];
+    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items;
   }
 
   openModal() {
@@ -65,7 +65,7 @@ export class DailyReportPage {
       displayDate: this.displayDate,
       name: this.name,
       dsToday: num,
-      dsHeading: this.segments[this.dsToday].heading[0],
+      dsHeading: this.segments[this.dsToday].heading,
       contents: [
         { type: "今日のDS意識度", value: this.rangeValue1 },
         { type: "今日の調子", value: this.rangeValue2 },
@@ -83,7 +83,7 @@ export class DailyReportPage {
   }
 
   public setDsItem() {
-    this.dsItem = this.segments[this.dsToday].items[0];
+    this.dsItem = this.segments[this.dsToday].items;
   }
 
   // dateFormat 関数の定義

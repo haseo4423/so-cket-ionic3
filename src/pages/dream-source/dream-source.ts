@@ -31,7 +31,6 @@ export class DreamSourcePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DreamSourcePage');
     this.segments = this.dreamSource.getSegmentItems();
   }
 
