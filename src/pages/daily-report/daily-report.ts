@@ -30,7 +30,7 @@ export class DailyReportPage {
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
-  public dsToday: number;
+  public dsToday: number = 0;
   public dsItem: string;
   public comment: string;
   public segments: any = [];
