@@ -55,7 +55,7 @@ export class DailyReportPage {
       }
       this.comment = modalObject.comment;
     }
-    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].items;
+    if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].item;
   }
 
   openModal() {
@@ -83,7 +83,7 @@ export class DailyReportPage {
   }
 
   public setDsItem() {
-    this.dsItem = this.segments[this.dsToday].items;
+    this.dsItem = this.segments[this.dsToday].item;
   }
 
   // dateFormat 関数の定義
