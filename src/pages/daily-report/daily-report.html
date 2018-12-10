@@ -55,6 +55,6 @@
 
 <ion-footer>
   <ion-toolbar>
-    <button ion-button (click)="openModal()" block>日報を作成する</button>
+    <button ion-button (click)="openModal()" block [disabled]="!name">日報を作成する</button>
   </ion-toolbar>
 </ion-footer>
