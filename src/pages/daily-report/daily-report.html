@@ -38,24 +38,23 @@
     <ion-item>
       <p class="white-space-prewrap">{{dsItem}}</p>
     </ion-item>
-    <ion-item>
-      <ion-label color="primary" stacked>今日のDS意識度： {{rangeValue1}}</ion-label>
-      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue1" color="secondary" (ngModelChange)="rangeValue1=$event/10">
-        <ion-icon range-left name="sad"></ion-icon>
-        <ion-icon range-right name="happy"></ion-icon>
-      </ion-range>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary" stacked>今日の調子： {{rangeValue2}}</ion-label>
-      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*rangeValue2" color="secondary" (ngModelChange)="rangeValue2=$event/10">
+    <ion-item *ngFor="let testContent of testContents;">
+      <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>
+      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"
+        (ngModelChange)="testContent.value=$event/10">
         <ion-icon range-left name="sad"></ion-icon>
         <ion-icon range-right name="happy"></ion-icon>
       </ion-range>
     </ion-item>
     <ion-item>
       <ion-label color="primary" stacked>自由記入欄</ion-label>
-      <ion-textarea [(ngModel)]="comment" name="comment" class="height10vh"></ion-textarea>
+      <ion-textarea [(ngModel)]="comment" name="comment" class="height50vh"></ion-textarea>
     </ion-item>
-    <ion-item><button ion-button (click)="openModal()" block>日報を作成する</button></ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="openModal()" block>日報を作成する</button>
+  </ion-toolbar>
+</ion-footer>
