@@ -9,6 +9,7 @@ import { TimeRegistrationPage } from '../pages/time-registration/time-registrati
 import { DailyReportPage } from '../pages/daily-report/daily-report';
 import { DreamSourcePage } from '../pages/dream-source/dream-source';
 import { DailyReportModalPage } from '../pages/daily-report-modal/daily-report-modal';
+import { ConfigurationPage } from '../pages/configuration/configuration';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +25,7 @@ import { DatePickerModule } from 'ionic3-datepicker';
     DailyReportPage,
     DreamSourcePage,
     DailyReportModalPage,
+    ConfigurationPage,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { DatePickerModule } from 'ionic3-datepicker';
     DailyReportPage,
     DreamSourcePage,
     DailyReportModalPage,
+    ConfigurationPage,
   ],
   providers: [
     StatusBar,

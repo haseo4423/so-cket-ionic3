@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TimeRegistrationPage } from '../pages/time-registration/time-registration';
 import { DailyReportPage } from '../pages/daily-report/daily-report';
 import { DreamSourcePage } from '../pages/dream-source/dream-source';
+import { ConfigurationPage } from '../pages/configuration/configuration';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
       { title: '勤怠', component: TimeRegistrationPage },
       { title: '日報', component: DailyReportPage },
       { title: 'D2S', component: DreamSourcePage },
+      { title: 'オプション', component: ConfigurationPage },
     ];
 
   }
