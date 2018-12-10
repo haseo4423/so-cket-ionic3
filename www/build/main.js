@@ -4,10 +4,64 @@ webpackJsonp([5],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigurationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ConfigurationPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ConfigurationPage = /** @class */ (function () {
+    function ConfigurationPage(navCtrl, navParams, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.toastCtrl = toastCtrl;
+    }
+    ConfigurationPage.prototype.storageClear = function () {
+        localStorage.clear();
+        var toast = this.toastCtrl.create({
+            message: 'LocalStorageを全て削除しました',
+            duration: 3000,
+            position: 'bottom'
+        });
+        toast.present();
+    };
+    ConfigurationPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-configuration',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/'<!--\n  Generated template for the ConfigurationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      オプション\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <button ion-button secondary (click)="storageClear()">LocalStorageクリア</button>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/configuration/configuration.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]])
+    ], ConfigurationPage);
+    return ConfigurationPage;
+}());
+
+//# sourceMappingURL=configuration.js.map
+
+/***/ }),
+
+/***/ 105:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_clipboard_dist_clipboard_min_js__ = __webpack_require__(383);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_clipboard_dist_clipboard_min_js__ = __webpack_require__(384);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_clipboard_dist_clipboard_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_clipboard_dist_clipboard_min_js__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -59,26 +113,27 @@ var DailyReportModalPage = /** @class */ (function () {
     };
     DailyReportModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      日報作成\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-label color="primary" stacked>本文</ion-label>\n  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>\n  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>\n  <!-- <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list> -->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
+            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      日報作成\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-label color="primary" stacked>本文</ion-label>\n  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>\n  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>\n  <!-- <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list> -->\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]])
     ], DailyReportModalPage);
     return DailyReportModalPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=daily-report-modal.js.map
 
 /***/ }),
 
-/***/ 105:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DailyReportPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__daily_report_modal_daily_report_modal__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__ = __webpack_require__(79);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -111,6 +166,7 @@ var DailyReportPage = /** @class */ (function () {
         this.initDate = new Date();
         this.disabledDates = [new Date(2016, 11, 14)];
         this.displayDate = this.dateFormat(this.initDate);
+        this.dsToday = 0;
         this.segments = [];
         this.testContents = [];
         this.segments = this.dreamSource.getMainSegmentItems();
@@ -130,7 +186,9 @@ var DailyReportPage = /** @class */ (function () {
         else {
             this.testContents = [
                 { type: "今日のDS意識度", value: 3 },
-                { type: "今日の調子", value: 3 }
+                { type: "今日の業務進捗", value: 3 },
+                { type: "今日の体調", value: 3 },
+                { type: "今日のモチベーション", value: 3 }
             ];
         }
         if (this.dsToday != undefined)
@@ -181,7 +239,7 @@ var DailyReportPage = /** @class */ (function () {
     };
     DailyReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"\n        [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <p class="white-space-prewrap">{{dsItem}}</p>\n    </ion-item>\n    <ion-item *ngFor="let testContent of testContents;">\n      <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"\n        (ngModelChange)="testContent.value=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height50vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <button ion-button (click)="openModal()" block>日報を作成する</button>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
+            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"\n        [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <p class="white-space-prewrap">{{dsItem}}</p>\n    </ion-item>\n    <ion-item *ngFor="let testContent of testContents;">\n      <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"\n        (ngModelChange)="testContent.value=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height50vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <button ion-button (click)="openModal()" block [disabled]="!name">日報を作成する</button>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]) === "function" && _d || Object])
@@ -194,17 +252,17 @@ var DailyReportPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DreamSourcePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval__ = __webpack_require__(384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval__ = __webpack_require__(385);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_interval__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -297,7 +355,7 @@ var DreamSourcePage = /** @class */ (function () {
     ], DreamSourcePage.prototype, "tabmenu", void 0);
     DreamSourcePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-dream-source',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap">{{segment.item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
+            selector: 'page-dream-source',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap">{{segment.item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]])
@@ -309,14 +367,14 @@ var DreamSourcePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 107:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimeRegistrationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -370,7 +428,7 @@ var TimeRegistrationPage = /** @class */ (function () {
     };
     TimeRegistrationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
+            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
@@ -383,7 +441,7 @@ var TimeRegistrationPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
+/***/ 119:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -396,33 +454,33 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 118;
+webpackEmptyAsyncContext.id = 119;
 
 /***/ }),
 
-/***/ 161:
+/***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/configuration/configuration.module": [
-		423,
-		0
-	],
-	"../pages/daily-report-modal/daily-report-modal.module": [
 		424,
 		4
 	],
-	"../pages/daily-report/daily-report.module": [
+	"../pages/daily-report-modal/daily-report-modal.module": [
 		425,
 		3
 	],
-	"../pages/dream-source/dream-source.module": [
+	"../pages/daily-report/daily-report.module": [
 		426,
 		2
 	],
-	"../pages/time-registration/time-registration.module": [
+	"../pages/dream-source/dream-source.module": [
 		427,
 		1
+	],
+	"../pages/time-registration/time-registration.module": [
+		428,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -436,18 +494,18 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 161;
+webpackAsyncContext.id = 162;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 329:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -478,7 +536,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher> -->\n  <h3>so-cket v0.3.0</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher> -->\n  <h3>so-cket v0.3.0</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], HomePage);
@@ -489,13 +547,13 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 332:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(354);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -503,32 +561,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_mock_mock__ = __webpack_require__(419);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_dream_source_dream_source__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic3_datepicker__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_time_registration_time_registration__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_mock_mock__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_dream_source_dream_source__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ionic3_datepicker__ = __webpack_require__(421);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -556,6 +616,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__["a" /* DailyReportPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__["a" /* DreamSourcePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__["a" /* ConfigurationPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -569,7 +630,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/time-registration/time-registration.module#TimeRegistrationPageModule', name: 'TimeRegistrationPage', segment: 'time-registration', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_14_ionic3_datepicker__["a" /* DatePickerModule */],
+                __WEBPACK_IMPORTED_MODULE_15_ionic3_datepicker__["a" /* DatePickerModule */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
@@ -579,13 +640,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pages_daily_report_daily_report__["a" /* DailyReportPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_dream_source_dream_source__["a" /* DreamSourcePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_daily_report_modal_daily_report_modal__["a" /* DailyReportModalPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_configuration_configuration__["a" /* ConfigurationPage */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_12__providers_mock_mock__["a" /* MockProvider */],
-                __WEBPACK_IMPORTED_MODULE_13__providers_dream_source_dream_source__["a" /* DreamSourceProvider */],
+                __WEBPACK_IMPORTED_MODULE_13__providers_mock_mock__["a" /* MockProvider */],
+                __WEBPACK_IMPORTED_MODULE_14__providers_dream_source_dream_source__["a" /* DreamSourceProvider */],
             ]
         })
     ], AppModule);
@@ -596,256 +658,256 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 394:
+/***/ 395:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 162,
-	"./af.js": 162,
-	"./ar": 163,
-	"./ar-dz": 164,
-	"./ar-dz.js": 164,
-	"./ar-kw": 165,
-	"./ar-kw.js": 165,
-	"./ar-ly": 166,
-	"./ar-ly.js": 166,
-	"./ar-ma": 167,
-	"./ar-ma.js": 167,
-	"./ar-sa": 168,
-	"./ar-sa.js": 168,
-	"./ar-tn": 169,
-	"./ar-tn.js": 169,
-	"./ar.js": 163,
-	"./az": 170,
-	"./az.js": 170,
-	"./be": 171,
-	"./be.js": 171,
-	"./bg": 172,
-	"./bg.js": 172,
-	"./bm": 173,
-	"./bm.js": 173,
-	"./bn": 174,
-	"./bn.js": 174,
-	"./bo": 175,
-	"./bo.js": 175,
-	"./br": 176,
-	"./br.js": 176,
-	"./bs": 177,
-	"./bs.js": 177,
-	"./ca": 178,
-	"./ca.js": 178,
-	"./cs": 179,
-	"./cs.js": 179,
-	"./cv": 180,
-	"./cv.js": 180,
-	"./cy": 181,
-	"./cy.js": 181,
-	"./da": 182,
-	"./da.js": 182,
-	"./de": 183,
-	"./de-at": 184,
-	"./de-at.js": 184,
-	"./de-ch": 185,
-	"./de-ch.js": 185,
-	"./de.js": 183,
-	"./dv": 186,
-	"./dv.js": 186,
-	"./el": 187,
-	"./el.js": 187,
-	"./en-au": 188,
-	"./en-au.js": 188,
-	"./en-ca": 189,
-	"./en-ca.js": 189,
-	"./en-gb": 190,
-	"./en-gb.js": 190,
-	"./en-ie": 191,
-	"./en-ie.js": 191,
-	"./en-il": 192,
-	"./en-il.js": 192,
-	"./en-nz": 193,
-	"./en-nz.js": 193,
-	"./eo": 194,
-	"./eo.js": 194,
-	"./es": 195,
-	"./es-do": 196,
-	"./es-do.js": 196,
-	"./es-us": 197,
-	"./es-us.js": 197,
-	"./es.js": 195,
-	"./et": 198,
-	"./et.js": 198,
-	"./eu": 199,
-	"./eu.js": 199,
-	"./fa": 200,
-	"./fa.js": 200,
-	"./fi": 201,
-	"./fi.js": 201,
-	"./fo": 202,
-	"./fo.js": 202,
-	"./fr": 203,
-	"./fr-ca": 204,
-	"./fr-ca.js": 204,
-	"./fr-ch": 205,
-	"./fr-ch.js": 205,
-	"./fr.js": 203,
-	"./fy": 206,
-	"./fy.js": 206,
-	"./gd": 207,
-	"./gd.js": 207,
-	"./gl": 208,
-	"./gl.js": 208,
-	"./gom-latn": 209,
-	"./gom-latn.js": 209,
-	"./gu": 210,
-	"./gu.js": 210,
-	"./he": 211,
-	"./he.js": 211,
-	"./hi": 212,
-	"./hi.js": 212,
-	"./hr": 213,
-	"./hr.js": 213,
-	"./hu": 214,
-	"./hu.js": 214,
-	"./hy-am": 215,
-	"./hy-am.js": 215,
-	"./id": 216,
-	"./id.js": 216,
-	"./is": 217,
-	"./is.js": 217,
-	"./it": 218,
-	"./it.js": 218,
-	"./ja": 219,
-	"./ja.js": 219,
-	"./jv": 220,
-	"./jv.js": 220,
-	"./ka": 221,
-	"./ka.js": 221,
-	"./kk": 222,
-	"./kk.js": 222,
-	"./km": 223,
-	"./km.js": 223,
-	"./kn": 224,
-	"./kn.js": 224,
-	"./ko": 225,
-	"./ko.js": 225,
-	"./ky": 226,
-	"./ky.js": 226,
-	"./lb": 227,
-	"./lb.js": 227,
-	"./lo": 228,
-	"./lo.js": 228,
-	"./lt": 229,
-	"./lt.js": 229,
-	"./lv": 230,
-	"./lv.js": 230,
-	"./me": 231,
-	"./me.js": 231,
-	"./mi": 232,
-	"./mi.js": 232,
-	"./mk": 233,
-	"./mk.js": 233,
-	"./ml": 234,
-	"./ml.js": 234,
-	"./mn": 235,
-	"./mn.js": 235,
-	"./mr": 236,
-	"./mr.js": 236,
-	"./ms": 237,
-	"./ms-my": 238,
-	"./ms-my.js": 238,
-	"./ms.js": 237,
-	"./mt": 239,
-	"./mt.js": 239,
-	"./my": 240,
-	"./my.js": 240,
-	"./nb": 241,
-	"./nb.js": 241,
-	"./ne": 242,
-	"./ne.js": 242,
-	"./nl": 243,
-	"./nl-be": 244,
-	"./nl-be.js": 244,
-	"./nl.js": 243,
-	"./nn": 245,
-	"./nn.js": 245,
-	"./pa-in": 246,
-	"./pa-in.js": 246,
-	"./pl": 247,
-	"./pl.js": 247,
-	"./pt": 248,
-	"./pt-br": 249,
-	"./pt-br.js": 249,
-	"./pt.js": 248,
-	"./ro": 250,
-	"./ro.js": 250,
-	"./ru": 251,
-	"./ru.js": 251,
-	"./sd": 252,
-	"./sd.js": 252,
-	"./se": 253,
-	"./se.js": 253,
-	"./si": 254,
-	"./si.js": 254,
-	"./sk": 255,
-	"./sk.js": 255,
-	"./sl": 256,
-	"./sl.js": 256,
-	"./sq": 257,
-	"./sq.js": 257,
-	"./sr": 258,
-	"./sr-cyrl": 259,
-	"./sr-cyrl.js": 259,
-	"./sr.js": 258,
-	"./ss": 260,
-	"./ss.js": 260,
-	"./sv": 261,
-	"./sv.js": 261,
-	"./sw": 262,
-	"./sw.js": 262,
-	"./ta": 263,
-	"./ta.js": 263,
-	"./te": 264,
-	"./te.js": 264,
-	"./tet": 265,
-	"./tet.js": 265,
-	"./tg": 266,
-	"./tg.js": 266,
-	"./th": 267,
-	"./th.js": 267,
-	"./tl-ph": 268,
-	"./tl-ph.js": 268,
-	"./tlh": 269,
-	"./tlh.js": 269,
-	"./tr": 270,
-	"./tr.js": 270,
-	"./tzl": 271,
-	"./tzl.js": 271,
-	"./tzm": 272,
-	"./tzm-latn": 273,
-	"./tzm-latn.js": 273,
-	"./tzm.js": 272,
-	"./ug-cn": 274,
-	"./ug-cn.js": 274,
-	"./uk": 275,
-	"./uk.js": 275,
-	"./ur": 276,
-	"./ur.js": 276,
-	"./uz": 277,
-	"./uz-latn": 278,
-	"./uz-latn.js": 278,
-	"./uz.js": 277,
-	"./vi": 279,
-	"./vi.js": 279,
-	"./x-pseudo": 280,
-	"./x-pseudo.js": 280,
-	"./yo": 281,
-	"./yo.js": 281,
-	"./zh-cn": 282,
-	"./zh-cn.js": 282,
-	"./zh-hk": 283,
-	"./zh-hk.js": 283,
-	"./zh-tw": 284,
-	"./zh-tw.js": 284
+	"./af": 163,
+	"./af.js": 163,
+	"./ar": 164,
+	"./ar-dz": 165,
+	"./ar-dz.js": 165,
+	"./ar-kw": 166,
+	"./ar-kw.js": 166,
+	"./ar-ly": 167,
+	"./ar-ly.js": 167,
+	"./ar-ma": 168,
+	"./ar-ma.js": 168,
+	"./ar-sa": 169,
+	"./ar-sa.js": 169,
+	"./ar-tn": 170,
+	"./ar-tn.js": 170,
+	"./ar.js": 164,
+	"./az": 171,
+	"./az.js": 171,
+	"./be": 172,
+	"./be.js": 172,
+	"./bg": 173,
+	"./bg.js": 173,
+	"./bm": 174,
+	"./bm.js": 174,
+	"./bn": 175,
+	"./bn.js": 175,
+	"./bo": 176,
+	"./bo.js": 176,
+	"./br": 177,
+	"./br.js": 177,
+	"./bs": 178,
+	"./bs.js": 178,
+	"./ca": 179,
+	"./ca.js": 179,
+	"./cs": 180,
+	"./cs.js": 180,
+	"./cv": 181,
+	"./cv.js": 181,
+	"./cy": 182,
+	"./cy.js": 182,
+	"./da": 183,
+	"./da.js": 183,
+	"./de": 184,
+	"./de-at": 185,
+	"./de-at.js": 185,
+	"./de-ch": 186,
+	"./de-ch.js": 186,
+	"./de.js": 184,
+	"./dv": 187,
+	"./dv.js": 187,
+	"./el": 188,
+	"./el.js": 188,
+	"./en-au": 189,
+	"./en-au.js": 189,
+	"./en-ca": 190,
+	"./en-ca.js": 190,
+	"./en-gb": 191,
+	"./en-gb.js": 191,
+	"./en-ie": 192,
+	"./en-ie.js": 192,
+	"./en-il": 193,
+	"./en-il.js": 193,
+	"./en-nz": 194,
+	"./en-nz.js": 194,
+	"./eo": 195,
+	"./eo.js": 195,
+	"./es": 196,
+	"./es-do": 197,
+	"./es-do.js": 197,
+	"./es-us": 198,
+	"./es-us.js": 198,
+	"./es.js": 196,
+	"./et": 199,
+	"./et.js": 199,
+	"./eu": 200,
+	"./eu.js": 200,
+	"./fa": 201,
+	"./fa.js": 201,
+	"./fi": 202,
+	"./fi.js": 202,
+	"./fo": 203,
+	"./fo.js": 203,
+	"./fr": 204,
+	"./fr-ca": 205,
+	"./fr-ca.js": 205,
+	"./fr-ch": 206,
+	"./fr-ch.js": 206,
+	"./fr.js": 204,
+	"./fy": 207,
+	"./fy.js": 207,
+	"./gd": 208,
+	"./gd.js": 208,
+	"./gl": 209,
+	"./gl.js": 209,
+	"./gom-latn": 210,
+	"./gom-latn.js": 210,
+	"./gu": 211,
+	"./gu.js": 211,
+	"./he": 212,
+	"./he.js": 212,
+	"./hi": 213,
+	"./hi.js": 213,
+	"./hr": 214,
+	"./hr.js": 214,
+	"./hu": 215,
+	"./hu.js": 215,
+	"./hy-am": 216,
+	"./hy-am.js": 216,
+	"./id": 217,
+	"./id.js": 217,
+	"./is": 218,
+	"./is.js": 218,
+	"./it": 219,
+	"./it.js": 219,
+	"./ja": 220,
+	"./ja.js": 220,
+	"./jv": 221,
+	"./jv.js": 221,
+	"./ka": 222,
+	"./ka.js": 222,
+	"./kk": 223,
+	"./kk.js": 223,
+	"./km": 224,
+	"./km.js": 224,
+	"./kn": 225,
+	"./kn.js": 225,
+	"./ko": 226,
+	"./ko.js": 226,
+	"./ky": 227,
+	"./ky.js": 227,
+	"./lb": 228,
+	"./lb.js": 228,
+	"./lo": 229,
+	"./lo.js": 229,
+	"./lt": 230,
+	"./lt.js": 230,
+	"./lv": 231,
+	"./lv.js": 231,
+	"./me": 232,
+	"./me.js": 232,
+	"./mi": 233,
+	"./mi.js": 233,
+	"./mk": 234,
+	"./mk.js": 234,
+	"./ml": 235,
+	"./ml.js": 235,
+	"./mn": 236,
+	"./mn.js": 236,
+	"./mr": 237,
+	"./mr.js": 237,
+	"./ms": 238,
+	"./ms-my": 239,
+	"./ms-my.js": 239,
+	"./ms.js": 238,
+	"./mt": 240,
+	"./mt.js": 240,
+	"./my": 241,
+	"./my.js": 241,
+	"./nb": 242,
+	"./nb.js": 242,
+	"./ne": 243,
+	"./ne.js": 243,
+	"./nl": 244,
+	"./nl-be": 245,
+	"./nl-be.js": 245,
+	"./nl.js": 244,
+	"./nn": 246,
+	"./nn.js": 246,
+	"./pa-in": 247,
+	"./pa-in.js": 247,
+	"./pl": 248,
+	"./pl.js": 248,
+	"./pt": 249,
+	"./pt-br": 250,
+	"./pt-br.js": 250,
+	"./pt.js": 249,
+	"./ro": 251,
+	"./ro.js": 251,
+	"./ru": 252,
+	"./ru.js": 252,
+	"./sd": 253,
+	"./sd.js": 253,
+	"./se": 254,
+	"./se.js": 254,
+	"./si": 255,
+	"./si.js": 255,
+	"./sk": 256,
+	"./sk.js": 256,
+	"./sl": 257,
+	"./sl.js": 257,
+	"./sq": 258,
+	"./sq.js": 258,
+	"./sr": 259,
+	"./sr-cyrl": 260,
+	"./sr-cyrl.js": 260,
+	"./sr.js": 259,
+	"./ss": 261,
+	"./ss.js": 261,
+	"./sv": 262,
+	"./sv.js": 262,
+	"./sw": 263,
+	"./sw.js": 263,
+	"./ta": 264,
+	"./ta.js": 264,
+	"./te": 265,
+	"./te.js": 265,
+	"./tet": 266,
+	"./tet.js": 266,
+	"./tg": 267,
+	"./tg.js": 267,
+	"./th": 268,
+	"./th.js": 268,
+	"./tl-ph": 269,
+	"./tl-ph.js": 269,
+	"./tlh": 270,
+	"./tlh.js": 270,
+	"./tr": 271,
+	"./tr.js": 271,
+	"./tzl": 272,
+	"./tzl.js": 272,
+	"./tzm": 273,
+	"./tzm-latn": 274,
+	"./tzm-latn.js": 274,
+	"./tzm.js": 273,
+	"./ug-cn": 275,
+	"./ug-cn.js": 275,
+	"./uk": 276,
+	"./uk.js": 276,
+	"./ur": 277,
+	"./ur.js": 277,
+	"./uz": 278,
+	"./uz-latn": 279,
+	"./uz-latn.js": 279,
+	"./uz.js": 278,
+	"./vi": 280,
+	"./vi.js": 280,
+	"./x-pseudo": 281,
+	"./x-pseudo.js": 281,
+	"./yo": 282,
+	"./yo.js": 282,
+	"./zh-cn": 283,
+	"./zh-cn.js": 283,
+	"./zh-hk": 284,
+	"./zh-hk.js": 284,
+	"./zh-tw": 285,
+	"./zh-tw.js": 285
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -861,23 +923,24 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 394;
+webpackContext.id = 395;
 
 /***/ }),
 
-/***/ 411:
+/***/ 412:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_time_registration_time_registration__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_daily_report_daily_report__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_dream_source_dream_source__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_time_registration_time_registration__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_daily_report_daily_report__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_dream_source_dream_source__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_configuration_configuration__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -887,6 +950,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -908,6 +972,7 @@ var MyApp = /** @class */ (function () {
             { title: '勤怠', component: __WEBPACK_IMPORTED_MODULE_5__pages_time_registration_time_registration__["a" /* TimeRegistrationPage */] },
             { title: '日報', component: __WEBPACK_IMPORTED_MODULE_6__pages_daily_report_daily_report__["a" /* DailyReportPage */] },
             { title: 'D2S', component: __WEBPACK_IMPORTED_MODULE_7__pages_dream_source_dream_source__["a" /* DreamSourcePage */] },
+            { title: 'オプション', component: __WEBPACK_IMPORTED_MODULE_8__pages_configuration_configuration__["a" /* ConfigurationPage */] },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -929,7 +994,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/yoshifumi/git/so-cket-ionic3/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/yoshifumi/git/so-cket-ionic3/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -940,7 +1005,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 419:
+/***/ 420:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1160,5 +1225,5 @@ var DreamSourceProvider = /** @class */ (function () {
 
 /***/ })
 
-},[332]);
+},[333]);
 //# sourceMappingURL=main.js.map
