@@ -8,7 +8,7 @@
 importScripts('./build/sw-toolbox.js');
 
 self.toolbox.options.cache = {
-  name: 'so-cket-cache-v0.3.0'
+  name: 'so-cket-cache-v0.4.0'
 };
 
 // pre-cache our key assets
