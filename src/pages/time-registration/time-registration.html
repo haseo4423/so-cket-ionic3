@@ -26,7 +26,7 @@
         <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block>登録</button>
+    <button ion-button block [disabled]="!url.indexOf('gktrg03')">登録</button>
   </form>
   <ion-list padding>
     <p>履歴</p>
