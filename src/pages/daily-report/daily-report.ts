@@ -30,7 +30,7 @@ export class DailyReportPage {
   public displayDate: String = this.dateFormat(this.initDate);
 
   public name: string;
-  public dsToday: number;
+  public dsToday: number = 0;
   public dsItem: string;
   public comment: string;
   public segments: any = [];
@@ -58,7 +58,9 @@ export class DailyReportPage {
     } else {
       this.testContents = [
         { type: "今日のDS意識度", value: 3 },
-        { type: "今日の調子", value: 3 }
+        { type: "今日の業務進捗", value: 3 },
+        { type: "今日の体調", value: 3 },
+        { type: "今日のモチベーション", value: 3 }
       ];
     }
     if (this.dsToday != undefined) this.dsItem = this.segments[this.dsToday].item;
