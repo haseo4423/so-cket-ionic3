@@ -23,11 +23,13 @@ export class DailyReportModalPage {
     public viewCtrl: ViewController,
     public toastCtrl: ToastController
   ) {
+    // modal起動時に渡されたobjectを受け取る
     let getParams = this.params.get("modalObject");
 
     getParams.name = this.checkEmpty(getParams.name);
     getParams.comment = this.checkEmpty(getParams.comment);
 
+    // 日報本文テンプレートに値を展開する
     this.modalContents = `日報　` + getParams.displayDate + `　` + getParams.name + `\n\n`;
     this.modalContents += `□本日のDS　` + getParams.dsToday + `：` + getParams.dsHeading + `\n\n`;
     this.modalContents += `※ 1:悪い <==> 5:良い\n`;
@@ -36,6 +38,7 @@ export class DailyReportModalPage {
     }
     this.modalContents += `\n□自由記入欄(DS体験/気づきなど、その他なんでも)\n` + getParams.comment;
 
+    // コピーボタンにバインド
     this.clipboard = new Clipboard('#cpyBtn');
     this.clipboard.on('success', () => this.showMsg(toastCtrl));
   }

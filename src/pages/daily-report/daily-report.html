@@ -20,8 +20,8 @@
   <ion-list>
     <ion-item>
       <p color="primary" class="likely-label" stacked>日付</p>
-      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"
-        [localeStrings]="{ weekdays: ['日', '月', '火', '水', '木', '金', '土'], months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] }">
+      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="markedDates" class="ScheduleDate"
+        [localeStrings]="localeString">
         <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>
       </span>
     </ion-item>
@@ -38,7 +38,7 @@
     <ion-item>
       <p class="white-space-prewrap">{{dsItem}}</p>
     </ion-item>
-    <ion-item *ngFor="let testContent of testContents;">
+    <ion-item *ngFor="let testContent of rangeContents;">
       <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>
       <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"
         (ngModelChange)="testContent.value=$event/10">

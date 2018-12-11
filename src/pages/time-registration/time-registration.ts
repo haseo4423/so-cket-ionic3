@@ -16,9 +16,9 @@ import * as moment from 'moment';
   templateUrl: 'time-registration.html',
 })
 export class TimeRegistrationPage {
-  url: string;
-  weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
-  registeredLogArray: Array<any> = [];
+  public url: string;
+  public weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
+  public registeredLogArray: Array<any> = [];
 
   constructor(
     public navCtrl: NavController,

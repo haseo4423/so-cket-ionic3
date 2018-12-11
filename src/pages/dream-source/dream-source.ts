@@ -24,11 +24,14 @@ export class DreamSourcePage {
 
   @ViewChild(Slides) slides: Slides;
   @ViewChild('tabmenu') tabmenu: any;
-  segments: any = [];
-  activeIndex: number = 0;
+  public segments: any = [];
+  public activeIndex: number = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dreamSource: DreamSourceProvider) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public dreamSource: DreamSourceProvider
+  ) { }
 
   ionViewDidLoad() {
     this.segments = this.dreamSource.getSegmentItems();
@@ -70,21 +73,6 @@ export class DreamSourcePage {
         obs.unsubscribe();
       }
     });
-  }
-
-  doRefresh(refresher) {
-    // this.currentPage = 1;
-    setTimeout(() => {
-      // this.qiitaServiceProvider.getQiitaItems(this.currentPage, this.queryOption)
-      //   .subscribe(items => {
-      //     this.qiitaItems = items;
-      //     console.log(items);
-      //   },
-      //     err => console.log(err),
-      //     () => { });
-
-      refresher.complete();
-    }, 500);
   }
 
 }
