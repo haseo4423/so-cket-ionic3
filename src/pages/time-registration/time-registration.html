@@ -23,13 +23,13 @@
     <ion-list>
       <ion-item>
         <ion-label floating>URL</ion-label>
-        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
+        <ion-input type="text" [(ngModel)]="url" name="url" (ngModelChange)="checkDisabled();"></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block [disabled]="url.indexOf('gktrg03')">登録</button>
+    <button ion-button block [disabled]="isDisabled">登録</button>
   </form>
   <ion-list padding>
-    <p>履歴<br>直近6件の履歴を保存します。</p>
+    <p>履歴<br>※直近6件の履歴を保存します。</p>
     <ion-item *ngFor="let log of registeredLogArray">
       <p>{{log}}</p>
     </ion-item>
