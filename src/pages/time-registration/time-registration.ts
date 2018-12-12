@@ -33,6 +33,7 @@ export class TimeRegistrationPage {
     if (localStorage.getItem('registeredUrl')) {
       this.url = JSON.parse(localStorage.getItem('registeredUrl'));
     }
+    this.checkDisabled();
     // 勤怠登録の履歴保存があるか
     if (localStorage.getItem('registeredLog')) {
       this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
@@ -41,8 +42,11 @@ export class TimeRegistrationPage {
 
   checkDisabled() {
     // 勤怠示すキーワードとスタッフ番号を示すキーワードがURLに入っていれば良しとする
-    if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0) this.isDisabled = false;
-    else this.isDisabled = true;
+    if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0) {
+      this.isDisabled = false;
+    } else {
+      this.isDisabled = true;
+    }
   }
 
   apiExecute() {

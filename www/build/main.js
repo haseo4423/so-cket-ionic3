@@ -430,6 +430,7 @@ var TimeRegistrationPage = /** @class */ (function () {
         if (localStorage.getItem('registeredUrl')) {
             this.url = JSON.parse(localStorage.getItem('registeredUrl'));
         }
+        this.checkDisabled();
         // 勤怠登録の履歴保存があるか
         if (localStorage.getItem('registeredLog')) {
             this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
@@ -437,10 +438,12 @@ var TimeRegistrationPage = /** @class */ (function () {
     };
     TimeRegistrationPage.prototype.checkDisabled = function () {
         // 勤怠示すキーワードとスタッフ番号を示すキーワードがURLに入っていれば良しとする
-        if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0)
+        if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0) {
             this.isDisabled = false;
-        else
+        }
+        else {
             this.isDisabled = true;
+        }
     };
     TimeRegistrationPage.prototype.apiExecute = function () {
         // API実行時にテキスト入力されているURLをlocalStorageに保存
@@ -568,12 +571,11 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>so-cket v1.0.0</h3>\n\n  <p>\n    このアプリでできること<br>\n    ・勤怠登録<br>\n    -> somaの勤怠登録APIが実行できます。<br>\n    ・日報作成<br>\n    -> 入力フォームから日報がちょっと楽に作成できます。<br>\n    ・D2S(Degital Dream Source)<br>\n    -> スマホでDSが見れます。\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>so-cket v1.0.1</h3>\n\n  <p>\n    このアプリでできること<br>\n    ・勤怠登録<br>\n    -> somaの勤怠登録APIが実行できます。<br>\n    ・日報作成<br>\n    -> 入力フォームから日報がちょっと楽に作成できます。<br>\n    ・D2S(Digital Dream Source)<br>\n    -> スマホでDSが見れます。\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], HomePage);
     return HomePage;
-    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
