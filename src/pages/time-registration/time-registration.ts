@@ -16,7 +16,8 @@ import * as moment from 'moment';
   templateUrl: 'time-registration.html',
 })
 export class TimeRegistrationPage {
-  public url: string;
+  // htmlでindexOfを使うため空文字で初期化
+  public url: string = "";
   public weekString: Array<String> = ['日', '月', '火', '水', '木', '金', '土'];
   public registeredLogArray: Array<any> = [];
 
