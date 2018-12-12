@@ -88,7 +88,11 @@ var DailyReportModalPage = /** @class */ (function () {
         this.viewCtrl = viewCtrl;
         this.toastCtrl = toastCtrl;
         this.modalContents = "";
+        // modal起動時に渡されたobjectを受け取る
         var getParams = this.params.get("modalObject");
+        getParams.name = this.checkEmpty(getParams.name);
+        getParams.comment = this.checkEmpty(getParams.comment);
+        // 日報本文テンプレートに値を展開する
         this.modalContents = "\u65E5\u5831\u3000" + getParams.displayDate + "\u3000" + getParams.name + "\n\n";
         this.modalContents += "\u25A1\u672C\u65E5\u306EDS\u3000" + getParams.dsToday + "\uFF1A" + getParams.dsHeading + "\n\n";
         this.modalContents += "\u203B 1:\u60AA\u3044 <==> 5:\u826F\u3044\n";
@@ -97,6 +101,7 @@ var DailyReportModalPage = /** @class */ (function () {
             this.modalContents += "\u25A1" + content.type + "\uFF1A" + content.value + "\n";
         }
         this.modalContents += "\n\u25A1\u81EA\u7531\u8A18\u5165\u6B04(DS\u4F53\u9A13/\u6C17\u3065\u304D\u306A\u3069\u3001\u305D\u306E\u4ED6\u306A\u3093\u3067\u3082)\n" + getParams.comment;
+        // コピーボタンにバインド
         this.clipboard = new __WEBPACK_IMPORTED_MODULE_2_clipboard_dist_clipboard_min_js__('#cpyBtn');
         this.clipboard.on('success', function () { return _this.showMsg(toastCtrl); });
     }
@@ -111,9 +116,16 @@ var DailyReportModalPage = /** @class */ (function () {
         });
         toast.present();
     };
+    DailyReportModalPage.prototype.checkEmpty = function (param) {
+        // 主にundefinedを画面に表示しないために空文字にすることが目的。
+        // 0やfalseも対象なので注意。
+        if (!param)
+            return "";
+        return param;
+    };
     DailyReportModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      日報作成\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-label color="primary" stacked>本文</ion-label>\n  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>\n  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>\n  <!-- <ion-list>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="{{character.image}}">\n      </ion-avatar>\n      <h2>{{character.name}}</h2>\n      <p>{{character.quote}}</p>\n    </ion-item>\n    <ion-item *ngFor="let item of character[\'items\']">\n      {{item.title}}\n      <ion-note item-end>\n        {{item.note}}\n      </ion-note>\n    </ion-item>\n  </ion-list> -->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
+            selector: 'page-daily-report-modal',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/'<!--\n  Generated template for the DailyReportModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      日報作成\n    </ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-label color="primary" stacked>本文</ion-label>\n  <textarea [(ngModel)]="modalContents" name="modalContents" [value]="modalContents" id="copyTarget" class="modalTextarea"></textarea>\n  <button id="cpyBtn" block ion-button data-clipboard-target="#copyTarget">コピー</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report-modal/daily-report-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */],
@@ -162,43 +174,56 @@ var DailyReportPage = /** @class */ (function () {
         this.navParams = navParams;
         this.modalCtrl = modalCtrl;
         this.dreamSource = dreamSource;
+        /* カレンダー用の変数群 */
         this.weekString = ['日', '月', '火', '水', '木', '金', '土'];
+        this.localeString = {
+            weekdays: this.weekString,
+            months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        };
         this.initDate = new Date();
-        this.disabledDates = [new Date(2016, 11, 14)];
+        // カレンダー上にマーキングする日付。日報を作成した日付の履歴表示に使えるかも。
+        this.markedDates = [new Date(2016, 11, 14)];
+        // カレンダー自体のフォーマットは日本的じゃないので表示用に値を作る
         this.displayDate = this.dateFormat(this.initDate);
         this.dsToday = 0;
+        // dream sourceプロバイダーのアイテムを格納する。
         this.segments = [];
-        this.testContents = [];
+        // スライダーゲージの項目情報を格納する。
+        // 項目数が可変のためオブジェクト配列
+        this.rangeContents = [];
         this.segments = this.dreamSource.getMainSegmentItems();
     }
     DailyReportPage.prototype.ionViewWillEnter = function () {
         if (localStorage.getItem('modalObject')) {
+            // localStorageに保存済みがあれば展開する。
             var modalObject = JSON.parse(localStorage.getItem('modalObject'));
             this.name = modalObject.name;
             var num = modalObject.dsToday;
             this.dsToday = num - 1;
             for (var _i = 0, _a = modalObject.contents; _i < _a.length; _i++) {
                 var content = _a[_i];
-                this.testContents.push({ type: content.type, value: content.value });
+                this.rangeContents.push({ type: content.type, value: content.value });
             }
             this.comment = modalObject.comment;
         }
         else {
-            this.testContents = [
+            // 無ければスライダーゲージの項目の初期セットを作る。
+            this.rangeContents = [
                 { type: "今日のDS意識度", value: 3 },
                 { type: "今日の業務進捗", value: 3 },
                 { type: "今日の体調", value: 3 },
                 { type: "今日のモチベーション", value: 3 }
             ];
         }
-        if (this.dsToday != undefined)
-            this.dsItem = this.segments[this.dsToday].item;
+        // 今日のDSを選択する。
+        this.dsItem = this.segments[this.dsToday].item;
     };
     DailyReportPage.prototype.openModal = function () {
+        /* 画面項目をobjectにしてlocalStorageに保存とmodalに値渡しをする */
         var num = this.dsToday;
-        num++;
+        num++; // 配列の添字に1を足したいんだけど何故か文字結合になってしまうからこうする。
         var objectArray = [];
-        for (var _i = 0, _a = this.testContents; _i < _a.length; _i++) {
+        for (var _i = 0, _a = this.rangeContents; _i < _a.length; _i++) {
             var content = _a[_i];
             objectArray.push({ type: content.type, value: content.value });
         }
@@ -215,13 +240,15 @@ var DailyReportPage = /** @class */ (function () {
         dailyReportModal.present();
     };
     DailyReportPage.prototype.setDate = function (date) {
+        // カレンダーから日付が押されたら値を更新する。
         this.initDate = date;
         this.displayDate = this.dateFormat(date);
     };
     DailyReportPage.prototype.setDsItem = function () {
+        // プルダウンからDSが選択されたら文章を更新する。
         this.dsItem = this.segments[this.dsToday].item;
     };
-    // dateFormat 関数の定義
+    // dateFormat date型の日付をフォーマットする。
     DailyReportPage.prototype.dateFormat = function (date) {
         var y = date.getFullYear();
         var m = date.getMonth() + 1;
@@ -239,7 +266,7 @@ var DailyReportPage = /** @class */ (function () {
     };
     DailyReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="disabledDates" class="ScheduleDate"\n        [localeStrings]="{ weekdays: [\'日\', \'月\', \'火\', \'水\', \'木\', \'金\', \'土\'], months: [\'1月\', \'2月\', \'3月\', \'4月\', \'5月\', \'6月\', \'7月\', \'8月\', \'9月\', \'10月\', \'11月\', \'12月\'] }">\n        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <p class="white-space-prewrap">{{dsItem}}</p>\n    </ion-item>\n    <ion-item *ngFor="let testContent of testContents;">\n      <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"\n        (ngModelChange)="testContent.value=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height50vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <button ion-button (click)="openModal()" block [disabled]="!name">日報を作成する</button>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
+            selector: 'page-daily-report',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/'<!--\n  Generated template for the DailyReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      日報\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <p color="primary" class="likely-label" stacked>日付</p>\n      <span ion-datepicker (ionChanged)="setDate($event);" [value]="initDate" [markDates]="markedDates" class="ScheduleDate"\n        [localeStrings]="localeString">\n        <span>{{displayDate}} <ion-icon name="calendar" item-left></ion-icon></span>\n      </span>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>氏名 ※必須</ion-label>\n      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>今日のDS</ion-label>\n      <ion-select interface="alert" [(ngModel)]="dsToday" name="dsToday" (ngModelChange)="setDsItem();">\n        <ion-option *ngFor="let segment of segments;let idx = index;" value="{{idx}}">{{idx+1}}：{{segment.heading}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <p class="white-space-prewrap">{{dsItem}}</p>\n    </ion-item>\n    <ion-item *ngFor="let testContent of rangeContents;">\n      <ion-label color="primary" stacked>{{testContent.type}}： {{testContent.value}}</ion-label>\n      <ion-range min="10" max="50" step="1" snaps="true" [(ngModel)]="10*testContent.value" color="secondary"\n        (ngModelChange)="testContent.value=$event/10">\n        <ion-icon range-left name="sad"></ion-icon>\n        <ion-icon range-right name="happy"></ion-icon>\n      </ion-range>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>自由記入欄</ion-label>\n      <ion-textarea [(ngModel)]="comment" name="comment" class="height50vh"></ion-textarea>\n    </ion-item>\n  </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <button ion-button (click)="openModal()" block [disabled]="!name">日報を作成する</button>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/daily-report/daily-report.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_3__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
@@ -334,19 +361,6 @@ var DreamSourcePage = /** @class */ (function () {
             }
         });
     };
-    DreamSourcePage.prototype.doRefresh = function (refresher) {
-        // this.currentPage = 1;
-        setTimeout(function () {
-            // this.qiitaServiceProvider.getQiitaItems(this.currentPage, this.queryOption)
-            //   .subscribe(items => {
-            //     this.qiitaItems = items;
-            //     console.log(items);
-            //   },
-            //     err => console.log(err),
-            //     () => { });
-            refresher.complete();
-        }, 500);
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */])
@@ -360,7 +374,9 @@ var DreamSourcePage = /** @class */ (function () {
             selector: 'page-dream-source',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/'<!--\n  Generated template for the DreamSourcePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      D2S\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- START:タブメニュー-->\n  <div class="tabmenu" #tabmenu ion-fixed>\n    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">\n      <div class="tabmenu-bt">\n        <button [ngClass]="{\'active\':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>\n      </div>\n    </div>\n  </div>\n  <!-- END:タブメニュー-->\n  <!-- START:リスト-->\n  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>\n    <ion-slide *ngFor="let segment of segments;let idx = index;">\n      <ion-list *ngIf="idx==0">\n        <div *ngFor="let inner_segment of segments;let inner_index = index;">\n          <button class="active" ion-button (click)="change(inner_index)" *ngIf="inner_index!=0" clear>{{inner_segment.name}}<br>{{inner_segment.heading}}</button>\n        </div>\n      </ion-list>\n      <ion-list *ngIf="idx!=0">\n        <div class="font-weight-bold">{{segment.heading}}</div>\n        <div class="white-space-prewrap">{{segment.item}}</div>\n        <button class="active" ion-button (click)="change(0)" clear>目次に戻る</button>\n      </ion-list>\n    </ion-slide>\n  </ion-slides>\n  <!-- END:リスト-->\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/dream-source/dream-source.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]],
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_dream_source_dream_source__["a" /* DreamSourceProvider */]])
     ], DreamSourcePage);
     return DreamSourcePage;
 }());
@@ -403,40 +419,54 @@ var TimeRegistrationPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.http = http;
+        this.url = "";
         this.weekString = ['日', '月', '火', '水', '木', '金', '土'];
         this.registeredLogArray = [];
+        // disabledオプションの中でindexOfが動作してくれないようなので別にフラグを用意する
+        this.isDisabled = true;
     }
-    TimeRegistrationPage.prototype.ionViewDidLoad = function () { };
     TimeRegistrationPage.prototype.ionViewWillEnter = function () {
+        // テキストボックスに入れるURLの保存があるか
         if (localStorage.getItem('registeredUrl')) {
             this.url = JSON.parse(localStorage.getItem('registeredUrl'));
         }
+        // 勤怠登録の履歴保存があるか
         if (localStorage.getItem('registeredLog')) {
             this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
         }
     };
+    TimeRegistrationPage.prototype.checkDisabled = function () {
+        // 勤怠示すキーワードとスタッフ番号を示すキーワードがURLに入っていれば良しとする
+        if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0)
+            this.isDisabled = false;
+        else
+            this.isDisabled = true;
+    };
     TimeRegistrationPage.prototype.apiExecute = function () {
+        // API実行時にテキスト入力されているURLをlocalStorageに保存
         localStorage.setItem('registeredUrl', JSON.stringify(this.url));
+        // 実行時の年月日時を取る
         var nowMoment = __WEBPACK_IMPORTED_MODULE_3_moment__();
         var weekNumber = nowMoment.format("d");
         var now = nowMoment.format("Y年M月D日(" + this.weekString[weekNumber] + ")H時m分");
         this.registeredLogArray.push(now);
+        // 保存する履歴は6件までなので超えたら後入れ先出しで削除する
         if (this.registeredLogArray.length > 6) {
             var deleteItemCount = this.registeredLogArray.length - 6;
             this.registeredLogArray.splice(0, deleteItemCount);
         }
         localStorage.setItem('registeredLog', JSON.stringify(this.registeredLogArray));
+        // CORSでapiリクエストが送れないがサーバ設定を変えるのは面倒なのでブラウザに実行してもらう
         window.open(this.url, "_system");
     };
     TimeRegistrationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block>登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
+            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url" (ngModelChange)="checkDisabled();"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block [disabled]="isDisabled">登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴<br>※直近6件の履歴を保存します。</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
     ], TimeRegistrationPage);
     return TimeRegistrationPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=time-registration.js.map
@@ -538,11 +568,12 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingText="ひっぱって更新" refreshingText="更新中...">\n    </ion-refresher-content>\n  </ion-refresher> -->\n  <h3>so-cket v0.4.0</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>so-cket v1.0.0</h3>\n\n  <p>\n    このアプリでできること<br>\n    ・勤怠登録<br>\n    -> somaの勤怠登録APIが実行できます。<br>\n    ・日報作成<br>\n    -> 入力フォームから日報がちょっと楽に作成できます。<br>\n    ・D2S(Degital Dream Source)<br>\n    -> スマホでDSが見れます。\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object])
     ], HomePage);
     return HomePage;
+    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
