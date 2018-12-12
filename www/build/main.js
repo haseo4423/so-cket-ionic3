@@ -419,40 +419,54 @@ var TimeRegistrationPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.http = http;
+        this.url = "";
         this.weekString = ['日', '月', '火', '水', '木', '金', '土'];
         this.registeredLogArray = [];
+        // disabledオプションの中でindexOfが動作してくれないようなので別にフラグを用意する
+        this.isDisabled = true;
     }
-    TimeRegistrationPage.prototype.ionViewDidLoad = function () { };
     TimeRegistrationPage.prototype.ionViewWillEnter = function () {
+        // テキストボックスに入れるURLの保存があるか
         if (localStorage.getItem('registeredUrl')) {
             this.url = JSON.parse(localStorage.getItem('registeredUrl'));
         }
+        // 勤怠登録の履歴保存があるか
         if (localStorage.getItem('registeredLog')) {
             this.registeredLogArray = JSON.parse(localStorage.getItem('registeredLog'));
         }
     };
+    TimeRegistrationPage.prototype.checkDisabled = function () {
+        // 勤怠示すキーワードとスタッフ番号を示すキーワードがURLに入っていれば良しとする
+        if (this.url.indexOf('gktrg03') > 0 && this.url.indexOf('staffNo') > 0)
+            this.isDisabled = false;
+        else
+            this.isDisabled = true;
+    };
     TimeRegistrationPage.prototype.apiExecute = function () {
+        // API実行時にテキスト入力されているURLをlocalStorageに保存
         localStorage.setItem('registeredUrl', JSON.stringify(this.url));
+        // 実行時の年月日時を取る
         var nowMoment = __WEBPACK_IMPORTED_MODULE_3_moment__();
         var weekNumber = nowMoment.format("d");
         var now = nowMoment.format("Y年M月D日(" + this.weekString[weekNumber] + ")H時m分");
         this.registeredLogArray.push(now);
+        // 保存する履歴は6件までなので超えたら後入れ先出しで削除する
         if (this.registeredLogArray.length > 6) {
             var deleteItemCount = this.registeredLogArray.length - 6;
             this.registeredLogArray.splice(0, deleteItemCount);
         }
         localStorage.setItem('registeredLog', JSON.stringify(this.registeredLogArray));
+        // CORSでapiリクエストが送れないがサーバ設定を変えるのは面倒なのでブラウザに実行してもらう
         window.open(this.url, "_system");
     };
     TimeRegistrationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block [disabled]="!url.indexOf(\'gktrg03\')">登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
+            selector: 'page-time-registration',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/'<!--\n  Generated template for the TimeRegistrationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      勤怠\n    </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <p padding>※社員番号を含めた勤怠登録URLを入力して登録ボタンを押してください。ブラウザが起動して打刻されます。</p>\n  <form padding (submit)="apiExecute()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>URL</ion-label>\n        <ion-input type="text" [(ngModel)]="url" name="url" (ngModelChange)="checkDisabled();"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block [disabled]="isDisabled">登録</button>\n  </form>\n  <ion-list padding>\n    <p>履歴<br>※直近6件の履歴を保存します。</p>\n    <ion-item *ngFor="let log of registeredLogArray">\n      <p>{{log}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/time-registration/time-registration.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
     ], TimeRegistrationPage);
     return TimeRegistrationPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=time-registration.js.map
@@ -554,11 +568,12 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>so-cket v0.4.0</h3>\n\n  <p>\n    このアプリでできること<br>\n    ・勤怠登録<br>\n    -> somaの勤怠登録APIが実行できます。<br>\n    ・日報作成<br>\n    -> 入力フォームから日報がちょっと楽に作成できます。<br>\n    ・D2S(Degital Dream Source)<br>\n    -> スマホでDSが見れます。\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>so-cket v1.0.0</h3>\n\n  <p>\n    このアプリでできること<br>\n    ・勤怠登録<br>\n    -> somaの勤怠登録APIが実行できます。<br>\n    ・日報作成<br>\n    -> 入力フォームから日報がちょっと楽に作成できます。<br>\n    ・D2S(Degital Dream Source)<br>\n    -> スマホでDSが見れます。\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n</ion-content>'/*ion-inline-end:"/Users/sog/git/so-cket-ionic3/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object])
     ], HomePage);
     return HomePage;
+    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
