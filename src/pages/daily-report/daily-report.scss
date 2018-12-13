@@ -1,10 +1,4 @@
 page-daily-report {
-  .height10vh {
-    height: 10vh;
-  }
-  .height50vh {
-    height: 50vh;
-  }
   ion-alert div[class="alert-radio-label"]{
     white-space: pre-line !important;
   }
@@ -13,5 +7,9 @@ page-daily-report {
     margin-left: 0;
     margin-bottom: 0;
     font-size: 1.2rem;
+  }
+  textarea {
+    height: 50vh;
+    box-shadow:0px 0px 1px 1px rgba(0, 0, 0, 0.2) inset;
   }
 }
